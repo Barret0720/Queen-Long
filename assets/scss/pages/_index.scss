@@ -1,0 +1,56 @@
+.hero {
+  background-image: url(/assets/images/hero_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  .secondWord {
+    padding-top: 15vw;
+    writing-mode: vertical-rl;
+    display: flex;
+    align-items: center;
+    .title {
+      text-orientation: sideways-right;
+      font-weight: 700;
+      color: $white;
+      margin-bottom: 32px;
+    }
+  }
+  .v-line {
+    border-left: 1px solid $white;
+    height: 216px;
+    margin-bottom: 56px;
+  }
+  .slogan {
+    font-family: 'Myanmar MN', Arial, sans-serif;
+    font-size: 132px;
+    color: $white;
+    margin-left: auto !important;
+    text-align: right;
+  }
+}
+.slide-ul{
+  writing-mode: vertical-rl;
+  height: 100%;
+  .slide-li{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: $primary;
+    border-right: 1px solid pink;
+    h3{
+      vertical-align: middle;
+    }
+    h4{
+      height: 20%;
+      font-weight: 300;
+      letter-spacing: 1.2;
+      font-size: 17px;
+    }
+  }
+}
+.wave-text-area{
+  position: absolute;
+  top: 0;
+  left: 33%;
+  height: 100%;
+  border-right: 16px solid $white;
+}
