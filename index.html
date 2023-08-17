@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
-    <script type="module" crossorigin src="/Queen-Long/assets/index-1eb38f58.js"></script>
-    <link rel="stylesheet" href="/Queen-Long/assets/index-c8606d4d.css">
+    <script type="module" crossorigin src="/Queen-Long/assets/index-341db8c2.js"></script>
+    <link rel="stylesheet" href="/Queen-Long/assets/index-4adcb1bf.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-xl fixed-top container">
@@ -76,7 +76,7 @@
         <li></li>
       </ul>
     </section>
-    <section class="position-relative mb-2">
+    <section class="position-relative mb-2 section day">
       <div class="position-absolute top-0 w-100">
         <div class="container">
           <h2
@@ -96,7 +96,7 @@
         />
       </div>
     </section>
-    <section class="mb-1 position-relative">
+    <section class="mb-1 position-relative section dusk">
       <div class="col-4 position-relative">
         <img
           src="/Queen-Long/assets/LightOfWaves_2-d32e99a0.png"
@@ -131,7 +131,7 @@
         </div>
       </div>
     </section>
-    <section class="position-relative">
+    <section class="position-relative section night">
       <div>
 
       </div>
@@ -145,7 +145,7 @@
         </p>
       </div>
     </section>
-    <section>
+    <section class="section dawn">
       <p class="text-rl">FRIENDS PARTY</p>
       <div class="d-flex justify-content-between">
         <h2>LIFESTYLE.</h2>
@@ -154,10 +154,10 @@
           the risk and increase the enjoyment.</p>
       </div>
     </section>
-    <section>
+    <section class="section sunrise">
       <img src="" alt="">
     </section>
-    <section>
+    <section class="section day">
       <ul class="list-unstyled d-flex">
         <li>
           <div class="card text-start">
@@ -184,37 +184,80 @@
       </ul>
     </section>
     <footer class="footer">
-    <h3>
-        HYLAS
-    </h3>
-    <div class="d-flex">
-        <ul class="list-unstyled row">
-            <li class="col col-4">SAIL</li>
-            <li class="col col-8">POWER</li>
-            <li class="col col-4">MEDIA</li>
-            <li class="col col-8">MERCHANDISE</li>
-            <li class="col col-4">JOIN US</li>
-            <li class="col col-4">HYLAS</li>
-            <li class="col col-4">MEMBER</li>
+  <div class="container">
+    <h3 class="title">HYLAS</h3>
+    <div class="d-flex mb-2 fs-7">
+      <ul class="list-unstyled w-50 h-auto d-flex">
+        <li class="mb-2">
+          <a href="#" class="text-decoration-none text-black">SAIL</a>
+        </li>
+        <li class="mb-2">
+          <a href="#" class="text-decoration-none text-black">POWER</a>
+        </li>
+        <li class="mb-2">
+          <a href="#" class="text-decoration-none text-black">MEDIA</a>
+        </li>
+        <li class="mb-2">
+          <a href="#" class="text-decoration-none text-black">MERCHANDISE</a>
+        </li>
+        <li class="mb-2">
+          <a href="#" class="text-decoration-none text-black"></a>JOIN US
+        </li>
+        <li class="mb-2">
+          <a href="#" class="text-decoration-none text-black">HYLAS</a>
+        </li>
+        <li class="mb-2">
+          <a href="#" class="text-decoration-none text-black">MEMBER</a>
+        </li>
+      </ul>
+      <div class="w-50">
+        <ul class="list-unstyled">
+          <li>+1 954 866 0750</li>
+          <li>info@hylasyachts.com</li>
+          <li>
+            No 4, Tung Ya Road, Shaou Kang, Kaohsiung, Taiwan R.O.C. (812)
+          </li>
         </ul>
-        <div>
-            <ul class="list-unstyled d-flex">
-                <li>+1 954 866 0750</li>
-                <li>info@hylasyachts.com</li>
-                <li>No 4, Tung Ya Road, Shaou Kang, Kaohsiung, Taiwan R.O.C. (812)</li>
-            </ul>
-            <p>
-                By entering your email address below, you consent to receiving our newsletter with access to our latest collections, events and initiatives. More details on this are provided in our Privacy Policy
-            </p>
-            <p>
-                Email : 
-            </p>
+        <p>
+          By entering your email address below, you consent to receiving our
+          newsletter with access to our latest collections, events and
+          initiatives. More details on this are provided in our Privacy Policy
+        </p>
+        <div class="border-bottom border-black">
+          <p class="ms-3">Email :</p>
         </div>
+      </div>
     </div>
-    <p>2023 © QUEEN LONG MARINE<br />
-        Designed By 純粹設計</p>
-    <h2>HYLAS</h2>
+    <p class="fs-7">
+      2023 © QUEEN LONG MARINE<br />
+      Designed By 純粹設計
+    </p>
+    <h2 class="brand">HYLAS</h2>
+  </div>
 </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script>
+const sections = document.querySelectorAll('.section');
+const colors = [
+    'rgba(255, 255, 255, 0.9)',    // 白天
+    'rgba(189, 215, 238, 0.9)',    // 灰藍
+    'rgba(223, 216, 216, 0.9)',    // 粉灰藍
+    'rgba(242, 163, 142, 0.9)'     // 晚霞紅
+];
+
+sections.forEach((section, index) => {
+    gsap.to(section, {
+        scrollTrigger: {
+            trigger: section,
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true
+        },
+        backgroundColor: colors[Math.min(index, colors.length - 1)] // 在最後的晚霞紅之後就固定為晚霞紅
+    });
+});
+    </script>
     
   </body>
 </html>
