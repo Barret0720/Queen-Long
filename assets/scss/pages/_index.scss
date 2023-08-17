@@ -2,7 +2,7 @@
   background-image: url(/assets/images/hero_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  .secondWord {
+  .second-word {
     padding-top: 15vw;
     writing-mode: vertical-rl;
     display: flex;
@@ -20,37 +20,70 @@
     margin-bottom: 56px;
   }
   .slogan {
-    font-family: 'Myanmar MN', Arial, sans-serif;
+    font-family: "Myanmar MN", Arial, sans-serif;
     font-size: 132px;
     color: $white;
     margin-left: auto !important;
     text-align: right;
   }
 }
-.slide-ul{
+.slide-ul {
   writing-mode: vertical-rl;
   height: 100%;
-  .slide-li{
+  .slide-li {
     display: flex;
     justify-content: end;
     align-items: center;
-    background-color: $primary;
-    border-right: 1px solid pink;
-    h3{
+    background-color: $third;
+    border-right: 1px solid #53bce4;
+    h3 {
       vertical-align: middle;
     }
-    h4{
+    h4 {
       height: 20%;
       font-weight: 300;
       letter-spacing: 1.2;
       font-size: 17px;
+      color: #72929f;
     }
   }
 }
-.wave-text-area{
+.wave-text-area {
   position: absolute;
   top: 0;
   left: 33%;
   height: 100%;
   border-right: 16px solid $white;
 }
+.horizontal-line{
+  position: absolute;
+  top: 50%;
+  margin-left: calc(-1 * 9vw);
+  width: calc(50% + 9vw) !important;
+  border-bottom: 16px solid $white;
+
+}
+.family-border{
+  border: 10px solid hsla(0, 0%, 100%, 0.26);
+  background-clip: padding-box;
+}
+
+// .day {
+//   background-color: #ffffff;
+// }
+
+// .dusk {
+//   background-color: #f5a623;
+// }
+
+// .night {
+//   background-color: #222222;
+// }
+
+// .dawn {
+//   background-color: #395978;
+// }
+
+// .sunrise {
+//   background-color: #f5a623;
+// }

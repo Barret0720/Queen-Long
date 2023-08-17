@@ -1,4 +1,22 @@
 .footer{
-  background: #69F0AE;
-  font-size: 64px;
+  background-image: url(/assets/images/footer_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  padding-top: 160px;
+  .title{
+    font-size: 32px;
+    color: $gray;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+  }
+  .brand{
+    margin-top: 64px;
+    padding-bottom: 288px;
+    font-size: 238px;
+    letter-spacing: 8rem;
+    text-align: center;
+    color: $primary;
+    font-weight: 400;
+  }
 }
