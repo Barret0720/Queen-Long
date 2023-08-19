@@ -459,7 +459,7 @@ $utilities: map-merge(
     "font-family": (
       property: font-family,
       class: font,
-      values: (monospace: var(--#{$prefix}font-monospace))
+      values: (sans-serif: var(--#{$prefix}font-sans-serif))
     ),
     "font-size": (
       rfs: true,

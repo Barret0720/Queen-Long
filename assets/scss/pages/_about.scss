@@ -1,0 +1,46 @@
+.about {
+  h3{
+    color: $info;
+  }
+  .time-line {
+    width: 300px;
+    margin: 30px auto;
+  }
+
+  .line {
+    padding: 5px 0 5px 30px;
+    border-left: 3px solid #5acfd6;
+    p {
+      text-align: center;
+      width: 250px;
+      padding: 10px;
+      border: 1px solid #5acfd6;
+      color: #03254a;
+      margin: 20px 0;
+      position: relative;
+    }
+    p:before {
+      content: "";
+      position: absolute;
+      left: -40px;
+      top: 7px;
+      width: 10px;
+      height: 10px;
+      border: 3px solid #d2fafb;
+      border-radius: 50%;
+      background-color: #5acfd6;
+    }
+    p:after {
+      content: "";
+      position: absolute;
+      left: -18px;
+      top: 7px;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-left: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 10px solid #5acfd6;
+    }
+  }
+}

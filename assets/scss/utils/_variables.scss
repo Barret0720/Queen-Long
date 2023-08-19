@@ -562,10 +562,11 @@ $aspect-ratios: (
 
 $font-family-sans-serif:      'Noto Sans TC', system-ui, -apple-system, Arial, sans-serif !default;
 $font-family-monospace:      'Poppins', sans-serif  !default;
+$font-family-sans:      'Noto Sans TC', system-ui, -apple-system, Arial, sans-serif !default;
 
 // stylelint-enable value-keyword-case
-$font-family-base:            var(--#{$prefix}font-sans-serif) !default;
-$font-family-code:            var(--#{$prefix}font-monospace) !default;
+$font-family-base:            var(--#{$prefix}font-monospace) !default;
+$font-family-code:            var(--#{$prefix}font-sans) !default;
 
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
