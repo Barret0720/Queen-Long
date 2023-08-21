@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>index</title>
-    <script type="module" crossorigin src="/Queen-Long/assets/index-2b3c506d.js"></script>
-    <link rel="stylesheet" href="/Queen-Long/assets/index-90703242.css">
+    <script type="module" crossorigin src="/Queen-Long/assets/index-93c4d316.js"></script>
+    <link rel="stylesheet" href="/Queen-Long/assets/index-ebab910e.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-xl fixed-top container">
@@ -56,12 +57,15 @@
             <p class="title">QUEEN LONG MARINE</p>
             <div class="v-line"></div>
           </div>
-          <h2 class="slogan">CUSTOMIZATION</h2>
+          <h2 class="slogan" data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+          data-aos-offset="0">CUSTOMIZATION</h2>
         </div>
         <img src="/Queen-Long/assets/hero_bg-af992ca8.png" alt="" class="hero w-100" />
       </section>
       <section
-        class="position-relative mb-3"
+        class="position-relative mb-3 d-none d-md-block"
         style="margin-bottom: 72px !important"
       >
         <ul
@@ -103,10 +107,10 @@
       </section>
       <section class="position-relative mb-2 section day">
         <div class="position-absolute top-0 w-100">
-          <div class="container">
+          <div class="container-fluid">
             <h2
-              class="text-white fw-semibold text-end"
-              style="font-size: 110px; margin-top: 96px"
+              class="text-white fw-semibold text-end fs-md-110 me-md-7"
+              style=" margin-top: 96px"
             >
               SAILING<span class="ms-1 text-success">FLEET</span>
             </h2>
@@ -121,7 +125,7 @@
           />
         </div>
       </section>
-      <section class="mb-1 position-relative section dusk">
+      <section class="mb-1 position-relative section dusk d-none d-md-block">
         <div class="w-100 position-relative z-2 pt-4">
           <div class="col-9 h-100 ms-auto">
             <img
@@ -389,7 +393,7 @@
       2023 © QUEEN LONG MARINE<br />
       Designed By <span class="font-sans-serif">純粹設計</span>
     </p>
-    <h2 class="brand">HYLAS</h2>
+    <h2 class="brand">H<i></i>Y<i></i>L<i></i>A<i></i>S</h2>
   </div>
 </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
@@ -416,6 +420,10 @@
         });
       });
     </script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     
   </body>
 </html>
