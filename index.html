@@ -154,7 +154,7 @@
           />
         </div>
       </section>
-      <section data-bgcolor="#ffffff" class="mb-1 position-relative">
+      <section data-bgcolor="#7979792b" class="mb-1 position-relative">
         <div class="w-100 position-relative z-2 pt-4" data-aos="fade-up">
           <div class="col-9 h-100 ms-auto">
             <img
@@ -196,7 +196,7 @@
           </div>
         </div>
       </section>
-      <section data-bgcolor="#797979" 
+      <section data-bgcolor="#4b2f30" 
         class="position-relative z-2"
         data-aos="fade-up"
         data-aos-easing="linear"
@@ -230,7 +230,7 @@
           srcset=""
         />
       </section>
-      <section data-bgcolor="#4b2f30"
+      <section data-bgcolor="#6c96a9"
         class="position-relative friend z-1"
         data-aos="fade-down"
         data-aos-easing="linear"
@@ -272,7 +272,7 @@
           </div>
         </div>
       </section>
-      <section data-bgcolor="#6c96a9" class="">
+      <section data-bgcolor="#4d2218" class="">
         <img
           src="/Queen-Long/assets/bg7-ce18a77c.png"
           class="img-fluid"
@@ -282,7 +282,7 @@
           data-aos-duration="1500"
         />
       </section>
-      <section data-bgcolor="#4d2218" class="position-relative bottom-slide mb-3 mb-md-96">
+      <section data-bgcolor="#ffffff" class="position-relative bottom-slide mb-3 mb-md-96">
         <div class="top-0 start-50 w-100">
           <div class="container">
             <ul
@@ -483,11 +483,33 @@
 
     </script>
     <script>
+      const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
+//apply sectionColors to each .fullscreen element
+gsap.set("section", {backgroundColor:gsap.utils.wrap(scrollColorElems)})
+const sections = gsap.utils.toArray("section")
+console.log(sections)
+sections.forEach(function(section, i){
+	console.log(section, scrollColorElems[i - 1])
+	console.log('section', section.dataset)
+	ScrollTrigger.create({
+		trigger:section,
+		start:"top",
+		end:"bottom",
+		animation:gsap.to("body", {backgroundColor:section.dataset.bgcolor, immediateRender:false}),
+		toggleActions:"restart none none reverse"
+		
+	})
+})
+
+
+    </script>
+    <!-- <script>
       /* COLOR CHANGER */
       window.addEventListener("load", function () {
         console.log('run color changer')
         const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
         scrollColorElems.forEach((colorSection, i) => {
+          console.log('colorSection',colorSection)
           const prevBg = i === 0 ? "" : scrollColorElems[i - 1].dataset.bgcolor;    
           ScrollTrigger.create({
             trigger: colorSection,
@@ -522,16 +544,16 @@
             ? scroller.scrollTo(value, 0, 0)
             : scroller.scroll.instance.scroll.y;
         },
-        getBoundingClientRect() {
-          console.log('window.innerWidth',window.innerWidth)
-          console.log('window.innerHeight',window.innerHeight)
-          return {
-            left: 0,
-            top: 0,
-            width: window.innerWidth,
-            height: window.innerHeight
-          };
-        }
+        // getBoundingClientRect() {
+        //   console.log('window.innerWidth',window.innerWidth)
+        //   console.log('window.innerHeight',window.innerHeight)
+        //   return {
+        //     left: 0,
+        //     top: 0,
+        //     width: window.innerWidth,
+        //     height: window.innerHeight
+        //   };
+        // }
       });
       
       ScrollTrigger.addEventListener("refresh", () => scroller.update());
@@ -539,7 +561,7 @@
       ScrollTrigger.refresh();
       
       
-          </script>
+          </script> -->
           <!-- Parallax v3.1.0
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   
