@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <title>QUEEN LONG MARINE | CUSTOMIZATION</title>
+    <title>index</title>
     <script type="module" crossorigin src="/Queen-Long/assets/index-1b0bdf13.js"></script>
     <link rel="stylesheet" href="/Queen-Long/assets/index-d3d6f7b4.css">
   </head>
@@ -58,9 +58,7 @@
           </div>
           <h2 class="slogan">CUSTOMIZATION</h2>
         </div>
-        <div class="position-relative hero_bg">
-          <img src="/Queen-Long/assets/hero_bg-c7d79afc.png" alt="" class="w-100" />
-        </div>
+        <img src="/Queen-Long/assets/hero_bg-c7d79afc.png" alt="" class="hero-bg w-100" />
       </section>
       <section data-bgcolor="#ffffff" class="position-relative mb-3 mb-md-72">
         <ul class="list-unstyled m-0 p-0 slide-ul"  data-aos="fade-up">
@@ -197,7 +195,7 @@
         </div>
       </section>
       <section data-bgcolor="#797979" 
-        class="position-relative z-2"
+        class="position-relative"
         data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-duration="1500"
@@ -231,7 +229,7 @@
         />
       </section>
       <section data-bgcolor="#4b2f30"
-        class="position-relative friend z-1"
+        class="position-relative friend z-n1"
         data-aos="fade-down"
         data-aos-easing="linear"
         data-aos-duration="1400"
@@ -480,32 +478,60 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script>
       AOS.init();
-
-    </script>
-    <script>
-      /* COLOR CHANGER */
-      window.addEventListener("load", function () {
-        console.log('run color changer')
-        const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
-        scrollColorElems.forEach((colorSection, i) => {
-          const prevBg = i === 0 ? "" : scrollColorElems[i - 1].dataset.bgcolor;    
-          ScrollTrigger.create({
-            trigger: colorSection,
-            scroller: ".index",
-            start: "top 50%",
-            onEnter: () =>
-              gsap.to(".index", {
-                backgroundColor: colorSection.dataset.bgcolor,
-                overwrite: "auto"
-              }),
-            onLeaveBack: () =>
-              gsap.to(".index", {
-                backgroundColor: prevBg,
-                overwrite: "auto"
-              })
-          });
+      $(function () {
+        var $accordion, $wideScreen;
+        $accordion = $(".slide-ul").children("li");
+        $wideScreen = $(window).width() > 767;
+        $accordion.on("click", function (e) {
+          var $this;
+          // e.stopPropagation();
+          $this = $(this);
+          if ($this.hasClass("out")) {
+            $this.addClass("out");
+          } else {
+            $this.addClass("out");
+            $this.siblings().removeClass("out");
+          }
         });
       });
+    </script>
+
+    <script>
+      let i = 1;
+      let divDisplay,
+        iCount = 0;
+
+      function countNum(i) {
+        if (i < 1) {
+          return i + 5;
+        } else if (i > 5) {
+          return i - 5;
+        } else {
+          return i;
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        let divDisplay = document.querySelectorAll(".slide-li");
+        setInterval(function () {
+          if (i > 5) {
+            dataTab = 1;
+            i = 1;
+          }
+          for (let oEle of divDisplay) {
+            if (oEle.classList.contains("out")) {
+              oEle.classList.remove("out");
+              break;
+            }
+          }
+          document
+            .querySelector('[data-tab="' + countNum(i) + '"]')
+            .classList.add("out");
+          i++;
+        }, 2500);
+      });
+    </script>
+    <script>
       gsap.registerPlugin(ScrollTrigger);
       
       /* SMOOTH SCROLL */
@@ -523,8 +549,6 @@
             : scroller.scroll.instance.scroll.y;
         },
         getBoundingClientRect() {
-          console.log('window.innerWidth',window.innerWidth)
-          console.log('window.innerHeight',window.innerHeight)
           return {
             left: 0,
             top: 0,
@@ -538,102 +562,38 @@
       
       ScrollTrigger.refresh();
       
+      /* COLOR CHANGER */
+      window.addEventListener("load", function () {
+        const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
+        scrollColorElems.forEach((colorSection, i) => {
+          const prevBg = i === 0 ? "" : scrollColorElems[i - 1].dataset.bgcolor;    
+          ScrollTrigger.create({
+            trigger: colorSection,
+            scroller: ".index",
+            start: "top 50%",
+            onEnter: () =>
+              gsap.to("body", {
+                backgroundColor: colorSection.dataset.bgcolor,
+                overwrite: "auto"
+              }),
+            onLeaveBack: () =>
+              gsap.to("body", {
+                backgroundColor: prevBg,
+                overwrite: "auto"
+              })
+          });
+        });
+      });
       
           </script>
-          <!-- Parallax v3.1.0
+          <!-- Parallax v3.1.0 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   
     <script>
-  	parallaxInstance = new Parallax( document.getElementsByName(".hero_bg") , { 
+  	parallaxInstance = new Parallax( document.getElementById( "【物件】" ) , { 
   		// 參數設定[註1]
   	});
-  </script> -->
-  <script>
-
-$(function () {
-        var $accordion, $wideScreen;
-        $accordion = $('.slide-ul').children('li');
-        $wideScreen = $(window).width() > 767;
-        if ($wideScreen) {
-            $accordion.on('click', function (e) {
-                var $this;
-                // e.stopPropagation();
-                $this = $(this);
-                if ($this.hasClass('out')) {
-                    $this.addClass('out');
-                } else {
-                    $this.addClass('out');
-                    $this.siblings().removeClass('out');
-                }
-            });
-        } else {
-            $accordion.on('touchstart touchend', function (e) {
-                var $this;
-                // e.stopPropagation();
-                $this = $(this);
-                if ($this.hasClass('out')) {
-                    $this.addClass('out');
-                } else {
-                    $this.addClass('out');
-                    $this.siblings().removeClass('out');
-                }
-            });
-        }
-    });
-
-//     $(function () {
-// var $accordion, $wideScreen;
-// $accordion = $(".slide-ul").children("li");
-// $wideScreen = $(window).width() > 767;
-// $accordion.on("click", function (e) {
-//   var $this;
-//   // e.stopPropagation();
-//   $this = $(this);
-//   if ($this.hasClass("out")) {
-//     $this.addClass("out");
-//   } else {
-//     $this.addClass("out");
-//     $this.siblings().removeClass("out");
-//   }
-// });
-// });
-
-let i = 1;
-let divDisplay,
-iCount = 0;
-
-function countNum(i) {
-if (i < 1) {
-  return i + 5;
-} else if (i > 5) {
-  return i - 5;
-} else {
-  return i;
-}
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-let divDisplay = document.querySelectorAll(".slide-li");
-setInterval(function () {
-  if (i > 5) {
-    dataTab = 1;
-    i = 1;
-  }
-  for (let oEle of divDisplay) {
-    if (oEle.classList.contains("out")) {
-      oEle.classList.remove("out");
-      break;
-    }
-  }
-  document
-    .querySelector('[data-tab="' + countNum(i) + '"]')
-    .classList.add("out");
-  i++;
-}, 2500);
-
-
-});
-</script>
+  </script>
     
   </body>
 </html>
