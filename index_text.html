@@ -59,26 +59,11 @@
           <h2 class="slogan">CUSTOMIZATION</h2>
         </div>
         <div class="position-relative hero_bg">
-          <img
-            src="/Queen-Long/assets/hero_bg-864df681.png"
-            alt=""
-            class="w-100"
-            data-parallax='{"y": 30}'
-          />
-          <img
-            src="/Queen-Long/assets/hero_bg_wave-a810a389.png"
-            alt=""
-            class="w-100 position-absolute top-0 start-0 bg-wave"
-          />
-          <img
-            src="/Queen-Long/assets/bot-49b95314.png"
-            alt=""
-            class="w-100 position-absolute top-0 start-0 z-1 bg-bot"
-          />
+          <img src="/Queen-Long/assets/hero_bg-864df681.png" alt="" class="w-100" data-parallax="{&quot;y&quot;: 30}"/>
         </div>
       </section>
       <section data-bgcolor="#ffffff" class="position-relative mb-3 mb-md-72">
-        <ul class="list-unstyled m-0 p-0 slide-ul" data-aos="fade-up">
+        <ul class="list-unstyled m-0 p-0 slide-ul"  data-aos="fade-up">
           <li class="slide-li out" data-tab="1">
             <div class="slide-word-box">
               <h3 class="mx-1 mx-md-3 fw-bold">Affirmation of award</h3>
@@ -211,8 +196,7 @@
           </div>
         </div>
       </section>
-      <section
-        data-bgcolor="#4b2f30"
+      <section data-bgcolor="#4b2f30" 
         class="position-relative z-2"
         data-aos="fade-up"
         data-aos-easing="linear"
@@ -239,26 +223,15 @@
             </div>
           </div>
         </div>
-        <img
-          src="/Queen-Long/assets/familytrip-e11dffc1.png"
-          alt="familytrip"
-          class="img-fluid"
-          srcset=""
-        />
+
       </section>
-      <section
-        data-bgcolor="#6c96a9"
+      <section data-bgcolor="#6c96a9"
         class="position-relative friend z-1"
         data-aos="fade-down"
         data-aos-easing="linear"
         data-aos-duration="1400"
       >
-        <img
-          src="/Queen-Long/assets/bg6-6087a5f3.png"
-          alt="familytrip"
-          class="img-fluid position-relative z-n1"
-          srcset=""
-        />
+
         <div class="position-absolute bottom-0 z-1">
           <img
             src="/Queen-Long/assets/friendparty-b559e9b7.png"
@@ -299,10 +272,7 @@
           data-aos-duration="1500"
         />
       </section>
-      <section
-        data-bgcolor="#ffffff"
-        class="position-relative bottom-slide mb-3 mb-md-96"
-      >
+      <section data-bgcolor="#ffffff" class="position-relative bottom-slide mb-3 mb-md-96">
         <div class="top-0 start-50 w-100">
           <div class="container">
             <ul
@@ -408,9 +378,9 @@
           </div>
         </div>
       </section>
-      <section data-bgcolor="#ffffff" class="container">
+      <section data-bgcolor="#ffffff"  class="container">
         <ul
-          class="list-unstyled row row-cols-2 row-cols-md-6 justify-content-evenly align-items-center g-4"
+          class="list-unstyled row row-cols-2 row-cols-md-6 justify-content-evenly align-items-center"
         >
           <li class="text-center">
             <img src="/Queen-Long/assets/awardIcon_1-3f57e1db.png" alt="" />
@@ -500,29 +470,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script>
       AOS.init();
+
     </script>
     <script>
       const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
-      //apply sectionColors to each .fullscreen element
-      gsap.set("section", {
-        backgroundColor: gsap.utils.wrap(scrollColorElems),
-      });
-      const sections = gsap.utils.toArray("section");
-      console.log(sections);
-      sections.forEach(function (section, i) {
-        console.log(section, scrollColorElems[i - 1]);
-        console.log("section", section.dataset);
-        ScrollTrigger.create({
-          trigger: section,
-          start: "top",
-          end: "bottom",
-          animation: gsap.to("body", {
-            backgroundColor: section.dataset.bgcolor,
-            immediateRender: false,
-          }),
-          toggleActions: "restart none none reverse",
-        });
-      });
+//apply sectionColors to each .fullscreen element
+gsap.set("section", {backgroundColor:gsap.utils.wrap(scrollColorElems)})
+const sections = gsap.utils.toArray("section")
+console.log(sections)
+sections.forEach(function(section, i){
+	console.log(section, scrollColorElems[i - 1])
+	console.log('section', section.dataset)
+	ScrollTrigger.create({
+		trigger:section,
+		start:"top",
+		end:"bottom",
+		animation:gsap.to("body", {backgroundColor:section.dataset.bgcolor, immediateRender:false}),
+		toggleActions:"restart none none reverse"
+		
+	})
+})
+
+
     </script>
     <!-- <script>
       /* COLOR CHANGER */
@@ -583,116 +552,100 @@
       
       
           </script> -->
-    <!-- Parallax v3.1.0 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-
+          <!-- Parallax v3.1.0 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  
     <!-- <script>
   	parallaxInstance = new Parallax( document.getElementsByName(".hero_bg") , { 
   		// 參數設定[註1]
   	});
   </script> -->
+  <script>
 
-    <script>
-      const waveImage = document.querySelector(".bg-wave");
-      const botImage = document.querySelector(".bg-bot");
-      window.addEventListener("scroll", () => {
-        const scrollY = window.scrollY;
-        gsap.to(waveImage, {
-          y: scrollY * -0.5, // 根据滚动位置计算移动距离
-          duration: 0.5, // 动画持续时间
-          ease: "power2.out", // 缓动函数
-        });
-        gsap.to(botImage, {
-    y: scrollY * 0.5, // 根据滚动位置计算上下移动距离
-    scale: 1 + scrollY * 0.001, // 根据滚动位置计算放大比例
-    duration: 0.5, // 动画持续时间
-    ease: 'power2.out' // 缓动函数
-  });
-      });
-    </script>
-    <script>
-      $(function () {
+$(function () {
         var $accordion, $wideScreen;
-        $accordion = $(".slide-ul").children("li");
+        $accordion = $('.slide-ul').children('li');
         $wideScreen = $(window).width() > 767;
         if ($wideScreen) {
-          $accordion.on("click", function (e) {
-            var $this;
-            // e.stopPropagation();
-            $this = $(this);
-            if ($this.hasClass("out")) {
-              $this.addClass("out");
-            } else {
-              $this.addClass("out");
-              $this.siblings().removeClass("out");
-            }
-          });
+            $accordion.on('click', function (e) {
+                var $this;
+                // e.stopPropagation();
+                $this = $(this);
+                if ($this.hasClass('out')) {
+                    $this.addClass('out');
+                } else {
+                    $this.addClass('out');
+                    $this.siblings().removeClass('out');
+                }
+            });
         } else {
-          $accordion.on("touchend", function (e) {
-            var $this;
-            // e.stopPropagation();
-            $this = $(this);
-            if ($this.hasClass("out")) {
-              $this.addClass("out");
-            } else {
-              $this.addClass("out");
-              $this.siblings().removeClass("out");
-            }
-          });
+            $accordion.on('touchend', function (e) {
+                var $this;
+                // e.stopPropagation();
+                $this = $(this);
+                if ($this.hasClass('out')) {
+                    $this.addClass('out');
+                } else {
+                    $this.addClass('out');
+                    $this.siblings().removeClass('out');
+                }
+            });
         }
-      });
+    });
 
-      //     $(function () {
-      // var $accordion, $wideScreen;
-      // $accordion = $(".slide-ul").children("li");
-      // $wideScreen = $(window).width() > 767;
-      // $accordion.on("click", function (e) {
-      //   var $this;
-      //   // e.stopPropagation();
-      //   $this = $(this);
-      //   if ($this.hasClass("out")) {
-      //     $this.addClass("out");
-      //   } else {
-      //     $this.addClass("out");
-      //     $this.siblings().removeClass("out");
-      //   }
-      // });
-      // });
+//     $(function () {
+// var $accordion, $wideScreen;
+// $accordion = $(".slide-ul").children("li");
+// $wideScreen = $(window).width() > 767;
+// $accordion.on("click", function (e) {
+//   var $this;
+//   // e.stopPropagation();
+//   $this = $(this);
+//   if ($this.hasClass("out")) {
+//     $this.addClass("out");
+//   } else {
+//     $this.addClass("out");
+//     $this.siblings().removeClass("out");
+//   }
+// });
+// });
 
-      let i = 1;
-      let divDisplay,
-        iCount = 0;
+let i = 1;
+let divDisplay,
+iCount = 0;
 
-      function countNum(i) {
-        if (i < 1) {
-          return i + 5;
-        } else if (i > 5) {
-          return i - 5;
-        } else {
-          return i;
-        }
-      }
+function countNum(i) {
+if (i < 1) {
+  return i + 5;
+} else if (i > 5) {
+  return i - 5;
+} else {
+  return i;
+}
+}
 
-      document.addEventListener("DOMContentLoaded", function () {
-        let divDisplay = document.querySelectorAll(".slide-li");
-        setInterval(function () {
-          if (i > 5) {
-            dataTab = 1;
-            i = 1;
-          }
-          for (let oEle of divDisplay) {
-            if (oEle.classList.contains("out")) {
-              oEle.classList.remove("out");
-              break;
-            }
-          }
-          document
-            .querySelector('[data-tab="' + countNum(i) + '"]')
-            .classList.add("out");
-          i++;
-        }, 2500);
-      });
-    </script>
+document.addEventListener("DOMContentLoaded", function () {
+let divDisplay = document.querySelectorAll(".slide-li");
+setInterval(function () {
+  if (i > 5) {
+    dataTab = 1;
+    i = 1;
+  }
+  for (let oEle of divDisplay) {
+    if (oEle.classList.contains("out")) {
+      oEle.classList.remove("out");
+      break;
+    }
+  }
+  document
+    .querySelector('[data-tab="' + countNum(i) + '"]')
+    .classList.add("out");
+  i++;
+}, 2500);
+
+
+});
+</script>
     
   </body>
 </html>
