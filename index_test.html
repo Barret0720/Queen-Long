@@ -217,7 +217,7 @@
       </section>
       <section
         data-bgcolor="#7979792b"
-        class="gsap-section h-v100 family-trip position-relative z-2"
+        class="gsap-section family-trip position-relative z-2"
         data-aos="zoom-in"
         data-aos-easing="linear"
         data-aos-duration="1500"
@@ -252,7 +252,7 @@
       </section>
       <section
         data-bgcolor="#4b2f30"
-        class="gsap-section  h-v100 friends-party position-relative friend z-1"
+        class="gsap-section friends-party position-relative friend z-1"
         data-aos="fade-down"
         data-aos-easing="linear"
         data-aos-duration="2400"
@@ -260,7 +260,7 @@
       <img
       src="/Queen-Long/assets/bg6-6087a5f3.png"
       alt="familytrip"
-      class="img-fluid position-relative z-n1 img-hv100"
+      class="img-fluid position-relative z-n1"
       srcset=""
     />
         <div class="position-absolute bottom-0 z-1">
@@ -293,12 +293,12 @@
           </div>
         </div>
       </section>
-      <section data-bgcolor="#6c96a9" class="gsap-section h-v100 position-relative"           data-aos="zoom-in"
+      <section data-bgcolor="#6c96a9" class="gsap-section position-relative"           data-aos="zoom-in"
       data-aos-easing="linear"
       data-aos-duration="2500">
         <img
           src="/Queen-Long/assets/bg7-6396589b.png"
-          class="img-fluid img-hv100"
+          class="img-fluid"
           alt=""
           data-aos="zoom-in"
           data-aos-easing="linear"
@@ -308,7 +308,7 @@
           <img src="/Queen-Long/assets/area7_hero-97a81c56.png" class="img-fluid" >
         </div>
       </section>
-      <section data-bgcolor="#4d2218" class="gsap-section h-v100 bottom-slide position-relative mb-3 mb-md-96">
+      <section data-bgcolor="#4d2218" class="gsap-section bottom-slide position-relative mb-3 mb-md-96">
         <div class="top-0 start-50 w-100">
           <div class="container">
             <ul
@@ -416,7 +416,10 @@
       </section>
       <section data-bgcolor="#ffffff" class="container">
         <ul
-          class="list-unstyled row row-cols-2 row-cols-md-6 justify-content-evenly align-items-center g-4">
+          class="list-unstyled row row-cols-2 row-cols-md-4 justify-content-evenly align-items-center g-4"
+        >          <li class="text-center">
+          <img src="/Queen-Long/assets/LOGO-1eb5eda4.png" class="img-fluid" alt="" />
+        </li>
           <li class="text-center">
             <img src="/Queen-Long/assets/awardIcon_1-3f57e1db.png" class="img-fluid" alt="" />
           </li>
@@ -531,7 +534,6 @@
     
     <script>
 
-
       window.onload=function(){
         const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
       const familyElem = document.querySelector('.family-trip');
@@ -548,7 +550,7 @@
         console.log('section,',section),
         ScrollTrigger.create({
           trigger: section,
-          // markers:true,
+          markers:true,
           start: "top 80%",
           end:`bottom`,
           animation: gsap.to("body", {
@@ -565,7 +567,8 @@
           toggleActions: "restart none none reverse",
         });
       });
-      }
+
+}
     </script>
   
   </body>
