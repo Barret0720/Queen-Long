@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <title>index</title>
+    <title>QUEEN LONG MARINE | CUSTOMIZATION</title>
     <script type="module" crossorigin src="/Queen-Long/assets/index_text-8af921ae.js"></script>
     <link rel="stylesheet" href="/Queen-Long/assets/index_text-5e34b01c.css">
   </head>
@@ -58,7 +58,9 @@
           </div>
           <h2 class="slogan">CUSTOMIZATION</h2>
         </div>
-        <img src="/Queen-Long/assets/hero_bg-864df681.png" alt="" class="hero-bg w-100" />
+        <div class="position-relative hero_bg">
+          <img src="/Queen-Long/assets/hero_bg-864df681.png" alt="" class="w-100" data-parallax="{&quot;y&quot;: 30}"/>
+        </div>
       </section>
       <section data-bgcolor="#ffffff" class="position-relative mb-3 mb-md-72">
         <ul class="list-unstyled m-0 p-0 slide-ul"  data-aos="fade-up">
@@ -152,7 +154,7 @@
           />
         </div>
       </section>
-      <section data-bgcolor="#ffffff" class="mb-1 position-relative">
+      <section data-bgcolor="#7979792b" class="mb-1 position-relative">
         <div class="w-100 position-relative z-2 pt-4" data-aos="fade-up">
           <div class="col-9 h-100 ms-auto">
             <img
@@ -194,8 +196,8 @@
           </div>
         </div>
       </section>
-      <section data-bgcolor="#797979" 
-        class="position-relative"
+      <section data-bgcolor="#4b2f30" 
+        class="position-relative z-2"
         data-aos="fade-up"
         data-aos-easing="linear"
         data-aos-duration="1500"
@@ -221,25 +223,15 @@
             </div>
           </div>
         </div>
-        <img
-          src="/Queen-Long/assets/familytrip-e11dffc1.png"
-          alt="familytrip"
-          class="img-fluid"
-          srcset=""
-        />
+
       </section>
-      <section data-bgcolor="#4b2f30"
-        class="position-relative friend z-n1"
+      <section data-bgcolor="#6c96a9"
+        class="position-relative friend z-1"
         data-aos="fade-down"
         data-aos-easing="linear"
         data-aos-duration="1400"
       >
-        <img
-          src="/Queen-Long/assets/bg6-6087a5f3.png"
-          alt="familytrip"
-          class="img-fluid position-relative z-n1"
-          srcset=""
-        />
+
         <div class="position-absolute bottom-0 z-1">
           <img
             src="/Queen-Long/assets/friendparty-b559e9b7.png"
@@ -270,7 +262,7 @@
           </div>
         </div>
       </section>
-      <section data-bgcolor="#6c96a9" class="">
+      <section data-bgcolor="#4d2218" class="">
         <img
           src="/Queen-Long/assets/bg7-6396589b.png"
           class="img-fluid"
@@ -280,7 +272,7 @@
           data-aos-duration="1500"
         />
       </section>
-      <section data-bgcolor="#4d2218" class="position-relative bottom-slide mb-3 mb-md-96">
+      <section data-bgcolor="#ffffff" class="position-relative bottom-slide mb-3 mb-md-96">
         <div class="top-0 start-50 w-100">
           <div class="container">
             <ul
@@ -478,60 +470,54 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script>
       AOS.init();
-      $(function () {
-        var $accordion, $wideScreen;
-        $accordion = $(".slide-ul").children("li");
-        $wideScreen = $(window).width() > 767;
-        $accordion.on("click", function (e) {
-          var $this;
-          // e.stopPropagation();
-          $this = $(this);
-          if ($this.hasClass("out")) {
-            $this.addClass("out");
-          } else {
-            $this.addClass("out");
-            $this.siblings().removeClass("out");
-          }
+
+    </script>
+    <script>
+      const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
+//apply sectionColors to each .fullscreen element
+gsap.set("section", {backgroundColor:gsap.utils.wrap(scrollColorElems)})
+const sections = gsap.utils.toArray("section")
+console.log(sections)
+sections.forEach(function(section, i){
+	console.log(section, scrollColorElems[i - 1])
+	console.log('section', section.dataset)
+	ScrollTrigger.create({
+		trigger:section,
+		start:"top",
+		end:"bottom",
+		animation:gsap.to("body", {backgroundColor:section.dataset.bgcolor, immediateRender:false}),
+		toggleActions:"restart none none reverse"
+		
+	})
+})
+
+
+    </script>
+    <!-- <script>
+      /* COLOR CHANGER */
+      window.addEventListener("load", function () {
+        console.log('run color changer')
+        const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
+        scrollColorElems.forEach((colorSection, i) => {
+          console.log('colorSection',colorSection)
+          const prevBg = i === 0 ? "" : scrollColorElems[i - 1].dataset.bgcolor;    
+          ScrollTrigger.create({
+            trigger: colorSection,
+            scroller: ".index",
+            start: "top 50%",
+            onEnter: () =>
+              gsap.to(".index", {
+                backgroundColor: colorSection.dataset.bgcolor,
+                overwrite: "auto"
+              }),
+            onLeaveBack: () =>
+              gsap.to(".index", {
+                backgroundColor: prevBg,
+                overwrite: "auto"
+              })
+          });
         });
       });
-    </script>
-
-    <script>
-      let i = 1;
-      let divDisplay,
-        iCount = 0;
-
-      function countNum(i) {
-        if (i < 1) {
-          return i + 5;
-        } else if (i > 5) {
-          return i - 5;
-        } else {
-          return i;
-        }
-      }
-
-      document.addEventListener("DOMContentLoaded", function () {
-        let divDisplay = document.querySelectorAll(".slide-li");
-        setInterval(function () {
-          if (i > 5) {
-            dataTab = 1;
-            i = 1;
-          }
-          for (let oEle of divDisplay) {
-            if (oEle.classList.contains("out")) {
-              oEle.classList.remove("out");
-              break;
-            }
-          }
-          document
-            .querySelector('[data-tab="' + countNum(i) + '"]')
-            .classList.add("out");
-          i++;
-        }, 2500);
-      });
-    </script>
-    <script>
       gsap.registerPlugin(ScrollTrigger);
       
       /* SMOOTH SCROLL */
@@ -548,52 +534,118 @@
             ? scroller.scrollTo(value, 0, 0)
             : scroller.scroll.instance.scroll.y;
         },
-        getBoundingClientRect() {
-          return {
-            left: 0,
-            top: 0,
-            width: window.innerWidth,
-            height: window.innerHeight
-          };
-        }
+        // getBoundingClientRect() {
+        //   console.log('window.innerWidth',window.innerWidth)
+        //   console.log('window.innerHeight',window.innerHeight)
+        //   return {
+        //     left: 0,
+        //     top: 0,
+        //     width: window.innerWidth,
+        //     height: window.innerHeight
+        //   };
+        // }
       });
       
       ScrollTrigger.addEventListener("refresh", () => scroller.update());
       
       ScrollTrigger.refresh();
       
-      /* COLOR CHANGER */
-      window.addEventListener("load", function () {
-        const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
-        scrollColorElems.forEach((colorSection, i) => {
-          const prevBg = i === 0 ? "" : scrollColorElems[i - 1].dataset.bgcolor;    
-          ScrollTrigger.create({
-            trigger: colorSection,
-            scroller: ".index",
-            start: "top 50%",
-            onEnter: () =>
-              gsap.to("body", {
-                backgroundColor: colorSection.dataset.bgcolor,
-                overwrite: "auto"
-              }),
-            onLeaveBack: () =>
-              gsap.to("body", {
-                backgroundColor: prevBg,
-                overwrite: "auto"
-              })
-          });
-        });
-      });
       
-          </script>
+          </script> -->
           <!-- Parallax v3.1.0 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   
-    <script>
-  	parallaxInstance = new Parallax( document.getElementById( "【物件】" ) , { 
+    <!-- <script>
+  	parallaxInstance = new Parallax( document.getElementsByName(".hero_bg") , { 
   		// 參數設定[註1]
   	});
-  </script>
+  </script> -->
+  <script>
+
+$(function () {
+        var $accordion, $wideScreen;
+        $accordion = $('.slide-ul').children('li');
+        $wideScreen = $(window).width() > 767;
+        if ($wideScreen) {
+            $accordion.on('click', function (e) {
+                var $this;
+                // e.stopPropagation();
+                $this = $(this);
+                if ($this.hasClass('out')) {
+                    $this.addClass('out');
+                } else {
+                    $this.addClass('out');
+                    $this.siblings().removeClass('out');
+                }
+            });
+        } else {
+            $accordion.on('touchend', function (e) {
+                var $this;
+                // e.stopPropagation();
+                $this = $(this);
+                if ($this.hasClass('out')) {
+                    $this.addClass('out');
+                } else {
+                    $this.addClass('out');
+                    $this.siblings().removeClass('out');
+                }
+            });
+        }
+    });
+
+//     $(function () {
+// var $accordion, $wideScreen;
+// $accordion = $(".slide-ul").children("li");
+// $wideScreen = $(window).width() > 767;
+// $accordion.on("click", function (e) {
+//   var $this;
+//   // e.stopPropagation();
+//   $this = $(this);
+//   if ($this.hasClass("out")) {
+//     $this.addClass("out");
+//   } else {
+//     $this.addClass("out");
+//     $this.siblings().removeClass("out");
+//   }
+// });
+// });
+
+let i = 1;
+let divDisplay,
+iCount = 0;
+
+function countNum(i) {
+if (i < 1) {
+  return i + 5;
+} else if (i > 5) {
+  return i - 5;
+} else {
+  return i;
+}
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+let divDisplay = document.querySelectorAll(".slide-li");
+setInterval(function () {
+  if (i > 5) {
+    dataTab = 1;
+    i = 1;
+  }
+  for (let oEle of divDisplay) {
+    if (oEle.classList.contains("out")) {
+      oEle.classList.remove("out");
+      break;
+    }
+  }
+  document
+    .querySelector('[data-tab="' + countNum(i) + '"]')
+    .classList.add("out");
+  i++;
+}, 2500);
+
+
+});
+</script>
     
   </body>
 </html>
