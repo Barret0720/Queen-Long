@@ -4,319 +4,474 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>QUEEN LONG MARINE | CUSTOMIZATION</title>
   </head>
   <body>
     <%- include('./layout/nav'); -%>
-    <section class="hero position-relative">
-      <div
-        class="container position-absolute top-0 start-50 translate-middle-x z-1"
-      >
-        <div class="second-word ms-auto">
-          <p class="title">QUEEN LONG MARINE</p>
-          <div class="v-line"></div>
+    <main class="index overflow-hidden">
+      <section data-bgcolor="#ffffff" class="hero position-relative">
+        <div
+          class="container position-absolute top-0 start-50 translate-middle-x z-1"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+          data-aos-offset="0"
+        >
+          <div class="second-word ms-auto">
+            <p class="title">QUEEN LONG MARINE</p>
+            <div class="v-line"></div>
+          </div>
+          <h2 class="slogan">CUSTOMIZATION</h2>
         </div>
-        <h2 class="slogan">CUSTOMIZATION</h2>
-      </div>
-      <img src="/assets/images/hero_bg.png" alt="" class="hero w-100" />
-    </section>
-    <section
-      class="position-relative mb-3"
-      style="margin-bottom: 72px !important"
-    >
-      <ul
-        class="list-unstyled m-0 p-0 position-absolute top-0 start-0 z-1 slide-ul"
-      >
-        <li class="slide-li bg-primary">
-          <h3 class="mx-3 fw-bold text-white">Affirmation of award</h3>
-          <h4 class="mb-3 mx-0 text-end text-white font-sans-serif">獲獎肯定</h4>
-        </li>
-        <li class="slide-li">
-          <h3 class="mx-3 fw-bold text-info">Co-designer</h3>
-          <h4 class="mb-3 mx-0 text-end font-sans-serif">合作設計師</h4>
-        </li>
-        <li class="slide-li">
-          <h3 class="mx-3 fw-bold text-info">Quality Assurance</h3>
-          <h4 class="mb-3 mx-0 text-end font-sans-serif">品質保證</h4>
-        </li>
-
-        <li class="slide-li">
-          <h3 class="mx-3 fw-bold text-info">Home maintenance</h3>
-          <h4 class="mb-3 mx-0 text-end font-sans-serif">到府維修保養</h4>
-        </li>
-        <li class="slide-li">
-          <h3 class="mx-3 fw-bold text-info">Club system</h3>
-          <h4 class="mb-3 mx-0 text-end font-sans-serif">俱樂部制度</h4>
-        </li>
-      </ul>
-      <ul class="list-unstyled mb-0">
-        <li>
-          <img src="/assets/images/slide.jpg" alt="slide1" class="w-100" />
-        </li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </section>
-    <section class="position-relative mb-2 section day">
-      <div class="position-absolute top-0 w-100">
-        <div class="container">
-          <h2
-            class="text-white fw-semibold text-end "
-            style="font-size: 110px; margin-top: 96px"
-          >
-            SAILING<span class="ms-1 text-success">FLEET</span>
-          </h2>
+        <div class="position-relative hero_bg">
+          <img
+            src="/assets/images/hero_bg.png"
+            alt=""
+            class="w-100"
+          />
+          
+          <img
+            src="/assets/images/hero_bg_wave.png"
+            alt=""
+            class="w-100 position-absolute top-0 start-0 bg-wave"
+          />          <img
+          src="/assets/images/hero_bg_wave2.png"
+          alt=""
+          class="w-100 position-absolute top-0 start-0 bg-wave2"
+        />
+          <img
+            src="/assets/images/bot.png"
+            alt=""
+            class="w-100 position-absolute top-0 start-0 z-1 bg-bot"
+          />
         </div>
-      </div>
-      <div class="col-9">
+        <div class="hero-logo translate-middle-x text-center">
+          <img src="/assets/images/logo_4.png">
+        </div>
+      </section>
+      <section data-bgcolor="#ffffff" class="position-relative mb-3 mb-md-72">
+        <ul class="list-unstyled m-0 p-0 slide-ul" data-aos="zoom-in">
+          <li class="slide-li out" data-tab="1">
+            <div class="slide-word-box">
+              <h3 class="mx-1 mx-md-3 fw-bold">Affirmation of award</h3>
+              <h4 class="mb-3 mx-0 text-end font-sans-serif">獲獎肯定</h4>
+            </div>
+            <div class="slide-image-box">
+              <img
+                src="/assets/images/slide.jpg"
+                alt="slide1"
+                class="img-fluid slide-image"
+              />
+            </div>
+          </li>
+          <li class="slide-li" data-tab="2">
+            <div class="slide-word-box">
+              <h3 class="mx-1 mx-md-3 fw-bold">Co-designer</h3>
+              <h4 class="mb-3 mx-0 text-end font-sans-serif">合作設計師</h4>
+            </div>
+            <div class="slide-image-box">
+              <img
+                src="/assets/images/slide.jpg"
+                alt="slide1"
+                class="img-fluid slide-image"
+              />
+            </div>
+          </li>
+          <li class="slide-li" data-tab="3">
+            <div class="slide-word-box">
+              <h3 class="mx-1 mx-md-3 fw-bold">Quality Assurance</h3>
+              <h4 class="mb-3 mx-0 text-end font-sans-serif">品質保證</h4>
+            </div>
+            <div class="slide-image-box">
+              <img
+                src="/assets/images/slide.jpg"
+                alt="slide1"
+                class="img-fluid slide-image"
+              />
+            </div>
+          </li>
+          <li class="slide-li" data-tab="4">
+            <div class="slide-word-box">
+              <h3 class="mx-1 mx-md-3 fw-bold">Home maintenance</h3>
+              <h4 class="mb-3 mx-0 text-end font-sans-serif">到府維修保養</h4>
+            </div>
+            <div class="slide-image-box">
+              <img
+                src="/assets/images/slide.jpg"
+                alt="slide1"
+                class="img-fluid slide-image"
+              />
+            </div>
+          </li>
+          <li class="slide-li" data-tab="5">
+            <div class="slide-word-box">
+              <h3 class="mx-1 mx-md-3 fw-bold">Club system</h3>
+              <h4 class="mb-3 mx-0 text-end font-sans-serif">俱樂部制度</h4>
+            </div>
+            <div class="slide-image-box">
+              <img
+                src="/assets/images/slide.jpg"
+                alt="slide1"
+                class="img-fluid slide-image"
+              />
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section data-bgcolor="#ffffff" class="position-relative mb-2">
+        <div
+          class="position-absolute top-0 w-100 z-1"
+          data-aos="zoom-in"
+          data-aos-easing="ease-in-sine"
+        >
+          <div class="container-fluid">
+            <h2
+              class="text-white fw-semibold text-end fs-md-110 me-md-7"
+              style="margin-top: 96px"
+            >
+              SAILING<span class="ms-1 text-success">FLEET</span>
+            </h2>
+          </div>
+        </div>
+        <div class="col-9" data-aos="zoom-in" data-aos-easing="ease-in-sine">
+          <img
+            src="/assets/images/hero2.jpg"
+            alt="Sailing Fleet"
+            class="img-fluid"
+          />
+        </div>
+      </section>
+      <section data-bgcolor="#ffffff" class="mb-1 position-relative">
+        <div class="w-100 position-relative z-2 pt-4" data-aos="zoom-in">
+          <div class="col-9 h-100 ms-auto">
+            <img
+              src="/assets/images/turtle.png"
+              class="img-fluid col-5"
+              style="margin-left: calc(-1 * 6.25vw)"
+            />
+            <div
+              class="row row-cols-2 g-0 position-relative z-n1"
+              style="margin-top: calc(-1 * 3vw)"
+            >
+              <img src="/assets/images/womensup.png" class="img-fluid" alt="" />
+              <img src="/assets/images/area3Bg.png" class="img-fluid" alt="" />
+              <div class="horizontal-line"></div>
+              <div
+                class="position-absolute top-0 end-0 d-flex flex-column justify-content-between h-100 text-white pt-3 pt-md-80 pb-md-232 col-10"
+              >
+                <h2 class="text-end me-3 fw-bold fs-md-110" data-aos="zoom-in">
+                  FOR BUSINESS
+                </h2>
+                <h2 class="fw-bold fs-md-110" data-aos="zoom-in">Your life.</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 position-absolute top-0 z-1" data-aos="zoom-in">
+          <img
+            src="/assets/images/LightOfWaves_2.png"
+            alt="waves"
+            class="img-fluid"
+          />
+          <div class="wave-text-area">
+            <p
+              class="text-rl text-white fs-md-3 fs-7 fw-bold z1 me-1 h-100 md-0"
+              style="margin-top: calc(10.1vw)"
+            >
+              FRIENDS PARTY
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        data-bgcolor="linear-gradient(180deg, rgba(255,255,255,1) 36%, rgba(121,121,121,1) 100%)"
+        class="gsap-section h-v100 family-trip position-relative z-2"
+        data-aos="zoom-in"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
+        <div class="position-absolute top-25 w-100">
+          <div class="col-10 col-md-9">
+            <div class="col-4 col-md-3 ms-auto">
+              <div class="family-border position-relative">
+                <h2
+                  class="text-white fw-bolder fs-3 fs-md-4 my-1 my-md-4 lh-1"
+                  style="margin-left: -2rem"
+                >
+                  RETIRED<br />
+                  LIFE
+                </h2>
+                <p
+                  class="m-0 position-absolute text-warning translate-middle-y fs-md-4 fw-semibold"
+                  style="margin-left: -2rem !important"
+                >
+                  FAMILY TRIP
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         <img
-          src="/assets/images/hero2.jpg"
-          alt="Sailing Fleet"
+          src="/assets/images/familytrip.png"
+          alt="familytrip"
           class="img-fluid"
           srcset=""
         />
-      </div>
-    </section>
-    <section class="mb-1 position-relative section dusk">
-      <div class="w-100 position-relative z-2 pt-4">
-        <div class="col-9 h-100 ms-auto">
+      </section>
+      <section
+        data-bgcolor="linear-gradient(180deg, rgba(121,121,121,1) 0%, rgba(255,197,139,1) 36%, rgba(75,47,48,1) 100%)"
+        class="gsap-section  h-v100 friends-party position-relative friend z-1"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="2400"
+      >
+      <img
+      src="/assets/images/bg6.png"
+      alt="familytrip"
+      class="img-fluid position-relative z-n1 img-hv100"
+      srcset=""
+    />
+        <div class="position-absolute col-md-7 col-10 bottom-0 z-1 party-photo">
           <img
-            src="/assets/images/turtle.png"
+            src="/assets/images/friendparty.png"
             class="img-fluid"
-            style="margin-left: calc(-1 * 6.25vw)"
+            alt=""
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
           />
-          <div
-            class="row row-cols-2 g-0 position-relative z-n1"
-            style="margin-top: calc(-1 * 3vw)"
-          >
-            <img src="/assets/images/womensup.png" class="img-fluid" alt="" />
-            <img src="/assets/images/area3Bg.png" class="img-fluid" alt="" />
-            <div class="horizontal-line"></div>
-            <div
-              class="position-absolute top-0 end-0 d-flex flex-column justify-content-between h-100 text-white"
-              style="padding-top: 80px; padding-bottom: 232px; width: 90%"
-            >
-              <h2
-                class="text-end me-3 fw-bold "
-                style="font-size: 100px"
-              >
-                FOR BUSINESS
-              </h2>
-              <h2 class="fw-bold " style="font-size: 100px">
-                Your life.
-              </h2>
+        </div>
+        <div
+          class="position-absolute top-0 z-2 text-white w-100 container start-50 translate-middle-x friend-word"
+          data-aos="zoom-in"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+        >
+          <div class="w-100 mt-1 mt-md-6">
+            <div class="col-11">
+              <p class="text-rl fs-md-3 fw-bold ms-auto">FRIENDS PARTY</p>
             </div>
           </div>
+          <div class="d-flex justify-content-between mt-md-280">
+            <h2 class="text-white fw-semibold w-50 fs-md-110">LIFESTYLE.</h2>
+            <p class="fw-medium w-md-25 w-50 d-none d-md-block">
+              We have all your yachting requirements in hand. Together with your
+              captain and crew, we reduce the risk and increase the enjoyment.
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="col-4 position-absolute top-0 z-1">
+      </section>
+      <section data-bgcolor="linear-gradient(180deg, rgba(75,47,48,1) 0%, rgba(108,150,169,1) 39%, rgba(2,53,75,1) 100%)" class="gsap-section h-v100 position-relative"           data-aos="zoom-in"
+      data-aos-easing="linear"
+      data-aos-duration="2500">
         <img
-          src="/assets/images/LightOfWaves_2.png"
-          alt="waves"
-          class="img-fluid"
+          src="/assets/images/bg7.png"
+          class="img-fluid img-hv100"
+          alt=""
+          data-aos="zoom-in"
+          data-aos-easing="linear"
+          data-aos-duration="2500"
         />
-        <div class="wave-text-area">
-          <p
-            class="text-rl text-white fs-3 fw-bold z1 me-1 h-100"
-            style="margin-top: calc(10.1vw)"
-          >
-            FRIENDS PARTY
-          </p>
+        <div class="col-9 position-absolute top-25 start-25 top-md-50 start-md-50 translate-middle-md z-1">
+          <img src="/assets/images/area7_hero.png" class="img-fluid" >
         </div>
-      </div>
-    </section>
-    <section class="position-relative section night">
-      <div class="position-absolute top-25 w-100">
-        <div class="col-9">
-          <div class="col-3 ms-auto">
-            <div class="family-border position-relative">
-              <h2
-                class="text-white fw-bolder my-4 lh-1"
-                style="margin-left: -2rem"
+      </section>
+      <section data-bgcolor="linear-gradient(180deg, rgba(2,53,75,1) 0%, rgba(213,164,113,1) 40%, rgba(77,34,24,1) 100%)" class="gsap-section h-v100 bottom-slide position-relative mb-3 mb-md-96">
+        <div class="top-0 start-50 w-100">
+          <div class="container">
+            <ul
+              class="list-unstyled row row-cols-2 row-cols-md-4 py-md-280 py-6"
+            >
+              <li
+                class="col"
+                data-aos="zoom-in"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
               >
-                RETIRED<br />
-                LIFE
-              </h2>
-              <p
-                class="m-0 position-absolute text-warning translate-middle-y fs-4 fw-semibold"
-                style="margin-left: -2rem !important"
+                <div class="card text-start border-0">
+                  <img
+                    class="card-img-top"
+                    src="/assets/images/slide1.png"
+                    alt="Title"
+                  />
+                  <div class="card-body border-0">
+                    <h6 class="card-title text-white fw-bold">
+                      More National Acclaim for Hylas Yachts
+                    </h6>
+                    <p class="card-text fs-7 text-white">
+                      The winners of the Cruising World’s “Boat of the Year”
+                      awards have just been announced and the Hylas H57 has won
+                      best cruising yacht overall.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="col"
+                data-aos="zoom-in"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
               >
-                FAMILY TRIP
-              </p>
-            </div>
+                <div class="card text-start border-0">
+                  <img
+                    class="card-img-top"
+                    src="/assets/images/slide2.png"
+                    alt="Title"
+                  />
+                  <div class="card-body border-0">
+                    <h6 class="card-title text-white fw-bold">
+                      More National Acclaim for Hylas Yachts
+                    </h6>
+                    <p class="card-text fs-7 text-white">
+                      The winners of the Cruising World’s “Boat of the Year”
+                      awards have just been announced and the Hylas H57 has won
+                      best cruising yacht overall.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="col"
+                data-aos="zoom-in"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
+              >
+                <div class="card text-start border-0">
+                  <img
+                    class="card-img-top"
+                    src="/assets/images/slide3.png"
+                    alt="Title"
+                  />
+                  <div class="card-body border-0">
+                    <h6 class="card-title text-white fw-bold">
+                      More National Acclaim for Hylas Yachts
+                    </h6>
+                    <p class="card-text fs-7 text-white">
+                      The winners of the Cruising World’s “Boat of the Year”
+                      awards have just been announced and the Hylas H57 has won
+                      best cruising yacht overall.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li
+                class="col"
+                data-aos="zoom-in"
+                data-aos-easing="linear"
+                data-aos-duration="2000"
+              >
+                <div class="card text-start border-0">
+                  <img
+                    class="card-img-top"
+                    src="/assets/images/slide4.png"
+                    alt="Title"
+                  />
+                  <div class="card-body border-0">
+                    <h6 class="card-title text-white fw-bold">
+                      More National Acclaim for Hylas Yachts
+                    </h6>
+                    <p class="card-text fs-7 text-white">
+                      The winners of the Cruising World’s “Boat of the Year”
+                      awards have just been announced and the Hylas H57 has won
+                      best cruising yacht overall.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-      <img
-        src="/assets/images/familytrip.png"
-        alt="familytrip"
-        class="img-fluid"
-        srcset=""
-      />
-    </section>
-    <section class="position-relative section dawn" style="margin-top: -160px">
-      <img
-        src="/assets/images/bg6.png"
-        alt="familytrip"
-        class="img-fluid position-relative z-n1"
-        srcset=""
-      />
-      <div class="position-absolute bottom-0 z-1">
-        <img src="/assets/images/friendparty.png" class="img-fluid" alt="" />
-      </div>
-      <div
-        class="position-absolute top-0 z-2 text-white w-100 container start-50 translate-middle-x"
-        style="margin-top: 160px"
-      >
-        <div class="w-100 mt-6">
-          <div class="col-10">
-            <p class="text-rl fs-3 fw-bold ms-auto">FRIENDS PARTY</p>
-          </div>
-        </div>
-        <div class="d-flex justify-content-between" style="margin-top: 280px">
-          <h2
-            class="text-white fw-semibold w-50"
-            style="font-size: 110px"
-          >
-            LIFESTYLE.
-          </h2>
-          <p class="fw-medium w-25">
-            We have all your yachting requirements in hand. Together with your
-            captain and crew, we reduce the risk and increase the enjoyment.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="section sunrise">
-      <img src="/assets/images/bg7.png" class="img-fluid" alt="" />
-    </section>
-    <section class="section day position-relative" style="margin-bottom: 96px">
-      <img src="/assets/images/bg8.png" class="img-fluid" alt="" />
-      <div class="position-absolute top-0 start-50 translate-middle-x w-100">
-        <div class="container">
-          <ul
-            class="list-unstyled d-flex"
-            style="margin-top: 280px; margin-bottom: 320px"
-          >
-            <li class="me-4">
-              <div class="card text-start border-0">
-                <img
-                  class="card-img-top"
-                  src="/assets/images/slide1.png"
-                  alt="Title"
-                />
-                <div class="card-body border-0">
-                  <h6 class="card-title text-white fw-bold ">
-                    More National Acclaim for Hylas Yachts
-                  </h6>
-                  <p class="card-text fs-7 text-white ">
-                    The winners of the Cruising World’s “Boat of the Year”
-                    awards have just been announced and the Hylas H57 has won
-                    best cruising yacht overall.
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li class="me-4">
-              <div class="card text-start border-0">
-                <img
-                  class="card-img-top"
-                  src="/assets/images/slide2.png"
-                  alt="Title"
-                />
-                <div class="card-body border-0">
-                  <h6 class="card-title text-white fw-bold ">
-                    More National Acclaim for Hylas Yachts
-                  </h6>
-                  <p class="card-text fs-7 text-white ">
-                    The winners of the Cruising World’s “Boat of the Year”
-                    awards have just been announced and the Hylas H57 has won
-                    best cruising yacht overall.
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li class="me-4">
-              <div class="card text-start border-0">
-                <img
-                  class="card-img-top"
-                  src="/assets/images/slide3.png"
-                  alt="Title"
-                />
-                <div class="card-body border-0">
-                  <h6 class="card-title text-white fw-bold ">
-                    More National Acclaim for Hylas Yachts
-                  </h6>
-                  <p class="card-text fs-7 text-white ">
-                    The winners of the Cruising World’s “Boat of the Year”
-                    awards have just been announced and the Hylas H57 has won
-                    best cruising yacht overall.
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li class="me-4">
-              <div class="card text-start border-0">
-                <img
-                  class="card-img-top"
-                  src="/assets/images/slide4.png"
-                  alt="Title"
-                />
-                <div class="card-body border-0">
-                  <h6 class="card-title text-white fw-bold ">
-                    More National Acclaim for Hylas Yachts
-                  </h6>
-                  <p class="card-text fs-7 text-white ">
-                    The winners of the Cruising World’s “Boat of the Year”
-                    awards have just been announced and the Hylas H57 has won
-                    best cruising yacht overall.
-                  </p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="container">
-      <ul
-        class="list-unstyled d-flex justify-content-evenly align-items-center"
-      >
-        <li><img src="/assets/images/awardIcon_1.png" alt="" /></li>
-        <li><img src="/assets/images/awardIcon_2.png" alt="" /></li>
-        <li><img src="/assets/images/awardIcon_3.png" alt="" /></li>
-        <li><img src="/assets/images/awardIcon_4.png" alt="" /></li>
-        <li><img src="/assets/images/awardIcon_5.png" alt="" /></li>
-        <li><img src="/assets/images/awardIcon_6.png" alt="" /></li>
+      </section>
+      <section data-bgcolor="#ffffff" class="container">
+        <ul
+          class="list-unstyled row row-cols-2 row-cols-md-6 justify-content-evenly align-items-center g-4">
+          <li class="text-center">
+            <img src="/assets/images/awardIcon_1.png" class="img-fluid" alt="" />
+          </li>
+          <li class="text-center">
+            <img src="/assets/images/awardIcon_2.png" class="img-fluid" alt="" />
+          </li>
+          <li class="text-center">
+            <img src="/assets/images/awardIcon_3.png" class="img-fluid" alt="" />
+          </li>
+          <li class="text-center">
+            <img src="/assets/images/awardIcon_4.png" class="img-fluid" alt="" />
+          </li>
+          <li class="text-center">
+            <img src="/assets/images/awardIcon_5.png" class="img-fluid" alt="" />
+          </li>
+          <li class="text-center">
+            <img src="/assets/images/awardIcon_6.png" class="img-fluid" alt="" />
+          </li>
+        </ul>
+      </section>
+    </main>
+    <div class="float-icon">
+      <ul class="list-unstyled connectIcons d-none">
+        <li class="mb-2">
+          <a href="#"><img src="/assets/images/icon_line.png"  class="img-fluid" alt="" /></a>
+        </li>
+        <li class="mb-2">
+          <a href="#"><img src="/assets/images/icon_FB.png"  class="img-fluid" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="/assets/images/icon_phone.png"  class="img-fluid" alt="" /></a>
+        </li>
       </ul>
-    </section>
+      <ul class="list-unstyled">
+        <li class="connectIcon mb-2">
+          <a href="#" class="connectClose"
+            ><img src="/assets/images/icon_message.png" class="img-fluid"  alt=""
+          /></a>
+        </li>
+        <li class="backToTop">
+          <a href="#"><img src="/assets/images/icon_top.png" class="img-fluid"  alt="" /></a>
+        </li>
+      </ul>
+    </div>
     <%- include('./layout/footer'); -%>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <!-- <script>
-      const sections = document.querySelectorAll(".section");
-      const colors = [
-        // "rgba(255, 255, 255, 0.9)", // 白天
-        "rgba(189, 215, 238, 0.9)", // 灰藍
-        "rgba(189, 215, 238, 0.9)", // 灰藍
-        "rgba(223, 216, 216, 0.9)", // 粉灰藍
-        "rgba(242, 163, 142, 0.9)", // 晚霞紅
-      ];
+    <%- include('./layout/jspackage'); -%>
+    <script type="module" src="../main.js"></script>
+    
+    <script>
 
-      sections.forEach((section, index) => {
-        gsap.to(section, {
-          scrollTrigger: {
-            trigger: section,
-            start: "top top",
-            end: "bottom bottom",
-            scrub: true,
-          },
-          backgroundColor: colors[Math.min(index, colors.length - 1)], // 在最後的晚霞紅之後就固定為晚霞紅
+
+      window.onload=function(){
+        const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
+      const familyElem = document.querySelector('.family-trip');
+      const partyElem = document.querySelector('.friends-party');
+      const bgAry =['linear-gradient(180deg, rgba(255,255,255,1) 21%, rgba(121,121,121,1) 100%)','linear-gradient(180deg, rgba(121,121,121,1) 21%, rgba(255,197,139,1) 36%, rgba(75,47,48,1) 100%)','linear-gradient(180deg, rgba(75,47,48,1) 18%, rgba(108,150,169,1) 39%, rgba(2,53,75,1) 100%)','linear-gradient(180deg, rgba(2,53,75,1) 18%, rgba(213,164,113,1) 40%, rgba(77,34,24,1) 100%)','rgb(255,255,255)']
+
+      gsap.set("section", {
+        background: gsap.utils.wrap(scrollColorElems),
+      });
+      gsap.registerPlugin(ScrollTrigger);
+      const sections = gsap.utils.toArray(".gsap-section");
+      sections.forEach(function (section, i) {
+        console.log(i)
+        console.log('section,',section),
+        ScrollTrigger.create({
+          trigger: section,
+          // markers:true,
+          start: "top 80%",
+          end:`bottom`,
+          animation: gsap.to("body", {
+            background: bgAry[i],
+            immediateRender: false,
+            ease: "power3.out",
+          }),
+          onLeave: () => {
+    gsap.to("body", {
+      background: '#ffffff', 
+      immediateRender: false,
+    });
+  },
+          toggleActions: "restart none none reverse",
         });
       });
-    </script> -->
-    <script type="module" src="../main.js"></script>
+      }
+    </script>
+  
   </body>
 </html>

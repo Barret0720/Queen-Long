@@ -65,28 +65,34 @@ $utilities: map-merge(
     // scss-docs-end utils-shadow
     // scss-docs-start utils-position
     "position": (
+      responsive: true,
       property: position,
       values: static relative absolute fixed sticky
     ),
     "top": (
+      responsive: true,
       property: top,
       values: $position-values
     ),
     "bottom": (
+      responsive: true,
       property: bottom,
       values: $position-values
     ),
     "start": (
+      responsive: true,
       property: left,
       class: start,
       values: $position-values
     ),
     "end": (
+      responsive: true,
       property: right,
       class: end,
       values: $position-values
     ),
     "translate-middle": (
+      responsive: true,
       property: transform,
       class: translate-middle,
       values: (
@@ -462,7 +468,7 @@ $utilities: map-merge(
       values: (sans-serif: var(--#{$prefix}font-sans-serif))
     ),
     "font-size": (
-      rfs: true,
+      responsive: true,
       property: font-size,
       class: fs,
       values: $font-sizes

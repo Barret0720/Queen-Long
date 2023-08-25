@@ -10,16 +10,16 @@
     <%- include('./layout/nav'); -%>
     <main class="about text-center">
       <section class="hero">
-        <div class="container">
-          <p class="text-info fw-medium">WE ARE</p>
-          <h2 class="text-gray">Hylas</h2>
-          <p class="text-info mb-2 fw-medium">
-            Queen Long Marine has been shaping the future with it's innovative,
+        <div class="container" style="margin-bottom: 64px;">
+          <p class="text-info fw-medium fs-5 mb-4">WE ARE</p>
+          <h2 class="text-gray mb-2" style="font-size: 100px;">Hylas</h2>
+          <p class="text-info mb-2 fw-medium fs-6">
+            Queen Long Marine has been shaping the future with it's innovative,<br />
             award-winning, luxury Hylas Yachts for over 40 years
           </p>
-          <img src="/assets/images/Abouthero.png" alt="" class="img-fluid" />
+          <img src="/assets/images/Abouthero.png" alt="" class="img-fluid mb-4" />
         </div>
-        <div class="container">
+        <div class="container" style="margin-bottom: 72px;">
           <h3 class="fw-semibold">HYLAS LEGACY</h3>
           <p class="fw-light text-black">
             Third-generation family owned and operated for three decades and
@@ -33,8 +33,8 @@
             quality of a Hylas Yacht is evident throughout.
           </p>
         </div>
-        <div class="container">
-          <div class="box">
+        <div class="container" style="margin-bottom: 72px;">
+          <div class="box shadow-box p-2">
             <h3 class="fw-semibold">LUXURY DESIGN</h3>
             <p class="fw-light text-black">
               Hylas yachts are equipped with reliable equipment and expert
@@ -54,9 +54,11 @@
             </p>
           </div>
         </div>
-        <div class="movie"></div>
+        <div class="movie"  style="margin-bottom: 72px;">
+          <img src="/assets/images/AboutMovie.png" alt="" class="w-100">
+        </div>
       </section>
-      <section class="container mb-4">
+      <section class="container mb-4" style="margin-bottom: 72px;">
         <h3 class="fw-semibold">ABOUT QUEEN LONG MARINE</h3>
         <p class="fw-light text-black">
           The Queen Long Marine shipyard, founder and owner of the Hylas Yachts
@@ -73,9 +75,10 @@
           We sell direct to the customer to offer the best possible service.
         </p>
       </section>
-      <section class="container">
-        <h3></h3>
-        <div class="time-line">
+      <section class="container mb-4" style="margin-bottom: 72px;">
+        <h3 class="fw-semibold">TIMELINE</h3>
+        <img src="/assets/images/about_timeline.png" class="img-fluid" alt="">
+        <!-- <div class="time-line">
           <div class="line">
             .
             <div class="card">
@@ -105,14 +108,14 @@
               existentie es un myth .
             </p>
           </div>
-        </div>
+        </div> -->
       </section>
       <section class="container">
         <h3 class="text-end fw-semibold">
           FOUNDER & CEO
         </h3>
-        <div class="d-flex">
-          <div class="col-3 me-4">
+        <div class="d-flex flex-column flex-md-row">
+          <div class="col-md-3 me-md-4 col-12 mb-2">
             <img src="/assets/images/CEOPhoto.png" alt="" class="img-fluid" />
           </div>
           <div class="text-start">
@@ -139,6 +142,7 @@
       </section>
     </main>
     <%- include('./layout/footer'); -%>
+    <%- include('./layout/jspackage'); -%>   
     <script type="module" src="../main.js"></script>
   </body>
 </html>

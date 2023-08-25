@@ -1,6 +1,14 @@
 .about {
-  h3{
+  h3 {
     color: $info;
+  }
+  .hero {
+    margin-top: 232px;
+    .shadow-box {
+      position: relative;
+      box-shadow: 0px -2px 42px -22px #000;
+      background-color: white;
+    }
   }
   .time-line {
     width: 300px;
@@ -41,6 +49,14 @@
       border-left: 8px solid transparent;
       border-bottom: 8px solid transparent;
       border-right: 10px solid #5acfd6;
+    }
+  }
+  .movie {
+    margin-top: -88px;
+  }
+  @include media-breakpoint-up(md) {
+    .movie {
+      margin-top: -160px;
     }
   }
 }
