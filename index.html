@@ -255,7 +255,7 @@
         class="gsap-section friends-party position-relative friend z-1"
         data-aos="fade-down"
         data-aos-easing="linear"
-        data-aos-duration="1400"
+        data-aos-duration="2400"
       >
       <img
       src="/Queen-Long/assets/bg6-6087a5f3.png"
@@ -293,14 +293,16 @@
           </div>
         </div>
       </section>
-      <section data-bgcolor="#6c96a9" class="gsap-section position-relative">
+      <section data-bgcolor="#6c96a9" class="gsap-section position-relative"           data-aos="zoom-in"
+      data-aos-easing="linear"
+      data-aos-duration="2500">
         <img
           src="/Queen-Long/assets/bg7-6396589b.png"
           class="img-fluid"
           alt=""
           data-aos="zoom-in"
           data-aos-easing="linear"
-          data-aos-duration="1500"
+          data-aos-duration="2500"
         />
         <div class="col-9 position-absolute top-50 start-50 translate-middle z-1">
           <img src="/Queen-Long/assets/area7_hero-97a81c56.png" class="img-fluid" >
@@ -316,7 +318,7 @@
                 class="col"
                 data-aos="zoom-in"
                 data-aos-easing="linear"
-                data-aos-duration="500"
+                data-aos-duration="1500"
               >
                 <div class="card text-start border-0">
                   <img
@@ -340,7 +342,7 @@
                 class="col"
                 data-aos="zoom-in"
                 data-aos-easing="linear"
-                data-aos-duration="1000"
+                data-aos-duration="1500"
               >
                 <div class="card text-start border-0">
                   <img
@@ -543,7 +545,7 @@
         console.log('section,',section),
         ScrollTrigger.create({
           trigger: section,
-          markers:true,
+          // markers:true,
           start: "top 80%",
           end:`bottom`,
           animation: gsap.to("body", {
