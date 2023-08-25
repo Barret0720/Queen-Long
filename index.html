@@ -224,7 +224,7 @@
         </div>
       </section>
       <section
-        data-bgcolor="#7979792b"
+        data-bgcolor="linear-gradient(180deg, rgba(255,255,255,1) 36%, rgba(121,121,121,1) 100%)"
         class="gsap-section h-v100 family-trip position-relative z-2"
         data-aos="zoom-in"
         data-aos-easing="linear"
@@ -259,7 +259,7 @@
         />
       </section>
       <section
-        data-bgcolor="#4b2f30"
+        data-bgcolor="linear-gradient(180deg, rgba(121,121,121,1) 0%, rgba(255,197,139,1) 36%, rgba(75,47,48,1) 100%)"
         class="gsap-section  h-v100 friends-party position-relative friend z-1"
         data-aos="fade-down"
         data-aos-easing="linear"
@@ -301,7 +301,7 @@
           </div>
         </div>
       </section>
-      <section data-bgcolor="#6c96a9" class="gsap-section h-v100 position-relative"           data-aos="zoom-in"
+      <section data-bgcolor="linear-gradient(180deg, rgba(75,47,48,1) 0%, rgba(108,150,169,1) 39%, rgba(2,53,75,1) 100%)" class="gsap-section h-v100 position-relative"           data-aos="zoom-in"
       data-aos-easing="linear"
       data-aos-duration="2500">
         <img
@@ -316,7 +316,7 @@
           <img src="/Queen-Long/assets/area7_hero-97a81c56.png" class="img-fluid" >
         </div>
       </section>
-      <section data-bgcolor="#4d2218" class="gsap-section h-v100 bottom-slide position-relative mb-3 mb-md-96">
+      <section data-bgcolor="linear-gradient(180deg, rgba(2,53,75,1) 0%, rgba(213,164,113,1) 40%, rgba(77,34,24,1) 100%)" class="gsap-section h-v100 bottom-slide position-relative mb-3 mb-md-96">
         <div class="top-0 start-50 w-100">
           <div class="container">
             <ul
@@ -544,24 +544,26 @@
         const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
       const familyElem = document.querySelector('.family-trip');
       const partyElem = document.querySelector('.friends-party');
-      const bgAry =['linear-gradient(180deg, rgba(255,255,255,1) 36%, rgba(121,121,121,1) 100%)','linear-gradient(180deg, rgba(121,121,121,1) 0%, rgba(255,197,139,1) 36%, rgba(75,47,48,1) 100%)','linear-gradient(180deg, rgba(75,47,48,1) 0%, rgba(108,150,169,1) 39%, rgba(2,53,75,1) 100%)','linear-gradient(180deg, rgba(2,53,75,1) 0%, rgba(213,164,113,1) 40%, rgba(77,34,24,1) 100%)','rgb(255,255,255)']
+      const bgAry =['linear-gradient(180deg, rgba(255,255,255,1) 21%, rgba(121,121,121,1) 100%)','linear-gradient(180deg, rgba(121,121,121,1) 21%, rgba(255,197,139,1) 36%, rgba(75,47,48,1) 100%)','linear-gradient(180deg, rgba(75,47,48,1) 18%, rgba(108,150,169,1) 39%, rgba(2,53,75,1) 100%)','linear-gradient(180deg, rgba(2,53,75,1) 18%, rgba(213,164,113,1) 40%, rgba(77,34,24,1) 100%)','rgb(255,255,255)']
 
-      // gsap.set(".gsap-section", {
-      //   background: '#ffffff',
-      // });
+      gsap.set("section", {
+        background: gsap.utils.wrap(scrollColorElems),
+      });
       gsap.registerPlugin(ScrollTrigger);
       // gsap.to()
       const sections = gsap.utils.toArray(".gsap-section");
       sections.forEach(function (section, i) {
+        console.log(i)
         console.log('section,',section),
         ScrollTrigger.create({
           trigger: section,
-          // markers:true,
+          markers:true,
           start: "top 80%",
           end:`bottom`,
           animation: gsap.to("body", {
             background: bgAry[i],
             immediateRender: false,
+            ease: "power3.out",
           }),
           onLeave: () => {
     // 当 section 完全离开视口后的底部 50% 处时，动画结束时触发
