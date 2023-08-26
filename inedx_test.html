@@ -216,12 +216,12 @@
           <div class="col-9 h-100 ms-auto position-relative">
             <img
               src="/Queen-Long/assets/turtle_box-aaaec771.png"
-              class="img-fluid col-3  mb-1 "
+              class="img-fluid col-5  mb-1 "
               style="margin-left: calc(-1 * 2.25vw)"
             />
-            <img src="/Queen-Long/assets/turtle-ac4e83c9.png" class="gsap-turtle img-fluid col-3 position-absolute top-0 start-0 z-1" style="margin-left: calc(-1 * 6.25vw); margin-top: calc(4.25vw); " alt="">
+            <img src="/Queen-Long/assets/turtle-ac4e83c9.png" class="gsap-turtle img-fluid col-5 position-absolute top-0 start-0 z-1 mt-2" style="margin-left: calc(-1 * 6.25vw);" alt="">
             <div
-              class="row row-cols-2 g-0 position-relative z- 1"
+              class="row row-cols-2 g-0 position-relative z-n1"
               style="margin-top: calc(-1 * 3vw)"
             >
               <img src="/Queen-Long/assets/womensup-2b2183ca.png" class="img-fluid" alt="" />
@@ -629,9 +629,10 @@
       const botImage = document.querySelector(".bg-boat");
       const turtleImg = document.querySelector(".gsap-turtle");
       gsap.to(turtleImg, {
+        x:20,
         y:15,
-        duration: 3,
-        ease: "none",
+        duration: 5,
+        ease: "bounce.inOut",
         repeat: -1,
         yoyo: true,
       });
@@ -791,7 +792,7 @@
   
   circle.style.left = left + 'px ';
   circle.style.top = top + 'px ';
-  if(left > document.body.clientWidth){
+  if(left > document.body.clientWidth || left===0){
     mainBot.style.visibility = 'visible'
     circle.style.visibility = 'hidden'
     
@@ -799,7 +800,7 @@
     mainBot.style.visibility = 'hidden'
     circle.style.visibility = 'visible'
   }
-  if(top > document.documentElement.clientHeight ){
+  if(top > document.documentElement.clientHeight || top===0){
     mainBot.style.visibility = 'visible'
     circle.style.visibility = 'hidden'
     
