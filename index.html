@@ -81,7 +81,7 @@
             class="w-100 position-absolute top-0 start-0 bg-wave2 hero-h-v100"
           />
           <img
-            src="/Queen-Long/assets/bot-8c983e02.png"
+            src="/Queen-Long/assets/bot-38196800.png"
             alt=""
             class="w-100 position-absolute top-0 start-0 z-1 bg-bot"
           />
@@ -624,17 +624,17 @@
       const botImage = document.querySelector(".bg-bot");
       const turtleImg = document.querySelector(".gsap-turtle");
       gsap.to(turtleImg, {
-        x:30,
+        x:20,
         y:15,
         duration: 5,
-        ease: "none",
+        ease: "bounce.inOut",
         repeat: -1,
         yoyo: true,
       });
       gsap.to(botImage, {
         y: 66,
         duration: 5,
-        ease: "none",
+        ease: "rough({ template: none.out, strength: 1, points: 20, taper: none, randomize: true, clamp: false})",
         repeat: -1,
         yoyo: true,
       });
