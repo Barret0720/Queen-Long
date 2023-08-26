@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>QUEEN LONG MARINE | CUSTOMIZATION</title>
-    <script type="module" crossorigin src="/Queen-Long/assets/sail-11c3ef08.js"></script>
-    <link rel="stylesheet" href="/Queen-Long/assets/sail-7672f3ed.css">
+    <script type="module" crossorigin src="/Queen-Long/assets/sail_single-f36a49f8.js"></script>
+    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-0e4ef0d5.css">
   </head>
   <body>
     <nav class="navbar bg-transparent fixed-top" aria-label="First navbar">
@@ -553,7 +553,7 @@
     </div>
     <footer class="footer position-relative">
   <div class="container">
-    <div class="col-12 col-md-3">
+    <div class="col-9 col-md-3">
       <a href="index.html">
         <img src="/Queen-Long/assets/logo_2-2478c161.png" class="img-fluid" alt="">
       </a>      
@@ -647,6 +647,15 @@
         e.preventDefault();
         connectIcons.classList.toggle("d-block");
         connectIcons.classList.toggle("d-none");
+      });
+
+      const ftWaveImage = document.querySelector(".ft-wave");
+      gsap.to(ftWaveImage, {
+        y: -12,
+        duration: 2,
+        ease: "none",
+        repeat: -1,
+        yoyo: true,
       });
 </script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>

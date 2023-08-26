@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>QUEEN LONG MARINE | CUSTOMIZATION</title>
-    <script type="module" crossorigin src="/Queen-Long/assets/sail-11c3ef08.js"></script>
-    <link rel="stylesheet" href="/Queen-Long/assets/sail-7672f3ed.css">
+    <script type="module" crossorigin src="/Queen-Long/assets/sail_single-f36a49f8.js"></script>
+    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-0e4ef0d5.css">
   </head>
   <body>
     <nav class="navbar bg-transparent fixed-top" aria-label="First navbar">
@@ -368,6 +368,7 @@
       <img
       src="/Queen-Long/assets/bg8-1db353c1.png"
       class="img-fluid position-relative z-n1 img-hv100"
+      style="opacity: 1;"
       srcset=""
     />
         <div class="position-absolute top-0 start-50 translate-middle-x w-100">
@@ -526,9 +527,15 @@
         </ul>
       </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+ 
     <footer class="footer position-relative">
   <div class="container">
-    <div class="col-12 col-md-3">
+    <div class="col-9 col-md-3">
       <a href="index.html">
         <img src="/Queen-Long/assets/logo_2-2478c161.png" class="img-fluid" alt="">
       </a>      
@@ -623,12 +630,16 @@
         connectIcons.classList.toggle("d-block");
         connectIcons.classList.toggle("d-none");
       });
+
+      const ftWaveImage = document.querySelector(".ft-wave");
+      gsap.to(ftWaveImage, {
+        y: -12,
+        duration: 2,
+        ease: "none",
+        repeat: -1,
+        yoyo: true,
+      });
 </script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     
 
     <script>
@@ -636,7 +647,6 @@
 
       const waveImage = document.querySelector(".bg-wave");
       const wave2Image = document.querySelector(".bg-wave2");
-      const ftWaveImage = document.querySelector(".ft-wave");
       const botImage = document.querySelector(".bg-boat");
       const turtleImg = document.querySelector(".gsap-turtle");
       gsap.to(turtleImg, {
@@ -647,8 +657,9 @@
         yoyo: true,
       });
       gsap.to(botImage, {
-        y: 66,
-        duration: 5,
+        y: -150,
+        x:- 33,
+        duration: 8,
         ease: "rough({ template: none.out, strength: 1, points: 20, taper: none, randomize: true, clamp: false})",
         repeat: -1,
         yoyo: true,
@@ -667,13 +678,7 @@
         repeat: -1,
         yoyo: true,
       });
-      gsap.to(ftWaveImage, {
-        y: -12,
-        duration: 2,
-        ease: "none",
-        repeat: -1,
-        yoyo: true,
-      });
+
       // window.addEventListener("scroll", () => {
       //   const scrollY = window.scrollY;
       //   gsap.to(waveImage, {
@@ -791,7 +796,7 @@
       //   });
       };
     </script>
-    <script>
+    <!-- <script>
       document.addEventListener('mousemove', function(e) {
 
   let body = document.querySelector('.hero');
@@ -819,6 +824,6 @@
     circle.style.visibility = 'visible'
   }
 });
-    </script>
+    </script> -->
   </body>
 </html>
