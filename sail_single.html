@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sali | Hylas</title>
-    <script type="module" crossorigin src="/Queen-Long/assets/sail_single-5bd97c05.js"></script>
-    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-8c19f74d.css">
+    <script type="module" crossorigin src="/Queen-Long/assets/sail_single-9c5f89e2.js"></script>
+    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-1f908191.css">
   </head>
   <body>
     <nav class="navbar bg-transparent fixed-top" aria-label="First navbar">
@@ -191,18 +191,20 @@
   </ul>
 </div>
 <div class="navCtrl">
+  <div class="logo-area">
+    <div class="nav-logo nav-light">
+      <a href="#">
+        <img
+          src="/Queen-Long/assets/logo_4-c27161eb.png"
+          style="width: 8vw !important; margin-top: 30px; height: unset"
+      /></a>
+    </div>
 
-
-<div class="logo-area">
-  <div class="nav-logo nav-light">
-  <img src="/Queen-Long/assets/logo_4-c27161eb.png"  style="width: 8vw !important; margin-top:30px; height:unset;"/>
+    <div class="nav-logo nav-derk">
+      <a href="#"><img src="/Queen-Long/assets/logo_4_dark-d90a9d41.png" /></a>
+    </div>
+  </div>
 </div>
-
-<div class="nav-logo nav-derk">
-  <img src="/Queen-Long/assets/logo_4_dark-d90a9d41.png" />
-</div>
-</div></div>
-
 
 <script>
   const indexEle = document.querySelector(".index");
@@ -214,7 +216,7 @@
     darkLogo.style.visibility = "hidden";
   }
   window.onload = function () {
-  const footerEle = document.querySelector(".footer");
+    const footerEle = document.querySelector(".footer");
     const footerHeight = footerEle.scrollHeight;
     const allHeight = document.body.scrollHeight;
     const navLogo = document.querySelector(".logo-area");
@@ -228,8 +230,7 @@
         navLogo.style.visibility = "visible";
       }
     };
-
-  };    
+  };
 
   const connectIcon = document.querySelector(".connectIcon");
   const connectIcons = document.querySelector(".connectIcons");
@@ -255,14 +256,14 @@
   $(window).scroll(function () {
     currentVal = scrollVal;
     scrollVal = $(window).scrollTop();
-    if(currentVal < scrollVal) {
+    if (currentVal < scrollVal) {
       navCtrlEle.style.display = "none";
       navBarElm.style.visibility = "hidden";
-    }else{
+    } else {
       navCtrlEle.style.display = "block";
       navBarElm.style.visibility = "visible";
     }
-  })
+  });
 </script>
     
     <style>
