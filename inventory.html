@@ -9,6 +9,21 @@
     <link rel="stylesheet" href="/Queen-Long/assets/sail_single-6ffa91bb.css">
   </head>
   <body>
+    <div class="loading-container">
+  <div class="logo">
+    <img src="/Queen-Long/assets/logo_4-c27161eb.png" class="img-fluid" />
+  </div>
+</div>
+<script>
+    window.addEventListener("load", function () {
+      const loadingContainer = document.querySelector(".loading-container");
+      loadingContainer.style.opacity = "1";
+      setTimeout(function () {
+        loadingContainer.style.display = "none";
+      }, 2000);
+    });
+
+</script>
     <nav class="navbar bg-transparent fixed-top" aria-label="First navbar">
   <div class="container mb-auto mt-1">
     <!-- <a class="navbar-brand" href="index.html">
