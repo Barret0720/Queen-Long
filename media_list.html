@@ -277,7 +277,6 @@
   $(window).scroll(function () {
     currentVal = scrollVal;
     scrollVal = $(window).scrollTop();
-    console.log(currentVal,scrollVal)
     if (currentVal < scrollVal) {
       if(scrollVal < 3) {
         navCtrlEle.style.display = "block";
