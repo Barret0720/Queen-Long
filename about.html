@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Hylas</title>
-    <script type="module" crossorigin src="/Queen-Long/assets/sail_single-a7551937.js"></script>
-    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-31f4b0b5.css">
+    <script type="module" crossorigin src="/Queen-Long/assets/sail_single-7c6de68a.js"></script>
+    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-f89ee6fd.css">
   </head>
   <body>
     <nav class="navbar bg-transparent fixed-top" aria-label="First navbar">
@@ -93,7 +93,7 @@
  
     <footer class="footer position-relative">
   <div class="container">
-    <div class="col-3 col-md-2 mb-3 mb-md-2 ms-1">
+    <div class="col-5 col-md-2 mb-3 mb-md-2 ms-1">
       <a href="index.html">
         <img src="/Queen-Long/assets/logo_2-1febfa43.png" class="img-fluid" alt="" />
       </a>
@@ -257,7 +257,12 @@
   $(window).scroll(function () {
     currentVal = scrollVal;
     scrollVal = $(window).scrollTop();
+    console.log(currentVal,scrollVal)
     if (currentVal < scrollVal) {
+      if(scrollVal < 3) {
+        navCtrlEle.style.display = "block";
+      navBarElm.style.visibility = "visible";
+      }
       navCtrlEle.style.display = "none";
       navBarElm.style.visibility = "hidden";
     } else {

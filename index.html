@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>QUEEN LONG MARINE | CUSTOMIZATION</title>
-    <script type="module" crossorigin src="/Queen-Long/assets/sail_single-a7551937.js"></script>
-    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-31f4b0b5.css">
+    <script type="module" crossorigin src="/Queen-Long/assets/sail_single-7c6de68a.js"></script>
+    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-f89ee6fd.css">
   </head>
 
   <body>
@@ -104,21 +104,22 @@
         </div>
         <div class="position-relative hero_bg">
           <img
+          src="/Queen-Long/assets/hero_bg_wave-4b30047a.png"
+          alt=""
+          class="w-100 position-absolute top-0 start-0 bg-wave hero-h-v100"
+        />
+        <img
+          src="/Queen-Long/assets/hero_bg_wave2-91aaebcc.png"
+          alt=""
+          class="w-100 position-absolute top-0 start-0 bg-wave2 hero-h-v100"
+        />
+          <img
             src="/Queen-Long/assets/hero_bg-3fd3a98a.png"
             alt=""
             class="w-100 hero-h-v100"
           />
 
-          <img
-            src="/Queen-Long/assets/hero_bg_wave-4b30047a.png"
-            alt=""
-            class="w-100 position-absolute top-0 start-0 bg-wave hero-h-v100"
-          />
-          <img
-            src="/Queen-Long/assets/hero_bg_wave2-91aaebcc.png"
-            alt=""
-            class="w-100 position-absolute top-0 start-0 bg-wave2 hero-h-v100"
-          />
+
           <img
             src="/Queen-Long/assets/bot-d5068cc1.png"
             alt=""
@@ -241,12 +242,12 @@
             >
               SAILING<span class="ms-1 text-success">FLEET</span>
             </h2>
-            <div class="col-7 col-md-5 me-md-7 d-none d-md-block">
+            <div class="col-7 col-md-5 me-md-7 ">
               <h3 class="text-third fw-bolder fs-md-2 fm-serif">
                 Our Heritage
               </h3>
               <p
-                class="fs-5 fm-serif mb-0 position-absolute z-3 d-none d-lg-block"
+                class="fs-5 fm-serif mb-0 position-absolute z-3 d-none d-md-block"
                 style="
                   background-color: #fff6;
                   padding: 8px;
@@ -258,6 +259,16 @@
                 Stephens, Germán Frers, Bill Dixon and Dean Salthouse. Many have
                 been award winners, both for their beauty and build quality.
               </p>
+              <p
+              class="fs-7 fm-serif mb-0 position-absolute z-3 d-block d-md-none"
+              style="
+                background-color: #fff6;
+                padding: 8px;
+                border-radius: 8px;
+              "
+            >
+            For over 40 years, Queen Long Marine have been award winners, both for their beauty and build quality.
+            </p>
             </div>
           </div>
         </div>
@@ -288,13 +299,11 @@
             <div class="col-9 h-100 ms-auto position-relative">
               <img
                 src="/Queen-Long/assets/turtle_box-aaaec771.png"
-                class="img-fluid col-3 mb-1"
-                style="margin-left: calc(-1 * 2.25vw)"
+                class="img-fluid col-3 mb-1 turtle-box"
               />
               <img
                 src="/Queen-Long/assets/turtle-ac4e83c9.png"
-                class="gsap-turtle img-fluid col-3 position-absolute top-0 start-0 z-1"
-                style="margin-left: calc(-1 * 6.25vw); margin-top: calc(4.25vw)"
+                class="gsap-turtle img-fluid col-4 col-md-3 position-absolute top-0 start-0 z-1 turtle-img"
                 alt=""
               />
               <div
@@ -656,21 +665,21 @@
         >
           <li class="text-center">
             <img
-              src="/Queen-Long/assets/awardIcon_1-3f57e1db.png"
+              src="/Queen-Long/assets/awardIcon_1-3bf958f9.png"
               class="img-fluid"
               alt=""
             />
           </li>
           <li class="text-center">
             <img
-              src="/Queen-Long/assets/awardIcon_2-569e5072.png"
+              src="/Queen-Long/assets/awardIcon_2-675c8927.png"
               class="img-fluid"
               alt=""
             />
           </li>
           <li class="text-center">
             <img
-              src="/Queen-Long/assets/awardIcon_3-68c81763.png"
+              src="/Queen-Long/assets/awardIcon_3-7fddeede.png"
               class="img-fluid"
               alt=""
             />
@@ -707,7 +716,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
  <footer class="footer position-relative">
   <div class="container">
-    <div class="col-3 col-md-2 mb-3 mb-md-2 ms-1">
+    <div class="col-5 col-md-2 mb-3 mb-md-2 ms-1">
       <a href="index.html">
         <img src="/Queen-Long/assets/logo_2-1febfa43.png" class="img-fluid" alt="" />
       </a>
@@ -871,7 +880,12 @@
   $(window).scroll(function () {
     currentVal = scrollVal;
     scrollVal = $(window).scrollTop();
+    console.log(currentVal,scrollVal)
     if (currentVal < scrollVal) {
+      if(scrollVal < 3) {
+        navCtrlEle.style.display = "block";
+      navBarElm.style.visibility = "visible";
+      }
       navCtrlEle.style.display = "none";
       navBarElm.style.visibility = "hidden";
     } else {
@@ -891,6 +905,32 @@
       const botMobileImage = document.querySelector(".bg-boat-m");
       const turtleImg = document.querySelector(".gsap-turtle");
       const bot2Image = document.querySelector(".bg-bot");
+
+      ScrollTrigger.matchMedia({
+	
+  // large
+  "(min-width: 600px)": function() {
+    gsap.to(turtleImg, {
+        y: 15,
+        duration: 3,
+        ease: "none",
+        repeat: -1,
+        yoyo: true,
+      });
+  },
+  // small
+  "(max-width: 599px)": function() {
+    gsap.to(turtleImg, {
+        y: 5,
+        duration: 2,
+        ease: "none",
+        repeat: -1,
+        yoyo: true,
+      });
+  },
+	
+}); 
+
       gsap.to(bot2Image, {
         x: 15,
         duration: 3,
@@ -898,13 +938,7 @@
         repeat: -1,
         yoyo: true,
       });
-      gsap.to(turtleImg, {
-        y: 15,
-        duration: 3,
-        ease: "none",
-        repeat: -1,
-        yoyo: true,
-      });
+
       gsap.to(botImage, {
         y: -33,
         x: -33,
