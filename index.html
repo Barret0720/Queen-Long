@@ -12,46 +12,21 @@
 
   <body>
     <div class="loading-container">
-    <div class="logo">
-        <img src="/Queen-Long/assets/logo_4-c27161eb.png" class="img-fluid">
-    </div>
+  <div class="logo">
+    <img src="/Queen-Long/assets/logo_4-c27161eb.png" class="img-fluid" />
+  </div>
 </div>
 <script>
-    // 宣告一個計數器來追蹤載入的圖片數量
-    let imagesLoaded = 0;
-  
-    // 獲取所有圖片元素
-    const images = document.querySelectorAll(".hero-bg-img");
-   // 監聽每個圖片的 onload 事件
-   images.forEach(img => {
-    img.onload = () => {
-      imagesLoaded++;
-      // 檢查是否所有圖片都已載入完成
-      if (imagesLoaded === images.length) {
-        // 所有圖片都載入後，關閉 loading 效果
-        closeLoadingEffect();
-      }
-    };
-  });
+    window.addEventListener("load", function () {
+      const loadingContainer = document.querySelector(".loading-container");
+      loadingContainer.style.opacity = "1";
+      setTimeout(function () {
+        loadingContainer.style.display = "none";
+      }, 2000);
+    });
 
-  function closeLoadingEffect() {
-    const loadingContainer = document.querySelector(".loading-container");
-    loadingContainer.style.opacity = "1";
-    setTimeout(function () {
-      loadingContainer.style.display = "none";
-    }, 3000);
-  }
-
-  // 在頁面載入後，保留原來的 loading 效果，不會因為添加圖片載入的代碼而影響
-  window.addEventListener("load", function () {
-    // 這部分保留您原來的 loading 效果代碼
-    const loadingContainer = document.querySelector(".loading-container");
-    loadingContainer.style.opacity = "1";
-    setTimeout(function () {
-      loadingContainer.style.display = "none";
-    }, 3000);
-  });
-</script> <nav class="navbar bg-transparent fixed-top" aria-label="First navbar">
+</script>
+ <nav class="navbar bg-transparent fixed-top" aria-label="First navbar">
   <div class="container mb-auto mt-1">
     <!-- <a class="navbar-brand" href="index.html">
       <img src="/assets/images/logo_1.png" style="height: 24px;" alt="">
@@ -809,7 +784,8 @@
           <li>+1 954 866 0750</li>
           <li>info@hylasyachts.com</li>
           <li class="text-md-nowrap">
-            No 4, Tung Ya Road, Shaou Kang, Kaohsiung, Taiwan R.O.C. <span class="d-none d-md-inline">(812)</span>
+            No 4, Tung Ya Road, Shaou Kang, Kaohsiung, Taiwan R.O.C.
+            <span class="d-none d-md-inline">(812)</span>
           </li>
           <li class="mb-0 col-12 d-none d-md-block">
             <p class="fs-7">
@@ -931,21 +907,41 @@
   const navCtrlEle = document.querySelector(".navCtrl");
   const navBarElm = document.querySelector(".navbar");
 
-  $(window).scroll(function () {
-    currentVal = scrollVal;
-    scrollVal = $(window).scrollTop();
-    if (currentVal < scrollVal) {
-      if(scrollVal < 3) {
-        navCtrlEle.style.display = "block";
-      navBarElm.style.visibility = "visible";
-      }
-      navCtrlEle.style.display = "none";
-      navBarElm.style.visibility = "hidden";
+  let navOpen = false;
+
+  navBarElm.addEventListener("click", function () {
+    navOpen = !navOpen;
+    if (navOpen) {
+      disableScroll();
     } else {
-      navCtrlEle.style.display = "block";
-      navBarElm.style.visibility = "visible";
+      enableScroll();
     }
   });
+
+  $(window).scroll(function () {
+    if (!navOpen) {
+      currentVal = scrollVal;
+      scrollVal = $(window).scrollTop();
+      if (currentVal < scrollVal) {
+        if (scrollVal < 3) {
+          navCtrlEle.style.display = "block";
+          navBarElm.style.visibility = "visible";
+        }
+        navCtrlEle.style.display = "none";
+        navBarElm.style.visibility = "hidden";
+      } else {
+        navCtrlEle.style.display = "block";
+        navBarElm.style.visibility = "visible";
+      }
+    }
+  });
+
+  function disableScroll() {
+    $("body").css("overflow", "hidden");
+  }
+  function enableScroll() {
+    $("body").css("overflow", "auto");
+  }
 </script>
   </body>
   
@@ -1102,11 +1098,6 @@
       showFamilyImage(familyIndex);
     }
     setInterval(nextImage, 5000);
-    // setInterval(() => {
-    //   if (!isLastImage) {
-    //     nextfamilyImage();
-    //   }
-    // }, 5000);
     $(document).ready(function () {
       setTimeout(() => {
         const intervalId = setInterval(() => {

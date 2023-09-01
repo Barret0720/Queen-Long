@@ -152,7 +152,8 @@
           <li>+1 954 866 0750</li>
           <li>info@hylasyachts.com</li>
           <li class="text-md-nowrap">
-            No 4, Tung Ya Road, Shaou Kang, Kaohsiung, Taiwan R.O.C. <span class="d-none d-md-inline">(812)</span>
+            No 4, Tung Ya Road, Shaou Kang, Kaohsiung, Taiwan R.O.C.
+            <span class="d-none d-md-inline">(812)</span>
           </li>
           <li class="mb-0 col-12 d-none d-md-block">
             <p class="fs-7">
@@ -274,21 +275,41 @@
   const navCtrlEle = document.querySelector(".navCtrl");
   const navBarElm = document.querySelector(".navbar");
 
-  $(window).scroll(function () {
-    currentVal = scrollVal;
-    scrollVal = $(window).scrollTop();
-    if (currentVal < scrollVal) {
-      if(scrollVal < 3) {
-        navCtrlEle.style.display = "block";
-      navBarElm.style.visibility = "visible";
-      }
-      navCtrlEle.style.display = "none";
-      navBarElm.style.visibility = "hidden";
+  let navOpen = false;
+
+  navBarElm.addEventListener("click", function () {
+    navOpen = !navOpen;
+    if (navOpen) {
+      disableScroll();
     } else {
-      navCtrlEle.style.display = "block";
-      navBarElm.style.visibility = "visible";
+      enableScroll();
     }
   });
+
+  $(window).scroll(function () {
+    if (!navOpen) {
+      currentVal = scrollVal;
+      scrollVal = $(window).scrollTop();
+      if (currentVal < scrollVal) {
+        if (scrollVal < 3) {
+          navCtrlEle.style.display = "block";
+          navBarElm.style.visibility = "visible";
+        }
+        navCtrlEle.style.display = "none";
+        navBarElm.style.visibility = "hidden";
+      } else {
+        navCtrlEle.style.display = "block";
+        navBarElm.style.visibility = "visible";
+      }
+    }
+  });
+
+  function disableScroll() {
+    $("body").css("overflow", "hidden");
+  }
+  function enableScroll() {
+    $("body").css("overflow", "auto");
+  }
 </script>
     
     <style>
