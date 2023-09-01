@@ -916,6 +916,15 @@
         repeat: -1,
         yoyo: true,
       });
+      
+      gsap.to(botImage, {
+        y: -33,
+        x: -33,
+        duration: 4,
+        ease: "rough({ template: none.out, strength: 1, points: 20, taper: none, randomize: true, clamp: false})",
+        repeat: -1,
+        yoyo: true,
+      });
   },
   // small
   "(max-width: 599px)": function() {
@@ -923,6 +932,15 @@
         y: 5,
         duration: 2,
         ease: "none",
+        repeat: -1,
+        yoyo: true,
+      });
+      
+      gsap.to(botImage, {
+        y: -30,
+        x: -30,
+        duration: 10,
+        ease: "rough({ template: none.out, strength: 1, points: 20, taper: none, randomize: true, clamp: false})",
         repeat: -1,
         yoyo: true,
       });
@@ -937,15 +955,7 @@
         repeat: -1,
         yoyo: true,
       });
-
-      gsap.to(botImage, {
-        y: -33,
-        x: -33,
-        duration: 4,
-        ease: "rough({ template: none.out, strength: 1, points: 20, taper: none, randomize: true, clamp: false})",
-        repeat: -1,
-        yoyo: true,
-      });      gsap.to(botMobileImage, {
+      gsap.to(botMobileImage, {
         y: -33,
         x: -33,
         duration: 4,
