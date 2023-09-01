@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>QUEEN LONG MARINE | CUSTOMIZATION</title>
-    <script type="module" crossorigin src="/Queen-Long/assets/sail_single-bc6b887e.js"></script>
-    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-2b80f75c.css">
+    <script type="module" crossorigin src="/Queen-Long/assets/sail_single-5dc8f8d4.js"></script>
+    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-6ffa91bb.css">
   </head>
 
   <body>
@@ -17,17 +17,41 @@
     </div>
 </div>
 <script>
-  window.addEventListener("load", function () {
+    // 宣告一個計數器來追蹤載入的圖片數量
+    let imagesLoaded = 0;
+  
+    // 獲取所有圖片元素
+    const images = document.querySelectorAll(".hero-bg-img");
+   // 監聽每個圖片的 onload 事件
+   images.forEach(img => {
+    img.onload = () => {
+      imagesLoaded++;
+      // 檢查是否所有圖片都已載入完成
+      if (imagesLoaded === images.length) {
+        // 所有圖片都載入後，關閉 loading 效果
+        closeLoadingEffect();
+      }
+    };
+  });
+
+  function closeLoadingEffect() {
     const loadingContainer = document.querySelector(".loading-container");
-
-    loadingContainer.style.opacity = "0";
-
+    loadingContainer.style.opacity = "1";
     setTimeout(function () {
       loadingContainer.style.display = "none";
-    }, 10000);
+    }, 3000);
+  }
+
+  // 在頁面載入後，保留原來的 loading 效果，不會因為添加圖片載入的代碼而影響
+  window.addEventListener("load", function () {
+    // 這部分保留您原來的 loading 效果代碼
+    const loadingContainer = document.querySelector(".loading-container");
+    loadingContainer.style.opacity = "1";
+    setTimeout(function () {
+      loadingContainer.style.display = "none";
+    }, 3000);
   });
-</script>
-    <nav class="navbar bg-transparent fixed-top" aria-label="First navbar">
+</script>    <nav class="navbar bg-transparent fixed-top" aria-label="First navbar">
   <div class="container mb-auto mt-1">
     <!-- <a class="navbar-brand" href="index.html">
       <img src="/assets/images/logo_1.png" style="height: 24px;" alt="">
@@ -122,36 +146,30 @@
           <img
           src="/Queen-Long/assets/hero_bg_wave-4b30047a.png"
           alt=""
-          class="w-100 position-absolute top-0 start-0 bg-wave hero-h-v100"
+          class="w-100 position-absolute top-0 start-0 bg-wave hero-h-v100 hero-bg-img"
         />
         <img
           src="/Queen-Long/assets/hero_bg_wave2-91aaebcc.png"
           alt=""
-          class="w-100 position-absolute top-0 start-0 bg-wave2 hero-h-v100"
+          class="w-100 position-absolute top-0 start-0 bg-wave2 hero-h-v100 hero-bg-img"
         />
           <img
             src="/Queen-Long/assets/hero_bg-3fd3a98a.png"
             alt=""
-            class="w-100 hero-h-v100"
+            class="w-100 hero-h-v100 hero-bg-img"
           />
 
 
           <img
             src="/Queen-Long/assets/bot-d5068cc1.png"
             alt=""
-            class="w-100 position-absolute top-0 start-0 z-1 bg-boat d-none d-lg-block"
+            class="w-100 position-absolute top-0 start-0 z-1 bg-boat d-none d-lg-block hero-bg-img"
           />
           <img
           src="/Queen-Long/assets/bot_mobile-4370e06b.png"
           alt=""
-          class="w-100 position-absolute top-0 start-0 z-1 bg-boat-m d-block d-lg-none"
+          class="w-100 position-absolute top-0 start-0 z-1 bg-boat-m d-block d-lg-none hero-bg-img"
         />
-          <img
-            src="/Queen-Long/assets/bot_mobile-4370e06b.png"
-            alt=""
-            class="position-absolute z-1 boat-mouse translate-middle"
-            style="visibility: hidden; width: 200px"
-          />
         </div>
       </section>
       <section
@@ -216,7 +234,7 @@
                 <div class="videobox">
                   <iframe
                     frameborder="0"
-                    src="https://www.youtube.com/embed/OcRKoKrWCbE?controls=0&autoplay=1&mute=1&loop=1&playlist=OcRKoKrWCbE"
+                    src="https://www.youtube.com/embed/OcRKoKrWCbE?controls=0&autoplay=1&mute=1&loop=1&?modestbranding=1&&showinfo=0&playlist=OcRKoKrWCbE"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; loop"
                     allowfullscreen
@@ -448,7 +466,7 @@
                 <div class="videobox">
                   <iframe
                     frameborder="0"
-                    src="https://www.youtube.com/embed/LFVO0n7aeJw?controls=0&autoplay=1&mute=1&loop=1&playlist=LFVO0n7aeJw"
+                    src="https://www.youtube.com/embed/LFVO0n7aeJw?controls=0&autoplay=1&mute=1&loop=1&?modestbranding=1&&showinfo=0&playlist=LFVO0n7aeJw"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; loop"
                     allowfullscreen
