@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sali H57 | Hylas</title>
-    <script type="module" crossorigin src="/Queen-Long/assets/sail_single-9792b14a.js"></script>
-    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-81a3e462.css">
+    <script type="module" crossorigin src="/Queen-Long/assets/sail_single-883f10dc.js"></script>
+    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-45c64f40.css">
   </head>
   <body>
     <div class="loading-container">
@@ -39,7 +39,8 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAWCAYAAACsR+4DAAAAuklEQVRIie2WQQ6CMBBFH8Yj6SH0ArpUl+ptgLiVnSfwEp5JampKYqSFIq3Moi8pC9LMPGBSfqaUwsZyvW3u5sARmFk3/kYNXIDz436zFvBpdggs1fTd923o42qeMCS1qetk7lHkZNZfcc7Y1ISenWCIFcsWq40AjTaiP2UJPAElZGmXUovthL25t5O+VBEO0DFol0rs8KcDdihJbCjOdPERFKMyJihOgo9YHuHPoOsVXU1TtP6iO1oDLx92W7mhbG3pAAAAAElFTkSuQmCC" alt="" />
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAaCAYAAADbhS54AAAACXBIWXMAAAsSAAALEgHS3X78AAAAhElEQVRIiWP8//8/w2AETIPSVYPZYSzEKDLyimhgYGCop5KdB89tW+FASNHQDjEGBoYDVLTzATGKRnMlqWDUYaSCoZErjbwiEhgYGBQGyjHntq1ogLHRiwuQw+zp7yQ4gDts0EblaDlGKhh1GKlg1GGkgtGGIqlgtKFIKhjNlSQBBgYGAKBUHpDlgZTpAAAAAElFTkSuQmCC" class="img-fluid open-icon" alt="" />
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAZCAYAAACy0zfoAAAACXBIWXMAAAsSAAALEgHS3X78AAABG0lEQVRIie3XwQ2CUAwG4F8XcAVHACbwCidvcITEPYwLuIGRIzc9cXYCwipO8EyTZ0IIaPtaEw426QED5UsNLaycc1hqrBcrk+CSrIgoNTdLsmIvqcHC+YIPylBgkhUlgJukBrdzVGzjUwz0sKs/pBpbM1zXNjWAalCcDRzBKKqube5muFDgDKzm3lP0tEqAWpgYxwVawIJw34BWMArVhhhBngDOAE4WMDVuAjgMFQwW68sDLqOfj1oYftg5+ot3Xdv0mtqqzk3A3h0M2iRmuJmn8hC6Scxwn8aFZtWpcZw5ZgUU4SQD1gIoedkUT34tkPuyGbySNEBu53o/u0SwGSA/aAhzMk7zKE7zknv+VNL1VId7/v/TMCgAvAB9Wxu0KrsUogAAAABJRU5ErkJggg==" class="img-fluid close-icon"  alt="" />
     </button>
 
     <div class="navbar-collapse collapse" data-bs-backdrop="static" id="navbar" style="min-height: 100vh;">
@@ -96,8 +97,7 @@
       <img src="/Queen-Long/assets/menu-bg-55dac6c1.jpg" class="nav-bg" alt="" />
     </div>
   </div>
-</nav>
-    <main class="media">
+</nav>    <main class="media">
       <div class="pt-8 pb-6">
 <img src="/Queen-Long/assets/sail_detail2-02e8c1dd.jpg" class="img-fluid" alt="">
     </main>
@@ -207,7 +207,7 @@
     </li>
   </ul>
 </div>
-<div class="navCtrl">
+<div class="navctrl">
   <div class="logo-area">
     <div class="nav-logo nav-light">
       <a href="index.html">
@@ -281,26 +281,26 @@ navBarElm.addEventListener("click", function () {
   }
 });
 
-$(window).scroll(function () {
-  currentVal = scrollVal;
-  scrollVal = $(window).scrollTop();
+// $(window).scroll(function () {
+//   currentVal = scrollVal;
+//   scrollVal = $(window).scrollTop();
 
-  if (currentVal < scrollVal) {
-    if (scrollVal < 10) {
-      navOpen = true; 
-    }
-    navCtrlEle.style.display = "none";
-    navBarElm.style.visibility = "hidden";
-  } else {
-    navCtrlEle.style.display = "block";
-    navBarElm.style.visibility = "visible";
-  }
-  if (navOpen) {
-    disableScroll();
-  } else {
-    enableScroll();
-  }
-});
+//   if (currentVal < scrollVal) {
+//     if (scrollVal < 10) {
+//       navOpen = true; 
+//     }
+//     navCtrlEle.style.display = "none";
+//     navBarElm.style.visibility = "hidden";
+//   } else {
+//     navCtrlEle.style.display = "block";
+//     navBarElm.style.visibility = "visible";
+//   }
+//   if (navOpen) {
+//     disableScroll();
+//   } else {
+//     enableScroll();
+//   }
+// });
 
 function disableScroll() {
   $("body").css("overflow", "hidden");
