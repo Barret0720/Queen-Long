@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Media | Hylas</title>
-    <script type="module" crossorigin src="/Queen-Long/assets/sail_single-5798708b.js"></script>
-    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-63830711.css">
+    <script type="module" crossorigin src="/Queen-Long/assets/sail_single-9792b14a.js"></script>
+    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-81a3e462.css">
   </head>
   <body>
     <div class="loading-container">
@@ -107,7 +107,7 @@
         <ul class="list-unstyled row g-3">
           <li class="col-12 col-md-6 position-relative"><a href="media_list.html"><img src="/Queen-Long/assets/media_News-6e5d4fc8.png" class="img-fluid" alt=""><p class="position-absolute p-1 fs-3 list-title">News</p></a></li>
           <li class="col-12 col-md-6 position-relative"><a href="media_list.html"><img src="/Queen-Long/assets/media_show-5e0c3ea5.png" class="img-fluid" alt=""><p class="position-absolute p-1 fs-3 list-title">Boat Show</p></a></li>
-          <li class="col-12 position-relative"><a href="media_list.html"><img src="/Queen-Long/assets/media_Articles-25e264bf.png" class="img-fluid" alt=""><p class="position-absolute p-1 fs-3 list-title">Articles</p></a></li>
+          <li class="col-12 position-relative"><a href="media_list.html"><img src="/Queen-Long/assets/media_Articles-86ab510e.png" class="img-fluid" alt=""><p class="position-absolute p-1 fs-3 list-title">Articles</p></a></li>
           <li class="col-12 col-md-6 position-relative"><a href="media_list.html"><img src="/Queen-Long/assets/media_News2-6ef5b024.png" class="img-fluid" alt=""><p class="position-absolute p-1 fs-3 list-title">Press News</p></a></li>
           <li class="col-12 col-md-6 position-relative"><a href="media_list.html" class="position-relative"><img src="/Queen-Long/assets/media_videos-4692f0b7.png" class="img-fluid" alt=""><img class="position-absolute top-50 start-50 translate-middle" src="/Queen-Long/assets/video_icon-642a1d46.png" alt=""><p class="position-absolute p-1  fs-3 list-title">Videos</p></a></li>
         </ul>
@@ -182,7 +182,7 @@
     </p>
   </div>
   <div class="footer-bg">
-    <img src="/Queen-Long/assets/footer_bg_1-7f64bd3d.png" class="img-fluid" alt="" />
+    <img src="/Queen-Long/assets/footer_bg_1-9d30c370.png" class="img-fluid" alt="" />
   </div>
   <div class="footer-bg ft-wave">
     <img src="/Queen-Long/assets/footer_bg_2-bc44f627.png" class="img-fluid" alt="" />
@@ -245,22 +245,22 @@
   } else {
     darkLogo.style.visibility = "hidden";
   }
-  window.onload = function () {
-    const footerEle = document.querySelector(".footer");
-    const footerHeight = footerEle.scrollHeight;
-    const allHeight = document.body.scrollHeight;
-    const navLogo = document.querySelector(".logo-area");
-    let delHeight = window.innerHeight;
-    window.onscroll = function () {
-      let top = window.scrollY;
-      let changeYpx = allHeight - delHeight - 160;
-      if (top >= changeYpx) {
-        navLogo.style.visibility = "hidden";
-      } else {
-        navLogo.style.visibility = "visible";
-      }
-    };
-  };
+  // window.onload = function () {
+  //   const footerEle = document.querySelector(".footer");
+  //   const footerHeight = footerEle.scrollHeight;
+  //   const allHeight = document.body.scrollHeight;
+  //   const navLogo = document.querySelector(".logo-area");
+  //   let delHeight = window.innerHeight;
+  //   window.onscroll = function () {
+  //     let top = window.scrollY;
+  //     let changeYpx = allHeight - delHeight - 160;
+  //     if (top >= changeYpx) {
+  //       navLogo.style.visibility = "hidden";
+  //     } else {
+  //       navLogo.style.visibility = "visible";
+  //     }
+  //   };
+  // };
 
   const connectIcon = document.querySelector(".connectIcon");
   const connectIcons = document.querySelector(".connectIcons");
@@ -301,7 +301,7 @@
       currentVal = scrollVal;
       scrollVal = $(window).scrollTop();
       if (currentVal < scrollVal) {
-        if (scrollVal < 5) {
+        if (scrollVal < 10) {
           navCtrlEle.style.display = "block";
           navBarElm.style.visibility = "visible";
         }
