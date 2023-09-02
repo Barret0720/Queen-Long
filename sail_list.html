@@ -306,47 +306,48 @@
     yoyo: true,
   });
   let currentVal = 0;
-  let scrollVal = 0;
-  const navCtrlEle = document.querySelector(".navCtrl");
-  const navBarElm = document.querySelector(".navbar");
+let scrollVal = 0;
+const navCtrlEle = document.querySelector(".navCtrl");
+const navBarElm = document.querySelector(".navbar");
 
-  let navOpen = false;
+let navOpen = false;
 
-  navBarElm.addEventListener("click", function () {
-    navOpen = !navOpen;
-    if (navOpen) {
-      disableScroll();
-    } else {
-      enableScroll();
-    }
-  });
-
-  $(window).scroll(function () {
-    if (!navOpen) {
-      navCtrlEle.style.display = "block";
-      navBarElm.style.visibility = "visible";
-      currentVal = scrollVal;
-      scrollVal = $(window).scrollTop();
-      if (currentVal < scrollVal) {
-        if (scrollVal < 10) {
-          navCtrlEle.style.display = "block";
-          navBarElm.style.visibility = "visible";
-        }
-        navCtrlEle.style.display = "none";
-        navBarElm.style.visibility = "hidden";
-      } else {
-        navCtrlEle.style.display = "block";
-        navBarElm.style.visibility = "visible";
-      }
-    }
-  });
-
-  function disableScroll() {
-    $("body").css("overflow", "hidden");
+navBarElm.addEventListener("click", function () {
+  navOpen = !navOpen;
+  if (navOpen) {
+    disableScroll();
+  } else {
+    enableScroll();
   }
-  function enableScroll() {
-    $("body").css("overflow", "auto");
+});
+
+$(window).scroll(function () {
+  currentVal = scrollVal;
+  scrollVal = $(window).scrollTop();
+
+  if (currentVal < scrollVal) {
+    if (scrollVal < 10) {
+      navOpen = true; 
+    }
+    navCtrlEle.style.display = "none";
+    navBarElm.style.visibility = "hidden";
+  } else {
+    navCtrlEle.style.display = "block";
+    navBarElm.style.visibility = "visible";
   }
+  if (navOpen) {
+    disableScroll();
+  } else {
+    enableScroll();
+  }
+});
+
+function disableScroll() {
+  $("body").css("overflow", "hidden");
+}
+function enableScroll() {
+  $("body").css("overflow", "auto");
+}
 </script>
     
   </body>
