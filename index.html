@@ -118,49 +118,50 @@
           </h2>
         </div>
         <div class="position-relative hero_bg">
-          <!-- <img
-            src="/assets/images/wave1.png"
+          <img
+            src="/Queen-Long/assets/wave1-5edca7c7.png"
             alt=""
             class="w-100 position-absolute top-0 start-0 bg-wave hero-h-v100 hero-bg-img"
           /><img
-            src="/assets/images/wave2.png"
+            src="/Queen-Long/assets/wave2-611f039b.png"
             alt=""
             class="w-100 position-absolute top-0 start-0 bg-wave2 hero-h-v100 hero-bg-img"
           /><img
-            src="/assets/images/wave3.png"
+            src="/Queen-Long/assets/wave3-f0fba4ca.png"
             alt=""
             class="w-100 position-absolute top-0 start-0 bg-wave3 hero-h-v100 hero-bg-img"
           /><img
-            src="/assets/images/wave4.png"
+            src="/Queen-Long/assets/wave4-a7e5140e.png"
             alt=""
             class="w-100 position-absolute top-0 start-0 bg-wave4 hero-h-v100 hero-bg-img"
           /><img
-            src="/assets/images/wave5.png"
+            src="/Queen-Long/assets/wave5-af63d284.png"
             alt=""
             class="w-100 position-absolute top-0 start-0 bg-wave5 hero-h-v100 hero-bg-img"
           /><img
-            src="/assets/images/wave6.png"
+            src="/Queen-Long/assets/wave6-803dd73e.png"
             alt=""
             class="w-100 position-absolute top-0 start-0 bg-wave6 hero-h-v100 hero-bg-img"
           /><img
-            src="/assets/images/wave7.png"
+            src="/Queen-Long/assets/wave7-44bb1fd7.png"
             alt=""
             class="w-100 position-absolute top-0 start-0 bg-wave7 hero-h-v100 hero-bg-img"
-          /><img
+          />
+          <!-- <img
             src="/assets/images/wave8.png"
             alt=""
             class="w-100 position-absolute top-0 start-0 bg-wave8 hero-h-v100 hero-bg-img"
           /> -->
-          <img
-            src="/Queen-Long/assets/hero_bg_wave-4b30047a.png"
+          <!-- <img
+            src="/assets/images/hero_bg_wave.png"
             alt=""
             class="w-100 position-absolute top-0 start-0 bg-wave hero-h-v100 hero-bg-img"
           />
           <img
-            src="/Queen-Long/assets/hero_bg_wave2-91aaebcc.png"
+            src="/assets/images/hero_bg_wave2.png"
             alt=""
             class="w-100 position-absolute top-0 start-0 bg-wave2 hero-h-v100 hero-bg-img"
-          />
+          /> -->
           <img
             src="/Queen-Long/assets/hero_bg-1cc8a58b.jpg"
             alt=""
@@ -1004,6 +1005,54 @@ function enableScroll() {
           repeat: -1,
           yoyo: true,
         });
+        gsap.to(waveImage, {
+      y: 20,
+      duration: 4,
+      ease: "none",
+      repeat: -1,
+      yoyo: true,
+    });
+    gsap.from(wave2Image, {
+      y: 40,
+      duration: 4,
+      ease: "rough({ template: none.out, strength: 1, points: 20, taper: none, randomize: true, clamp: false})",
+      repeat: -1,
+      yoyo: true,
+    });
+    gsap.from(wave3Image, {
+      y: 37,
+      duration: 5,
+      ease: "circ.out",      repeat: -1,
+      yoyo: true,
+    });
+    gsap.from(wave4Image, {
+      y: 46,
+      duration: 4,
+      ease: "none",
+      repeat: -1,
+      yoyo: true,
+    });
+    gsap.from(wave5Image, {
+      y: 20,
+      duration: 5,
+      ease: "bounce.out",
+            repeat: -1,
+      yoyo: true,
+    });
+    gsap.from(wave6Image, {
+      y: 35,
+      duration: 3,
+      ease: "none",
+      repeat: -1,
+      yoyo: true,
+    });
+    gsap.from(wave7Image, {
+      y: 13,
+      duration: 1,
+      ease: "none",
+      repeat: -1,
+      yoyo: true,
+    });
       },
       // small
       "(max-width: 599px)": function () {
@@ -1023,6 +1072,54 @@ function enableScroll() {
           repeat: -1,
           yoyo: true,
         });
+        gsap.to(waveImage, {
+      y: 20,
+      duration: 4,
+      ease: "none",
+      repeat: -1,
+      yoyo: true,
+    });
+    gsap.from(wave2Image, {
+      y: 23,
+      duration: 4,
+      ease: "rough({ template: none.out, strength: 1, points: 20, taper: none, randomize: true, clamp: false})",
+      repeat: -1,
+      yoyo: true,
+    });
+    gsap.from(wave3Image, {
+      y: 5,
+      duration: 5,
+      ease: "circ.out",      repeat: -1,
+      yoyo: true,
+    });
+    gsap.from(wave4Image, {
+      y: 15,
+      duration: 4,
+      ease: "none",
+      repeat: -1,
+      yoyo: true,
+    });
+    gsap.from(wave5Image, {
+      y: 20,
+      duration: 5,
+      ease: "bounce.out",
+            repeat: -1,
+      yoyo: true,
+    });
+    gsap.from(wave6Image, {
+      y: 23,
+      duration: 6,
+      ease: "none",
+      repeat: -1,
+      yoyo: true,
+    });
+    gsap.from(wave7Image, {
+      y: 13,
+      duration: 5,
+      ease: "none",
+      repeat: -1,
+      yoyo: true,
+    });
       },
     });
 
@@ -1041,62 +1138,7 @@ function enableScroll() {
       repeat: -1,
       yoyo: true,
     });
-    gsap.to(waveImage, {
-      y: 20,
-      duration: 4,
-      ease: "none",
-      repeat: -1,
-      yoyo: true,
-    });
-    gsap.from(wave2Image, {
-      y: 40,
-      duration: 4,
-      ease: "none",
-      repeat: -1,
-      yoyo: true,
-    });
-    gsap.from(wave3Image, {
-      y: 37,
-      duration: 4,
-      ease: "none",
-      repeat: -1,
-      yoyo: true,
-    });
-    gsap.from(wave4Image, {
-      y: 16,
-      duration: 4,
-      ease: "none",
-      repeat: -1,
-      yoyo: true,
-    });
-    gsap.from(wave5Image, {
-      y: 20,
-      duration: 4,
-      ease: "none",
-      repeat: -1,
-      yoyo: true,
-    });
-    gsap.from(wave6Image, {
-      y: 35,
-      duration: 4,
-      ease: "none",
-      repeat: -1,
-      yoyo: true,
-    });
-    gsap.from(wave7Image, {
-      y: 13,
-      duration: 4,
-      ease: "none",
-      repeat: -1,
-      yoyo: true,
-    });
-    gsap.from(wave8Image, {
-      y: 23,
-      duration: 4,
-      ease: "none",
-      repeat: -1,
-      yoyo: true,
-    });
+  
 
     $(function () {
       let $accordion, $wideScreen;
