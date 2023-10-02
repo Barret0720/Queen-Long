@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>News Media | Hylas</title>
-    <script type="module" crossorigin src="/Queen-Long/assets/sail_single-b115e198.js"></script>
-    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-5147fe16.css">
+    <script type="module" crossorigin src="/Queen-Long/assets/sail_single-4c01dffa.js"></script>
+    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-9511435f.css">
   </head>
   <body>
     <div class="loading-container">
@@ -46,7 +46,7 @@
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAZCAYAAACy0zfoAAAACXBIWXMAAAsSAAALEgHS3X78AAABG0lEQVRIie3XwQ2CUAwG4F8XcAVHACbwCidvcITEPYwLuIGRIzc9cXYCwipO8EyTZ0IIaPtaEw426QED5UsNLaycc1hqrBcrk+CSrIgoNTdLsmIvqcHC+YIPylBgkhUlgJukBrdzVGzjUwz0sKs/pBpbM1zXNjWAalCcDRzBKKqube5muFDgDKzm3lP0tEqAWpgYxwVawIJw34BWMArVhhhBngDOAE4WMDVuAjgMFQwW68sDLqOfj1oYftg5+ot3Xdv0mtqqzk3A3h0M2iRmuJmn8hC6Scxwn8aFZtWpcZw5ZgUU4SQD1gIoedkUT34tkPuyGbySNEBu53o/u0SwGSA/aAhzMk7zKE7zknv+VNL1VId7/v/TMCgAvAB9Wxu0KrsUogAAAABJRU5ErkJggg==" class="img-fluid close-icon"  alt="" />
     </button>
 
-    <div class="navbar-collapse collapse ms-auto" data-bs-backdrop="static" id="navbar" style="min-height: 100vh;">
+    <div class="navbar-collapse collapse ms-auto w-100" data-bs-backdrop="static" id="navbar" style="min-height: 100vh;">
       <ul class="navbar-nav ms-auto mb-2">
         <li class="text-end me-8">
           <a
@@ -213,7 +213,7 @@
     </div>
 
     <div class="brand pb-5">
-      <img src="/Queen-Long/assets/logo_1-bc9afc6a.png" class="img-fluid " alt="" />
+      <img src="/Queen-Long/assets/logo_1-bc9afc6a.png" class="img-fluid" alt="" />
     </div>
     <p class="fs-7 mb-0 text-center pb-1 text-white-50 d-block d-md-none">
       2023 © QUEEN LONG MARINE Designed By
@@ -261,8 +261,8 @@
 </div>
 <div class="nav-logo">
   <a class="navbar-brand" href="index.html">
-    <img src="/Queen-Long/assets/logo_4-c27161eb.png" class="nav-light"  alt="">
-    <img src="/Queen-Long/assets/logo_4_dark-d90a9d41.png" class="nav-dark" alt="">
+    <img src="/Queen-Long/assets/logo_4-c27161eb.png" class="nav-light" alt="" />
+    <img src="/Queen-Long/assets/logo_4_dark-d90a9d41.png" class="nav-dark" alt="" />
   </a>
 </div>
 
@@ -275,23 +275,6 @@
   } else {
     darkLogo.style.display = "none";
   }
-  // window.onload = function () {
-  //   const footerEle = document.querySelector(".footer");
-  //   const footerHeight = footerEle.scrollHeight;
-  //   const allHeight = document.body.scrollHeight;
-  //   const navLogo = document.querySelector(".logo-area");
-  //   let delHeight = window.innerHeight;
-  //   window.onscroll = function () {
-  //     let top = window.scrollY;
-  //     let changeYpx = allHeight - delHeight - 160;
-  //     if (top >= changeYpx) {
-  //       navLogo.style.visibility = "hidden";
-  //     } else {
-  //       navLogo.style.visibility = "visible";
-  //     }
-  //   };
-  // };
-
   const connectIcon = document.querySelector(".connectIcon");
   const connectIcons = document.querySelector(".connectIcons");
   connectIcon.addEventListener("click", (e) => {
@@ -309,73 +292,35 @@
     yoyo: true,
   });
   let currentVal = 0;
-let scrollVal = 0;
-const navCtrlEle = document.querySelector(".navCtrl");
-const navBarElm = document.querySelector(".navbar-toggler");
-const navLogoElm = document.querySelector(".nav-logo")
+  let scrollVal = 0;
+  const navCtrlEle = document.querySelector(".navCtrl");
+  const navBarElm = document.querySelector(".navbar-toggler");
+  const navLogoElm = document.querySelector(".nav-logo");
 
-let navOpen = false;
+  let navOpen = false;
 
-// navBarElm.addEventListener("click", function () {
-//   navOpen = !navOpen;
-//   if (navOpen) {
-//     disableScroll();
-//     // navLogoElm.style.visibility = "hidden";
-//   } else {
-//     enableScroll();
-//     // navLogoElm.style.visibility = "visible";
-//   }
-// });
+  let toggleButton = document.querySelector(".navbar-toggler");
 
-// 获取折叠按钮元素
-var toggleButton = document.querySelector('.navbar-toggler');
+  const navBrand = document.querySelector(".nav-logo");
 
-// 获取navbar-brand元素
-const navBrand = document.querySelector('.nav-logo');
+  navBarElm.addEventListener("click", function () {
+    if (toggleButton.getAttribute("aria-expanded") === "true") {
+      disableScroll();
+      navBrand.classList.remove("logo-show");
+      navBrand.classList.add("logo-hidden");
+    } else {
+      enableScroll();
+      navBrand.classList.remove("logo-hidden");
+      navBrand.classList.add("logo-show");
+    }
+  });
 
-// 监听Bootstrap折叠状态的事件
-navBarElm.addEventListener('click', function () {
-  // 检查折叠按钮的状态
-  if (toggleButton.getAttribute('aria-expanded') === 'true') {
-    // 如果折叠按钮已展开，显示nav-hid元素
-    disableScroll();
-    navBrand.classList.remove("logo-show");
-    navBrand.classList.add("logo-hidden");
-  } else {
-    // 如果折叠按钮已折叠，隐藏nav-hid元素
-    enableScroll();
-    navBrand.classList.remove("logo-hidden");
-    navBrand.classList.add("logo-show");
+  function disableScroll() {
+    $("body").css("overflow", "hidden");
   }
-});
-
-// $(window).scroll(function () {
-//   currentVal = scrollVal;
-//   scrollVal = $(window).scrollTop();
-
-//   if (currentVal < scrollVal) {
-//     if (scrollVal < 10) {
-//       navOpen = true; 
-//     }
-//     navCtrlEle.style.display = "none";
-//     navBarElm.style.visibility = "hidden";
-//   } else {
-//     navCtrlEle.style.display = "block";
-//     navBarElm.style.visibility = "visible";
-//   }
-//   if (navOpen) {
-//     disableScroll();
-//   } else {
-//     enableScroll();
-//   }
-// });
-
-function disableScroll() {
-  $("body").css("overflow", "hidden");
-}
-function enableScroll() {
-  $("body").css("overflow", "auto");
-}
+  function enableScroll() {
+    $("body").css("overflow", "auto");
+  }
 </script>
     
   </body>
