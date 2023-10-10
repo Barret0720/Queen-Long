@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Merchandise | Hylas</title>
-    <script type="module" crossorigin src="/Queen-Long/assets/merchandise_single-f3a68c51.js"></script>
-    <link rel="modulepreload" crossorigin href="/Queen-Long/assets/sail_single-c4fb47a7.js">
-    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-7554fa1f.css">
+    <script type="module" crossorigin src="/Queen-Long/assets/merchandise_single-bca957cf.js"></script>
+    <link rel="modulepreload" crossorigin href="/Queen-Long/assets/sail_single-159b1519.js">
+    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-653f6134.css">
   </head>
   <link
     rel="stylesheet"
@@ -132,28 +132,45 @@
       <section class="container-broken mt-5">
         <div class="row row-1 row-cols-md-2">
           <div class="img-box">
-            <div class="main-image mb-1">
-              <div class="main-box">
-                <img src="/Queen-Long/assets/merchandiseProduct9-cb0c685b.jpg" alt="">
+            <div class="main-image mb-1 h-75">
+              <div class="main-box h-100 mx-auto">
+                <img
+                  src="/Queen-Long/assets/merchandiseProduct9-cb0c685b.jpg"
+                  alt=""
+                />
               </div>
             </div>
-            <div class="thumbnail-image">
-              <img
-                src="/Queen-Long/assets/merchandiseProduct9-cb0c685b.jpg"
-                alt=""
-              />              <img
-              src="/Queen-Long/assets/merchandiseProduct11-1e8c9782.jpg"
-              alt=""
-            />              <img
-            src="/Queen-Long/assets/merchandiseProductHeat-4a13fbcf.jpg"
-            alt=""
-          />              <img
-          src="/Queen-Long/assets/merchandiseProductHeat2-7ebd5b0e.jpg"
-          alt=""
-        />              <img
-        src="/Queen-Long/assets/merchandiseProduct9-cb0c685b.jpg"
-        alt=""
-      />
+            <div class="thumbnail-image h-25">
+              <div class="tumthumbnail-box h-100">
+                <img
+                  src="/Queen-Long/assets/merchandiseProduct9-cb0c685b.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="tumthumbnail-box">
+                <img
+                  src="/Queen-Long/assets/merchandiseProduct11-1e8c9782.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="tumthumbnail-box">
+                <img
+                  src="/Queen-Long/assets/merchandiseProductHeat-4a13fbcf.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="tumthumbnail-box">
+                <img
+                  src="/Queen-Long/assets/merchandiseProductHeat2-7ebd5b0e.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="tumthumbnail-box">
+                <img
+                  src="/Queen-Long/assets/merchandiseProduct9-cb0c685b.jpg"
+                  alt=""
+                />
+              </div>
             </div>
             <div class="pswp-gallery" id="my-gallery">
               <a
@@ -283,7 +300,7 @@
       <section class="container text-center text-md-end">
         <a
           href="merchandise.html"
-          class="back-button mt-md-8 mt-2 mb-9 p-1 ps-2"
+          class="back-button ratio1-1 mt-md-8 mt-2 mb-9 p-1 ps-2"
           ><span class="back-arrow"></span
         ></a>
       </section>
@@ -333,7 +350,7 @@
         <ul class="list-unstyled">
           <li>+1 954 866 0750</li>
           <li>info@hylasyachts.com</li>
-          <li class="text-md-nowrap">
+          <li class="text-lg-nowrap">
             No 4, Tung Ya Road, Shaou Kang, Kaohsiung, Taiwan R.O.C.
             <span class="d-none d-md-inline">(812)</span>
           </li>
@@ -460,7 +477,85 @@
     
 
     
+<script>
+  // carousel for products
+var tween = window.TweenMax;
+  $('.nk-product-carousel').each(function () {
+      var $carousel = $(this).find('.nk-carousel-inner');
+      var $thumbs = $(this).find('.nk-product-carousel-thumbs');
+      var $thumbsCont = $thumbs.children();
+      var curX = 0;
+      var thumbsW = 0;
+      var thumbsContW = 0;
 
+      function updateValues() {
+          if ($thumbsCont[0]._gsTransform && $thumbsCont[0]._gsTransform.x) {
+              curX = $thumbsCont[0]._gsTransform.x;
+          } else {
+              curX = 0;
+          }
+          thumbsW = $thumbs.width();
+          thumbsContW = $thumbsCont.width();
+      }
+
+      $thumbsCont.on('click', '> div', function () {
+          var index = $(this).index();
+          $carousel.flickity('select', index);
+      });
+
+      $carousel.on('cellSelect', function () {
+          var api = $carousel.data('flickity');
+          if (!api) {
+              return;
+          }
+          // set selected nav cell
+          var $selected = $thumbsCont.children().removeClass('active').eq(api.selectedIndex).addClass('active');
+
+          // scroll nav
+          updateValues();
+          var selectedLeft = $selected.position().left;
+          if (selectedLeft < 0) {
+              tween.to($thumbsCont, 0.2, {
+                  x: curX - selectedLeft
+              });
+          } else {
+              var selectedW = $selected.width();
+              if (selectedLeft + selectedW > thumbsW) {
+                  tween.to($thumbsCont, 0.2, {
+                      x: curX - (selectedLeft + selectedW - thumbsW)
+                  });
+              }
+          }
+      });
+
+      var startX = false;
+      var mc = new Hammer.Manager($thumbs[0]);
+      mc.add(new Hammer.Pan({
+          pointers: 1,
+          threshold: 0
+      }));
+      mc.on('pan press', function (e) {
+          e.preventDefault();
+
+          // init
+          if (startX === false) {
+              updateValues();
+              startX = curX;
+          }
+
+          // move
+          if (thumbsContW > thumbsW) {
+              curX = Math.min(0, Math.max(e.deltaX + startX, thumbsW - thumbsContW));
+              tween.set($thumbsCont, {
+                  x: curX
+              });
+          }
+          if (e.isFinal) {
+              startX = false;
+          }
+      });
+  });
+</script>
     <script>
       (function ($) {
         //設定大圖瀏覽顯示尺寸: 元素必須包含 href, data-size 屬性
