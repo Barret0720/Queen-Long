@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Hylas</title>
-    <script type="module" crossorigin src="/Queen-Long/assets/sail_single-6b12817e.js"></script>
-    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-0c7407e5.css">
+    <script type="module" crossorigin src="/Queen-Long/assets/sail_single-a8843096.js"></script>
+    <link rel="stylesheet" href="/Queen-Long/assets/sail_single-f5b201b0.css">
   </head>
   <body>
     <nav class="navbar bg-transparent fixed-top" aria-label="First navbar">
-  <div class="container mb-auto mt-1 flex-column">
+  <div class="w-100 text-end mb-auto mt-1 flex-column">
     <button
-      style="margin-right: calc(-1 * 3.5vw)"
+      style="margin-right: 3.5vw"
       class="navbar-toggler collapsed border-0 ms-auto"
       type="button"
       data-bs-toggle="collapse"
@@ -27,45 +27,45 @@
 
     <div class="navbar-collapse collapse ms-auto w-100" data-bs-backdrop="static" id="navbar" style="min-height: 100vh;">
       <ul class="navbar-nav ms-auto mb-2">
-        <li class="text-end me-8">
+        <li class="text-end">
           <a
-            class="nav-link text-white fw-normal active"
+            class="pe-8 nav-link text-white fw-normal active"
             aria-current="page"
             href="index.html"
             ><img src="/Queen-Long/assets/logo_3-0c41d9ed.png" class="menu-logo" alt=""
           /></a>
         </li>
-        <li class="nav-item text-end me-8">
+        <li class="nav-item text-end">
           <a
-            class="nav-link text-white fw-normal active fs-3"
+            class="pe-8 nav-link text-white fw-normal active fs-3"
             aria-current="page"
             href="about.html"
             >Hylas /</a
           >
         </li>
-        <li class="nav-item text-end me-8">
-          <a class="nav-link text-white fw-normal fs-3" href="media.html"
+        <li class="nav-item text-end">
+          <a class="pe-8 nav-link text-white fw-normal fs-3" href="media.html"
             >Media /</a
           >
         </li>
-        <li class="nav-item text-end me-8">
-          <a class="nav-link text-white fw-normal fs-3" href="merchandise.html"
+        <li class="nav-item text-end">
+          <a class="pe-8 nav-link text-white fw-normal fs-3" href="merchandise.html"
             >Merchandise /</a
           >
         </li>
-        <li class="nav-item text-end me-8">
-          <a class="nav-link text-white fw-normal fs-3" href="index.html"
+        <li class="nav-item text-end">
+          <a class="pe-8 nav-link text-white fw-normal fs-3" href="index.html"
             >Power /</a
           >
         </li>
-        <li class="nav-item text-end me-8">
-          <a class="nav-link text-white fw-normal fs-3" href="sail.html"
+        <li class="nav-item text-end">
+          <a class="pe-8 nav-link text-white fw-normal fs-3" href="sail.html"
             >Sail /</a
           >
         </li>
-        <li class="nav-item text-end me-8">
+        <li class="nav-item text-end">
           <a
-            class="nav-link text-white fw-normal fs-4 d-flex align-items-center justify-content-end"
+            class="pe-8 nav-link text-white fw-normal fs-4 d-flex align-items-center justify-content-end"
             href="index.html"
             ><img
               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAjCAYAAACOysqWAAAACXBIWXMAAAsSAAALEgHS3X78AAABSElEQVRIie2WQU7DMBBFHxVLJMKOZZYse4QepUfpEXqEHqFHyBHCDdITEAQ7Kg1yZUOwJvE4dYSE+JI3sfy/45n5MzcighG3wB1wBt6th1aJ/QrYAR3wAbwAb0APHIA6qeD+YGTVItLKNHoR2U5wjApUItIlyIfY5ArsM8jFX8YsUGWSB6hPpQV5bc2QCBvtY0kBNaNSaXo1NIF2Jql6ThNogNcZAo1VwGGfSf4MHNWdiSpsjOnpqnmdW2ihHo6GAhslTwmE5WzgEFlHk/KgsHLseha0INfeip1Fi2H1PsBbS5BzTS5GG8dkSJ7yfit+ZFWpm8fofBYSOtcS2AWB0rcP6EM/UH28AO7dFOLqYMlCePiVfvAv8AcFTgvyn1fempfA6TLme1Mq5aRDXAbiYf+1NvkUnAd9Tdtxy3wEnq54Ltfdvgcw4BNIp+39VOpkAgAAAABJRU5ErkJggg=="
@@ -79,12 +79,33 @@
       <img src="/Queen-Long/assets/menu-bg-55dac6c1.jpg" class="nav-bg" alt="" />
     </div>
   </div>
-</nav>    <main class="about text-center">
+</nav>    <div class="loading-container">
+  <div class="logo">
+    <img src="/Queen-Long/assets/logo_4-c27161eb.png" class="img-fluid" />
+  </div>
+</div>
+<script>
+  window.addEventListener("load", function () {
+    const loadingContainer = document.querySelector(".loading-container");
+    loadingContainer.style.opacity = "1";
+    loadingContainer.style.transition = "opacity 1s ease-in-out";
+
+    setTimeout(function () {
+      loadingContainer.style.opacity = "0"; 
+    }, 2000);
+
+    loadingContainer.addEventListener("transitionend", function () {
+      loadingContainer.style.display = "none";
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    });
+  });
+</script>    <main class="about text-center">
       <section class="hero">
-        <div class="container" style="margin-bottom: 64px">
+        <div class="container" style="margin-bottom: 40px">
           <p class="text-info fw-medium fs-5 mb-4">WE ARE</p>
           <h2 class="text-gray mb-2" style="font-size: 100px">Hylas</h2>
-          <p class="text-info mb-2 fw-medium fs-6">
+          <p class="text-info mb-2 fw-medium fs-6 mb-9">
             Queen Long Marine has been shaping the future with it's
             innovative,<br />
             award-winning, luxury Hylas Yachts for over 40 years
@@ -92,10 +113,13 @@
           <img
             src="/Queen-Long/assets/Abouthero-a4e44d7f.png"
             alt=""
-            class="img-fluid mb-4"
+            class="img-fluid mb-2"
           />
         </div>
-        <div class="container" style="margin-bottom: 72px">
+        <div
+          class="container p-2 p-md-5 px-3 px-md-9"
+          style="margin-bottom: 56px"
+        >
           <h3 class="fw-semibold">HYLAS LEGACY</h3>
           <p class="fw-light text-black">
             Third-generation family owned and operated for three decades and
@@ -109,8 +133,11 @@
             quality of a Hylas Yacht is evident throughout.
           </p>
         </div>
-        <div class="container" style="margin-bottom: 72px">
-          <div class="box shadow-box">
+        <div
+          class="container shadow-box p-2 p-md-5 px-3 px-md-9"
+          style="margin-bottom: 56px"
+        >
+          <div class="box">
             <h3 class="fw-semibold">LUXURY DESIGN</h3>
             <p class="fw-light text-black">
               Hylas yachts are equipped with reliable equipment and expert
@@ -130,11 +157,11 @@
             </p>
           </div>
         </div>
-        <div class="movie" style="margin-top: -160px">
+        <div class="movie mb-4" style="margin-top: -160px">
           <img src="/Queen-Long/assets/AboutMovie-7e66266f.png" alt="" class="w-100" />
         </div>
       </section>
-      <section class="container mb-4">
+      <section class="container shadow-box p-2 p-md-5 px-3 px-md-9 mb-4">
         <h3 class="fw-semibold">ABOUT QUEEN LONG MARINE</h3>
         <p class="fw-light text-black">
           The Queen Long Marine shipyard, founder and owner of the Hylas Yachts
@@ -151,191 +178,227 @@
           We sell direct to the customer to offer the best possible service.
         </p>
       </section>
-      <section class="container">
-        <h3></h3>
+      <section class="container mt-5 pt-9">
+        <h3 class="fw-semibold mb-2">TIMELINE</h3>
+        <h4 class="font-basic-sans text-info mb-2">1978</h4>
         <div class="time-line">
           <div class="timeline">
             <div
-              class="row row-cols-1 row-cols-md-2 ms-3 ms-md-auto flex-row-reverse g-0"
+              class="timeline-block row row-cols-1 row-cols-md-2 ms-3 ms-md-auto g-0"
             >
-              <div class="card border-0 rounded-0 ps-2">
-                <img
-                  class="img-fluid"
-                  src="/Queen-Long/assets/timeLine_1981-25c98336.jpg"
-                  alt="1981"
-                />
-                <div class="card-body">
-                  <h4 class="card-title">1981</h4>
-                  <p class="card-text">Stevens 47 Built | 1981</p>
-                </div>
-              </div>
-              <div class="card mt-9 border-0 rounded-0 pe-2">
-                <img
-                  class="img-fluid"
-                  src="/Queen-Long/assets/timeLine_1982-9e850e01.jpg"
-                  alt="1982"
-                />
-                <div class="card-body">
-                  <h4 class="card-title">1982</h4>
+              <div class="card border-0 rounded-0">
+                <div class="card-body text-md-end first-card">
+                  <h3 class="brand">HYLAS</h3>
+                  <h4 class="card-title fw-semibold fw-semibold">1982</h4>
                   <p class="card-text">Peterson 46 built | 1982</p>
                 </div>
               </div>
             </div>
             <div
-              class="row row-cols-1 row-cols-md-2 ms-3 ms-md-auto flex-row-reverse g-0 time-line-gray"
+              class="timeline-block row row-cols-1 row-cols-md-2 ms-3 ms-md-auto flex-row-reverse g-0"
             >
-              <div class="card border-0 rounded-0 ps-2">
-                <img
-                  class="img-fluid"
-                  src="/Queen-Long/assets/timeLine_1995-fbdd0964.jpg"
-                  alt="1995"
-                />
+              <div class="card border-0 rounded-0">
+                <div class="card-img-box">
+                  <img
+                    class="img-fluid"
+                    src="/Queen-Long/assets/timeLine_1981-25c98336.jpg"
+                    alt="1981"
+                  />
+                </div>
                 <div class="card-body">
-                  <h4 class="card-title">1995</h4>
-                  <p class="card-text">Hylas H46 Built | 1995<br>
-                    -In Production</p>
+                  <h4 class="card-title fw-semibold">1981</h4>
+                  <p class="card-text">Stevens 47 Built | 1981</p>
                 </div>
               </div>
-              <div class="card mt-9 border-0 rounded-0 pe-2">
-                <img
-                  class="img-fluid"
-                  src="/Queen-Long/assets/timeLine_2004-228839bf.jpg"
-                  alt="2004"
-                />
+              <div class="card border-0 rounded-0">
+                <div class="card-img-box">
+                  <img
+                    class="img-fluid"
+                    src="/Queen-Long/assets/timeLine_1982-9e850e01.jpg"
+                    alt="1982"
+                  />
+                </div>
                 <div class="card-body">
-                  <h4 class="card-title">2004</h4>
+                  <h4 class="card-title fw-semibold">1982</h4>
+                  <p class="card-text">Peterson 46 built | 1982</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="timeline-block row row-cols-1 row-cols-md-2 ms-3 ms-md-auto flex-row-reverse g-0 time-line-gray"
+            >
+              <div class="card border-0 rounded-0">
+                <div class="card-img-box">
+                  <img
+                    class="img-fluid"
+                    src="/Queen-Long/assets/timeLine_1995-fbdd0964.jpg"
+                    alt="1995"
+                  />
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title fw-semibold">1995</h4>
+                  <p class="card-text">
+                    Hylas H46 Built | 1995<br />
+                    -In Production
+                  </p>
+                </div>
+              </div>
+              <div class="card border-0 rounded-0">
+                <div class="card-img-box">
+                  <img
+                    class="img-fluid"
+                    src="/Queen-Long/assets/timeLine_2004-228839bf.jpg"
+                    alt="2004"
+                  />
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title fw-semibold">2004</h4>
                   <p class="card-text">Hylas H66 Built | 2004-05</p>
                 </div>
               </div>
             </div>
             <div
-              class="row row-cols-1 row-cols-md-2 ms-3 ms-md-auto flex-row-reverse g-0"
+              class="timeline-block row row-cols-1 row-cols-md-2 ms-3 ms-md-auto flex-row-reverse g-0"
             >
-              <div class="card border-0 rounded-0 ps-2">
-                <img
-                  class="img-fluid"
-                  src="/Queen-Long/assets/timeLine_2010-d53cc463.jpg"
-                  alt="2010"
-                />
+              <div class="card border-0 rounded-0">
+                <div class="card-img-box">
+                  <img
+                    class="img-fluid"
+                    src="/Queen-Long/assets/timeLine_2010-d53cc463.jpg"
+                    alt="2010"
+                  />
+                </div>
                 <div class="card-body">
-                  <h4 class="card-title">2010</h4>
-                  <p class="card-text">Hylas H56 Built | 2010<br>
-                    -In Production</p>
+                  <h4 class="card-title fw-semibold">2010</h4>
+                  <p class="card-text">
+                    Hylas H56 Built | 2010<br />
+                    -In Production
+                  </p>
                 </div>
               </div>
-              <div class="card mt-9 border-0 rounded-0 pe-2">
-                <img
-                  class="img-fluid"
-                  src="/Queen-Long/assets/timeLine_2019-4dd564c5.jpg"
-                  alt="2019"
-                />
+              <div class="card border-0 rounded-0">
+                <div class="card-img-box">
+                  <img
+                    class="img-fluid"
+                    src="/Queen-Long/assets/timeLine_2019-4dd564c5.jpg"
+                    alt="2019"
+                  />
+                </div>
                 <div class="card-body">
-                  <h4 class="card-title">2019</h4>
-                  <p class="card-text">New Hylas H57 & H60<br>
-                    | Coming Soon</p>
+                  <h4 class="card-title fw-semibold">2019</h4>
+                  <p class="card-text">
+                    New Hylas H57 & H60<br />
+                    | Coming Soon
+                  </p>
                 </div>
               </div>
             </div>
             <div
-              class="row row-cols-1 row-cols-md-2 ms-3 ms-md-auto flex-row-reverse g-0 time-line-gray"
+              class="timeline-block row row-cols-1 row-cols-md-2 ms-3 ms-md-auto flex-row-reverse g-0 time-line-gray"
             >
-              <div class="card border-0 rounded-0 ps-2">
-                <img
-                  class="img-fluid"
-                  src="/Queen-Long/assets/timeLine_2021-8f3247ae.jpg"
-                  alt="2021"
-                />
+              <div class="card border-0 rounded-0">
+                <div class="card-img-box">
+                  <img
+                    class="img-fluid"
+                    src="/Queen-Long/assets/timeLine_2021-8f3247ae.jpg"
+                    alt="2021"
+                  />
+                </div>
                 <div class="card-body">
-                  <h4 class="card-title">2021</h4>
+                  <h4 class="card-title fw-semibold">2021</h4>
                   <p class="card-text">New Hylas H57</p>
                 </div>
               </div>
-              <div class="card mt-9 border-0 rounded-0 pe-2">
-                <img
-                  class="img-fluid"
-                  src="/Queen-Long/assets/timeLine_2004-228839bf.jpg"
-                  alt="2004"
-                />
+              <div class="card border-0 rounded-0">
+                <div class="card-img-box">
+                  <img
+                    class="img-fluid"
+                    src="/Queen-Long/assets/timeLine_2004-228839bf.jpg"
+                    alt="2004"
+                  />
+                </div>
                 <div class="card-body">
-                  <h4 class="card-title">2022</h4>
+                  <h4 class="card-title fw-semibold">2022</h4>
                   <p class="card-text">New Hylas M49</p>
                 </div>
               </div>
             </div>
             <div
-            class="row row-cols-1 row-cols-md-2 ms-3 ms-md-auto flex-row-reverse g-0"
-          >
-            <div class="card border-0 rounded-0 ps-2">
-              <img
-                class="img-fluid"
-                src="/Queen-Long/assets/timeLine_2023-bc79a650.jpg"
-                alt="2023"
-              />
-              <div class="card-body">
-                <h4 class="card-title">2023</h4>
-                <p class="card-text">New Hylas M47</p>
-              </div>
-            </div>
-          </div>
-            <div class="timeline-block">
-              <div class="timeline-dot">&nbsp;</div>
-              <div class="timeline-content">
-                <div class="timeline-date">1985</div>
-                <p>創辦人Gary Wu從衛星天線驅動系統起家。</p>
+              class="timeline-block row row-cols-1 row-cols-md-2 ms-3 ms-md-auto flex-row-reverse g-0"
+            >
+              <div class="card border-0 rounded-0">
+                <div class="card-img-box">
+                  <img
+                    class="img-fluid"
+                    src="/Queen-Long/assets/timeLine_2023-bc79a650.jpg"
+                    alt="2023"
+                  />
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title fw-semibold">2023</h4>
+                  <p class="card-text">New Hylas M47</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <h4 class="font-basic-sans text-info mb-2">2023</h4>
       </section>
-      <section class="container">
+      <section class="container mt-5 pt-9">
         <h3 class="text-center fw-semibold">FOUNDER & CEO</h3>
-        <div class="row row-cols-1 row-cols-md-2">
-          <div class="card border-0">
+        <div
+          class="d-flex flex-column flex-md-row justify-content-md-around mt-2 mt-md-4"
+        >
+          <div class="card border-0 rounded-0 w-md-40 w-100">
             <img
-              class="card-img-top"
+              class="card-img-top rounded-0"
               src="/Queen-Long/assets/JOSEPH_HUANG-7052c0d4.jpg"
               alt="JOSEPH HUANG"
               class="img-fluid"
             />
             <div class="card-body">
-              <h4 class="card-title">JOSEPH HUANG</h4>
+              <h4 class="card-title fw-normal text-primary text-start">
+                JOSEPH HUANG
+              </h4>
             </div>
           </div>
-          <div class="card border-0">
+          <div class="card border-0 rounded-0 w-md-40 w-100">
             <img
-              class="card-img-top"
+              class="card-img-top rounded-0"
               src="/Queen-Long/assets/ANDY_HUANG-b066b609.jpg"
               alt="ANDY HUANG"
               class="img-fluid"
             />
             <div class="card-body">
-              <h4 class="card-title">ANDY HUANG</h4>
+              <h4 class="card-title fw-normal text-primary text-start">
+                ANDY HUANG
+              </h4>
             </div>
           </div>
         </div>
-        <p>
+        <p class="ceo-word">
           California state university, Fullerton. Finance (Bachelor of Finance
           and Economics), Pasadena Art center (Master of Furniture Design)
         </p>
-        <p>
-          Hylas Yachts Founded in 1979, it focuses on 46-70 feet high-quality
-          power sailboats. It is one of the few Asian shipyards that
-          manufactures customized sailboats. In 1985, the "HYLAS" ​​brand was
-          officially established. Emphasis is placed on combining the
+        <p class="ceo-word">
+          Hylas Yachts<br />Founded in 1979, it focuses on 46-70 feet
+          high-quality power sailboats. It is one of the few Asian shipyards
+          that manufactures customized sailboats. In 1985, the "HYLAS" ​​brand
+          was officially established. Emphasis is placed on combining the
           performance of a high-performance racing sailboat with the luxurious
           and comfortable space of a yacht, making Hylas feel comfortable and
           convenient, elegant and smooth sailing, and feel like home when
           driving Hylas.
         </p>
-        <p>
+        <p class="ceo-word">
           Andy Huang is the third generation. He was born in the Institute of
           Art Center College of Design in Los Angeles. Leaders work together to
           lead the company into a new pattern.
         </p>
       </section>
-      <section class="container">
+      <section class="container mt-5 pt-9">
         <h3 class="text-center fw-semibold">MEET THE DESIGNER</h3>
-        <div class="d-flex mb-2">
+        <div class="d-flex mb-2 mb-md-4">
           <div class="col-3 me-4">
             <img
               src="/Queen-Long/assets/Bill-9cf2c22f.jpg"
@@ -344,6 +407,11 @@
             />
           </div>
           <div class="text-start">
+            <img
+              class="icons_35"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsSAAALEgHS3X78AAADE0lEQVRYhb1Yu24TQRQ9iSgokOwSqgQJatKuhBSnTLNxSZflC1hKChZrv8DwA9h/YO8PYEuIpbRrkGJX0IGlFHRGd3XGuh7PPrx+HMlSPNm5c+bc5/pkuVyiDqIkvQDQLNj6Pfa9f9uaflCTTAvAl5LHPgIIt7V9WocQgE6FZ97UMVxLIQt9ADO19GEXY/sg1It9b2S+REm6E6G6LjsYKmcZA7kH4GxLMgsA3dj3qsRdNUJRkp4DuNuSiI23se91yx6q6rJKtyuzESVpUd3KUBrUVOdWLV3pIC7Z22QGNvgJyy5XRSFtYFyVjCD2vb8SP2opLFOpUCGHOhu34wEX/DqLfW9mPdKlMpVUKgzqKEl7ipCo07LIivGABxkMmVW6NnVUwZSsO6d6G8h1GZvnhjqyTqJ3bA8Na+uN9LkoSUdRkgZKpQX/bhT1uFyFxCCAS6MOCXXUmsYcgNz4Rc7/OnSr6W+5KjkVYhHUB1+yu9tkpgBex74nxuXAK/Y2DSmkn61mm6uSUyFLHRcyxfIyjvElqrQdLjVwqrRGiIa6jAMX+iRiZ5ITzMBQZZkNUTjUF8sIqRvdOjYtSLJXlUgOuYBnuHrhmJk5MIQmjoCUYDREnClak1ibirlC4vrk/fDbYwC/1OKUbCW1DwYmTmB55ZMQEj//UYtPd3HNtoiSdKbceH1Kd4yVna0H8x3ItKyY+mrqkHZPgONBn9WPfe8+I8R4WZV2VfIPBpYEHT+ZKKf2AtE+gkb60nNTizQhPbfcsDYdi9Dq7BUhZtY0Z8NewUlC172Vd+zmqlU6ZBzpTB7qwmsTGqjgPmNV3SsYzNruWgHORlhrDB2p5hqQZC5YSzRcY6yGngCkPc1oYyJKSaV+KD+d5AxXcFVuGggLpoLc9pPTN0HPvHL1MhsyI0+4ZuSu+vY6p8IjTpStkh8j3pluH9A9zQKlig41CtbZv+CFB/JmuzExlsxGGjKsrf3yofa73kZsZG4lkVWWFQ354sqXAJ4BeMJlce1PaYKx7/0uYhsl6SO1/zmX7wH84H6xsw4A/wHTVU7vxMgIKwAAAABJRU5ErkJggg=="
+              alt="icon boat"
+            />
             <h4 class="text-info fw-bold">Bill Dixon</h4>
             <p class="text-black">Managing Director</p>
             <p class="text-black">
@@ -351,20 +419,20 @@
               the strategic direction of the practice with an established
               reputation for award winning design and visionary thinking.
             </p>
-            <p class="text-black">
+            <p class="ceo-word">
               Throughout the project process he is directly involved and is
               passionate about the detail, ensuring the delivery of the vision
               has been carried through to completion. A lifetime of racing,
               sailing and family cruising, brings a deep understanding of the
               nautical environment and respect for the sea.
             </p>
-            <p class="text-black">
+            <p class="ceo-word">
               When not designing he is most likely to be found cruising around
               the Solent on his boat or behind a BBQ.
             </p>
           </div>
         </div>
-        <div class="d-flex flex-row-reverse mb-2">
+        <div class="d-flex flex-row-reverse mb-2  mb-md-4">
           <div class="col-3 ms-4">
             <img
               src="/Queen-Long/assets/Frers-191c8683.jpg"
@@ -373,8 +441,13 @@
             />
           </div>
           <div class="text-start">
+            <img
+              class="icons_35"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsSAAALEgHS3X78AAADE0lEQVRYhb1Yu24TQRQ9iSgokOwSqgQJatKuhBSnTLNxSZflC1hKChZrv8DwA9h/YO8PYEuIpbRrkGJX0IGlFHRGd3XGuh7PPrx+HMlSPNm5c+bc5/pkuVyiDqIkvQDQLNj6Pfa9f9uaflCTTAvAl5LHPgIIt7V9WocQgE6FZ97UMVxLIQt9ADO19GEXY/sg1It9b2S+REm6E6G6LjsYKmcZA7kH4GxLMgsA3dj3qsRdNUJRkp4DuNuSiI23se91yx6q6rJKtyuzESVpUd3KUBrUVOdWLV3pIC7Z22QGNvgJyy5XRSFtYFyVjCD2vb8SP2opLFOpUCGHOhu34wEX/DqLfW9mPdKlMpVUKgzqKEl7ipCo07LIivGABxkMmVW6NnVUwZSsO6d6G8h1GZvnhjqyTqJ3bA8Na+uN9LkoSUdRkgZKpQX/bhT1uFyFxCCAS6MOCXXUmsYcgNz4Rc7/OnSr6W+5KjkVYhHUB1+yu9tkpgBex74nxuXAK/Y2DSmkn61mm6uSUyFLHRcyxfIyjvElqrQdLjVwqrRGiIa6jAMX+iRiZ5ITzMBQZZkNUTjUF8sIqRvdOjYtSLJXlUgOuYBnuHrhmJk5MIQmjoCUYDREnClak1ibirlC4vrk/fDbYwC/1OKUbCW1DwYmTmB55ZMQEj//UYtPd3HNtoiSdKbceH1Kd4yVna0H8x3ItKyY+mrqkHZPgONBn9WPfe8+I8R4WZV2VfIPBpYEHT+ZKKf2AtE+gkb60nNTizQhPbfcsDYdi9Dq7BUhZtY0Z8NewUlC172Vd+zmqlU6ZBzpTB7qwmsTGqjgPmNV3SsYzNruWgHORlhrDB2p5hqQZC5YSzRcY6yGngCkPc1oYyJKSaV+KD+d5AxXcFVuGggLpoLc9pPTN0HPvHL1MhsyI0+4ZuSu+vY6p8IjTpStkh8j3pluH9A9zQKlig41CtbZv+CFB/JmuzExlsxGGjKsrf3yofa73kZsZG4lkVWWFQ354sqXAJ4BeMJlce1PaYKx7/0uYhsl6SO1/zmX7wH84H6xsw4A/wHTVU7vxMgIKwAAAABJRU5ErkJggg=="
+              alt="icon boat"
+            />
             <h4 class="text-info fw-bold">Germán Frers</h4>
-            <p class="text-black">
+            <p class="ceo-word">
               Germán Frers, Sr. (born July 4, 1941, in Argentina) is a naval
               architect renowned for designing successful racing yachts. He
               designed his first yacht in 1958. There is a design team
@@ -386,7 +459,7 @@
             </p>
           </div>
         </div>
-        <div class="d-flex">
+        <div class="d-flex  mb-2 mb-md-4">
           <div class="col-3 me-4">
             <img
               src="/Queen-Long/assets/STEPHENS-f6013e8e.jpg"
@@ -395,21 +468,26 @@
             />
           </div>
           <div class="text-start">
+            <img
+              class="icons_35"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAACXBIWXMAAAsSAAALEgHS3X78AAADE0lEQVRYhb1Yu24TQRQ9iSgokOwSqgQJatKuhBSnTLNxSZflC1hKChZrv8DwA9h/YO8PYEuIpbRrkGJX0IGlFHRGd3XGuh7PPrx+HMlSPNm5c+bc5/pkuVyiDqIkvQDQLNj6Pfa9f9uaflCTTAvAl5LHPgIIt7V9WocQgE6FZ97UMVxLIQt9ADO19GEXY/sg1It9b2S+REm6E6G6LjsYKmcZA7kH4GxLMgsA3dj3qsRdNUJRkp4DuNuSiI23se91yx6q6rJKtyuzESVpUd3KUBrUVOdWLV3pIC7Z22QGNvgJyy5XRSFtYFyVjCD2vb8SP2opLFOpUCGHOhu34wEX/DqLfW9mPdKlMpVUKgzqKEl7ipCo07LIivGABxkMmVW6NnVUwZSsO6d6G8h1GZvnhjqyTqJ3bA8Na+uN9LkoSUdRkgZKpQX/bhT1uFyFxCCAS6MOCXXUmsYcgNz4Rc7/OnSr6W+5KjkVYhHUB1+yu9tkpgBex74nxuXAK/Y2DSmkn61mm6uSUyFLHRcyxfIyjvElqrQdLjVwqrRGiIa6jAMX+iRiZ5ITzMBQZZkNUTjUF8sIqRvdOjYtSLJXlUgOuYBnuHrhmJk5MIQmjoCUYDREnClak1ibirlC4vrk/fDbYwC/1OKUbCW1DwYmTmB55ZMQEj//UYtPd3HNtoiSdKbceH1Kd4yVna0H8x3ItKyY+mrqkHZPgONBn9WPfe8+I8R4WZV2VfIPBpYEHT+ZKKf2AtE+gkb60nNTizQhPbfcsDYdi9Dq7BUhZtY0Z8NewUlC172Vd+zmqlU6ZBzpTB7qwmsTGqjgPmNV3SsYzNruWgHORlhrDB2p5hqQZC5YSzRcY6yGngCkPc1oYyJKSaV+KD+d5AxXcFVuGggLpoLc9pPTN0HPvHL1MhsyI0+4ZuSu+vY6p8IjTpStkh8j3pluH9A9zQKlig41CtbZv+CFB/JmuzExlsxGGjKsrf3yofa73kZsZG4lkVWWFQ354sqXAJ4BeMJlce1PaYKx7/0uYhsl6SO1/zmX7wH84H6xsw4A/wHTVU7vxMgIKwAAAABJRU5ErkJggg=="
+              alt="icon boat"
+            />
             <h4 class="text-info fw-bold">OLIN STEPHENS</h4>
-            <p class="text-black">
+            <p class="ceo-word">
               “For advancing knowledge and research in naval architecture,
               particularly in the outstanding design and technology of sailing
               yachts.”
             </p>
-            <p class="text-black">BY J. NICHOLAS NEWMAN</p>
-            <p class="text-black">
+            <p class="ceo-word">BY J. NICHOLAS NEWMAN</p>
+            <p class="ceo-word">
               OLIN STEPHENS died on September 13, 2008, five months after
               celebrating his 100th birthday. During his long career he was the
               preeminent designer of sailing yachts. He was regarded with great
               respect and affection by naval architects and sailors throughout
               the world.
             </p>
-            <p class="text-black">
+            <p class="ceo-word">
               Olin was born in New York City on April 13, 1908. He and his
               brother Rod learned to sail small boats during their childhood,
               and this experience molded their careers. Olin attended MIT in
@@ -422,6 +500,13 @@
         </div>
       </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+ 
     <footer class="footer position-relative">
   <div class="container col-3xl-9">
     <div class="col-5 col-md-2 col-3xl-1 mb-3 mb-md-2 ms-1">
