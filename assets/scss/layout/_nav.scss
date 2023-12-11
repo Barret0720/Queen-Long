@@ -3,15 +3,15 @@
   margin-left: calc( -1 * var(--bs-gutter-x) * 0.5);
   margin-right: calc( -1 * var(--bs-gutter-x) * 0.5);
 }
-nav:has(.navbar-collapse.collapse.show){
-  height: 100%;
-  transition: all 0.5s ease-in;
-}
+// nav:has(.navbar-collapse.collapse.show){
+//   height: 100%;
+//   transition: all 0.5s ease-in;
+// }
 .nav-bg{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: right;
   position: absolute;
   top: 0;
   left: 0;
@@ -19,5 +19,62 @@ nav:has(.navbar-collapse.collapse.show){
   transition: all 0.5s ease-in;
 }
 .menu-logo{
-  width: 100px;
+  width: 160px;
+  padding-bottom: 1.2rem;
+}
+.navbar-toggler:focus{    box-shadow: 0 0 7px 5px #37658480 !important;}
+.nav-logo{
+    position: fixed;
+    z-index: 1099;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    margin-top: 16px;
+}
+.nav-light{
+  width: 8vw !important;
+  margin-top: 30px;
+}
+.nav-dark{
+  height: 75px !important;
+}
+.logo-show{
+  visibility: visible;
+}
+.logo-hidden{
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.nav-link{
+  padding-top: 0.8rem !important;
+  padding-bottom: 0.8rem !important;
+}
+
+.nk-onscroll-hide{
+  visibility: hidden;
+}
+
+.nk-onscroll-show{
+  visibility: visible;
+}
+
+.close-icon {
+  display: block;
+
+}
+.open-icon{
+  display: none;
+}
+
+.collapsed {
+  .close-icon {
+  display: none;
+  }
+
+  .open-icon {
+  display: block;
+  }
 }

@@ -4,11 +4,16 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 @import './utils/utilities';
 
-@import './layout/nav.scss';
-@import './layout/footer.scss';
+@import './layout/loading';
+@import './layout/nav';
+@import './layout/footer';
 
-@import './utils/comm.scss';
-@import './pages/index.scss';
-@import './pages/about.scss';
+@import './utils/comm';
+@import './utils/component';
+@import './pages/index';
+@import './pages/about';
+@import './pages/media';
+@import './pages/merchandise';
+@import './pages/sail';
 
 @import '../../node_modules/bootstrap';

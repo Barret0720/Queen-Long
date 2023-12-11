@@ -1,0 +1,22 @@
+<div class="loading-container">
+  <div class="logo">
+    <img src="/assets/images/logo_4.png" class="img-fluid" />
+  </div>
+</div>
+<script>
+  window.addEventListener("load", function () {
+    const loadingContainer = document.querySelector(".loading-container");
+    loadingContainer.style.opacity = "1";
+    loadingContainer.style.transition = "opacity 1s ease-in-out";
+
+    setTimeout(function () {
+      loadingContainer.style.opacity = "0"; 
+    }, 2000);
+
+    loadingContainer.addEventListener("transitionend", function () {
+      loadingContainer.style.display = "none";
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    });
+  });
+</script>

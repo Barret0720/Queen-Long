@@ -1,31 +1,99 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%- include('./layout/head'); -%>
     <title>Media | Hylas</title>
   </head>
   <body>
-    <%- include('./layout/nav'); -%>
+    <%- include('./layout/loading'); -%> <%- include('./layout/nav'); -%>
     <main class="media text-center">
-      <section class="title mt-7 w-100 d-flex justify-content-center mb-4">
+      <section class="title mt-9 pt-1 w-100 d-flex justify-content-center mb-2 mb-md-4">
         <div class="col-8 text-center">
-          <img src="/assets/images/media_header.png" class="img-fluid" alt="">
+          <h1 class="title-word title-word-blue">MEDIA</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item breadcrumb-item-blue"><a href="index.html">HOME</a></li>
+              <li class="breadcrumb-item breadcrumb-item-blue" aria-current="page">
+                MEDIA
+              </li>
+            </ol>
+          </nav>
         </div>
       </section>
-      <section class="mb-2">
+      <section class="mb-2 pb-5 container-fluid">
         <ul class="list-unstyled row g-3">
-          <li class="col-12 col-md-6"><a href="#"><img src="/assets/images/media_News.png" class="img-fluid" alt=""></a></li>
-          <li class="col-12 col-md-6"><a href="#"><img src="/assets/images/media_show.png" class="img-fluid" alt=""></a></li>
-          <li class="col-12"><a href="#"><img src="/assets/images/media_Articles.png" class="img-fluid" alt=""></a></li>
-          <li class="col-12 col-md-6"><a href="#"><img src="/assets/images/media_News2.png" class="img-fluid" alt=""></a></li>
-          <li class="col-12 col-md-6"><a href="#" class="position-relative"><img src="/assets/images/media_videos.png" class="img-fluid" alt=""><img class="position-absolute top-50 start-50 translate-middle" src="/assets/images/video_icon.png" alt=""></a></li>
+          <li class="col-12 col-md-6">
+            <div class="position-relative list-card">
+              <a href="media_list.html"
+                ><img
+                  src="/assets/images/media_News.png"
+                  class="img-fluid w-100"
+                  alt=""
+                />
+                <p class="position-absolute end-0 fs-3 list-title">News</p></a
+              >
+            </div>
+          </li>
+          <li class="col-12 col-md-6">
+            <div class="position-relative list-card">
+              <a href="media_list.html"
+                ><img
+                  src="/assets/images/media_show.png"
+                  class="img-fluid w-100"
+                  alt=""
+                />
+                <p class="position-absolute fs-3 list-title">
+                  Boat Show
+                </p></a
+              >
+            </div>
+          </li>
+          <li class="col-12">
+            <div class="position-relative list-card">
+              <a href="media_list.html"
+                ><img
+                  src="/assets/images/media_Articles.png"
+                  class="img-fluid w-100"
+                  alt=""
+                />
+                <p class="position-absolute start-50 translate-middle-x fs-3 list-title mb-0 mb-md-2">Articles</p></a
+              >
+            </div>
+          </li>
+          <li class="col-12 col-md-6">
+            <div class="position-relative list-card">
+              <a href="media_list.html"
+                ><img
+                  src="/assets/images/media_News2.png"
+                  class="img-fluid w-100"
+                  alt=""
+                />
+                <p class="position-absolute end-0 fs-3 list-title">
+                  Press News
+                </p></a
+              >
+            </div>
+          </li>
+          <li class="col-12 col-md-6">
+            <div class="position-relative list-card">
+              <a href="media_list.html" 
+                ><img
+                  src="/assets/images/media_videos.png"
+                  class="img-fluid w-100"
+                  alt=""
+                /><img
+                  class="position-absolute top-50 start-50 translate-middle"
+                  src="/assets/images/video_icon.png"
+                  alt=""
+                />
+                <p class="position-absolute fs-3 list-title">Videos</p></a
+              >
+            </div>
+          </li>
         </ul>
       </section>
     </main>
-    <%- include('./layout/footer'); -%>
-    <%- include('./layout/jspackage'); -%>   
+    <%- include('./layout/jspackage'); -%> <%- include('./layout/footer'); -%>
     <script type="module" src="../main.js"></script>
   </body>
 </html>

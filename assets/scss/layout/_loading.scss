@@ -1,0 +1,38 @@
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    background-image: url(/assets/images/hero_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 99999;
+    transition: background-image 0.5s ease-in-out; 
+ }
+.logo {
+    width: 20vw; 
+    border-radius: 50%; 
+    animation: breathe 3s infinite alternate; 
+}
+@include media-breakpoint-up(md) { 
+    .logo{
+        width: 16vw;
+    }
+}
+
+@keyframes breathe {
+    0% {
+        transform: scale(1); 
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1.1); 
+        opacity: 1; 
+    }
+}

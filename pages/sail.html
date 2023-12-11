@@ -4,22 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Hylas</title>
+    <title>Sail | Hylas</title>
   </head>
   <body>
     <%- include('./layout/nav'); -%>
-    <div class="pt-7">
-      <img src="/assets/images/web/sail_title.jpg" class="img-fluid">
-    </div>
-    <div class="container mb-2">
-      <img src="/assets/images/web/sail_slogan.jpg" class="img-fluid" alt="">
-    </div>
-    <ul class="list-unstyled row row-cols-1 row-cols-md-2 g-0">
-      <li class="mb-2"><a href="#"><img src="/assets/images/web/sail_left.jpg" class="img-fluid" alt=""></a></li>
-      <li class=""><a href="#"><img src="/assets/images/web/sail_right.jpg" class="img-fluid" alt=""></a></li>
-    </ul>
+    <main class="sail">
+      <section
+        class="title-image mt-9 w-100 d-flex justify-content-center mb-3"
+      >
+        <div class="mx-auto">
+          <h1 class="title-word">SAIL</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">HOME</a></li>
+              <li class="breadcrumb-item" aria-current="page">SAIL</li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+      <section class="d-flex justify-content-center mb-2">
+        <div>
+          <h2 class="fw-light text-primary">
+            SAILING YACHTS FOR SALE
+          </h2>
+          <h3 class="fw-light text-primary">Choose a sailing yacht</h3>
+        </div>
+      </section>
+      <section>
+        <ul class="list-unstyled row row-cols-1 row-cols-md-2 g-0 mb-3">
+          <li class="mb-2 position-relative sail-box"><a href="sail_list_news.html"><img src="/assets/images/sail/sail_left.jpg" class="img-fluid w-100" alt=""><h3 class="fw-bolder text-white sail-word">New</h3><div class="square-element"></div></a></li>
+          <li class="mb-2 position-relative sail-box"><a href="sail_list_secondhand.html"><img src="/assets/images/sail/sail_riglt.jpg" class="img-fluid w-100" alt=""><h3 class="fw-bolder text-white sail-word">Secondhand</h3><div class="square-element"></div></a></li>
+        </ul>
+      </section>
+    </main>
+    <%- include('./layout/jspackage'); -%> 
     <%- include('./layout/footer'); -%>
-    <%- include('./layout/jspackage'); -%>   
     <script type="module" src="../main.js"></script>
+
   </body>
 </html>

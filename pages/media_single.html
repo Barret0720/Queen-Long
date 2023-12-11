@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Media | Hylas</title>
+  </head>
+  <body>
+    <%- include('./layout/loading'); -%> <%- include('./layout/nav'); -%>
+    <main class="media">
+      <section
+        class="title-image mt-9 w-100 d-flex justify-content-center mb-7"
+      >
+        <div class="mx-auto">
+          <h1 class="title-word">MEDIA</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">HOME</a></li>
+              <li class="breadcrumb-item" aria-current="page">MEDIA</li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+      <section class="mb-2 container text-center text-xl-start mt-2 mtmd-4">
+        <h3 class="fw-semibold w-xl-50">
+          More National Acclaim for Hylas Yachts
+        </h3>
+        <p class="card-date">August 27, 2023</p>
+        <img
+          src="/assets/images/media/media_main.jpg"
+          class="img-fluid mb-4"
+          alt=""
+        />
+        <p class="fs-5 mb-2">
+          The winners of the Cruising World’s “Boat of the Year” awards have
+          just been announced and the Hylas H57 has won best cruising yacht
+          overall. This is a great testament to Bill Dixon’s design and the
+          Hylas unwavering commitment to building high quality ocean capable
+          yachts.
+        </p>
+        <p class="fs-5">
+          What a spectacular way to round off a hugely successful fall boat show
+          season. The Hylas H57 won “Best In Show” at the Newport International
+          Boat Show and now the top award after the rigorous inspection by
+          Cruising World judges in Annapolis.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center mt-md-8 mt-2">
+          <img
+            src="/assets/images/media/media_award1.jpg"
+            class="img-fluid me-md-5 mb-2"
+            alt=""
+          />
+          <img
+            src="/assets/images/media/media_award2.jpg"
+            class="img-fluid mb2-"
+            alt=""
+          />
+        </div>
+      </section>
+      <div class="d-flex justify-content-center align-items-center">
+        <a
+        href="media_list.html"
+        class="back-button fw-normal text-info mt-md-8 mt-2 mb-9"
+        ><span class="back-arrow me-1"></span>Back</a
+      >
+      </div>
+
+    </main>
+    <%- include('./layout/jspackage'); -%> <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+.merchandise {
+  .title-image {
+    background-image: url("/assets/images/merchandise/merchandiseBanner.jpg");
+  }
+  .next-button{
+    visibility: hidden;
+    margin-top: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  .card {
+    overflow: hidden;
+    height: 100%;
+    .card-img-top{
+      mix-blend-mode: multiply;
+     }
+    &:hover {
+      background-color: rgb(201 217 219 / 26%);
+      border-radius: 16px !important;
+      box-shadow:  4px 4px 16px -6px rgba(0, 0, 0, 0.54);
+      transition: all 0.3s;
+      .next-button{
+        visibility: visible;
+      }
+
+    }
+  }
+
+  .card-body{
+    height: 100%;
+  }
+  .card-color {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    gap: 8px;
+    span {
+      width: 23px;
+      height: 23px;
+      border-radius: 100%;
+    }
+    .light-blue{
+        background-color: #769ee9;
+    }
+    .blue {
+      background-color: #34549e;
+    }
+    .black {
+      background-color: #000;
+    }
+    .nav-blue {
+      background-color: #0e2b4b;
+    }
+    .red {
+      background-color: #c2122a;
+    }
+    .grey {
+      background-color: #cdccc6;
+    }
+    .bule-grey{
+        background-color: #71788b;
+    }
+    .white {
+      background-color: #fff;
+      border: solid 1px #cdccc6;
+    }
+  }
+  .card-title {
+    font-weight: 500;
+    color: $black;
+  }
+  .card-text {
+    font-weight: 400;
+    font-size: 14px;
+    color: $gray-500;
+  }
+  .card-price {
+    font-weight: 500;
+    color: $black;
+  }
+  .main-image{
+    max-height: 500px;
+
+  }
+  .main-box{
+    aspect-ratio: 1/1;
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  .thumbnail-image{
+    max-height: 136px;
+    display: flex;
+    justify-content: center;
+    // flex-wrap: nowrap;
+    // overflow-x: scroll;
+    gap: 16px;
+    .tumthumbnail-box{
+      height: 100%;
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+        // opacity: 0.5;
+      }
+    }
+
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+.thumbnail-image::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.thumbnail-image {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+}

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merchandise | Hylas</title>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/photoswipe@5.2.2/dist/photoswipe.css "
+  />
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"
+  ></script>
+  <body>
+    <%- include('./layout/loading'); -%> <%- include('./layout/nav'); -%>
+    <main class="merchandise">
+      <section
+        class="title-image mt-9 w-100 d-flex justify-content-center mb-7"
+      >
+        <div class="mx-auto">
+          <h1 class="title-word">MERCHANDISE</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">HOME</a></li>
+              <li class="breadcrumb-item">
+                <a href="merchandise.html">MERCHANDISE</a>
+              </li>
+              <li class="breadcrumb-item" aria-current="page">
+                Port Authority Flexfit One ...
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+      <section class="container-broken mt-5">
+        <div class="row row-1 row-cols-md-2">
+          <div class="img-box">
+            <div class="main-image mb-1 h-75">
+              <div class="main-box h-100 mx-auto">
+                <img
+                  src="/assets/images/merchandise/merchandiseSingle.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="thumbnail-image h-25">
+              <div class="tumthumbnail-box h-100">
+                <img
+                  src="/assets/images/merchandise/merchandiseSlide_1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="tumthumbnail-box">
+                <img
+                src="/assets/images/merchandise/merchandiseSlide_2.jpg"
+                alt=""
+                />
+              </div>
+              <div class="tumthumbnail-box">
+                <img
+                src="/assets/images/merchandise/merchandiseSlide_3.jpg"
+                alt=""
+                />
+              </div>
+            </div>
+            <!-- <div class="pswp-gallery" id="my-gallery">
+              <a
+                href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"
+                data-pswp-width="1875"
+                data-pswp-height="2500"
+                target="_blank"
+              >
+                <img
+                  src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"
+                data-pswp-width="1669"
+                data-pswp-height="2500"
+                target="_blank"
+              >
+                <img
+                  src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"
+                  alt=""
+                />
+              </a>
+              <a
+                href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
+                data-pswp-width="2500"
+                data-pswp-height="1666"
+                target="_blank"
+              >
+                <img
+                  src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"
+                  alt=""
+                />
+              </a>
+            </div> -->
+          </div>
+
+          <div class="product-information w-100 w-md-33">
+            <h4 class="fw-semibold">
+              Port Authority Flexfit One Ten Cool & Dry Mini Pique Cap
+            </h4>
+            <p class="text-gray">Port Authority | C934-CRS_HYLAS</p>
+            <p class="fw-semibold">$32.00</p>
+            <h5>color</h5>
+            <div class="card-color justify-content-start">
+              <span class="blue"></span>
+              <span class="black"></span>
+              <span class="nav-blue"></span>
+              <span class="red"></span>
+              <span class="grey"></span>
+              <span class="white"></span>
+            </div>
+            <h5 class="mt-5">Description</h5>
+            <p class="fw-light">
+              The Icon Suede Hat is made of 100% vegan suede and features an
+              embossed 'T' logo on a metal badge. This high-crown, premium hat
+              has an adjustable strap with a metal buckle closure. The visor is
+              made from recycled plastic bottles.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="container-broken pt-5">
+        <h4 class="ms-2 mb-2">Recommended Products</h4>
+        <ul
+          class="list-unstyled row row-cols-1 row-cols-md-3 justify-content-between"
+        >
+          <li>
+            <a href="merchandise_single.html">
+              <div
+                class="card border-0 rounded-0 p-5 pb-3 overflow-hidden bg-light"
+              >
+                <img
+                  class="card-img-top w-75 mx-auto"
+                  src="/assets/images/merchandise/merchandiseProductHeat.jpg"
+                  alt="Port Authority Snapback Truker Cap"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Port Authority Snapback Truker Cap</h4>
+                  <p class="card-title">$30.00</p>
+                </div>
+              </div></a
+            >
+          </li>
+          <li>
+            <a href="merchandise_single.html">
+              <div
+                class="card border-0 rounded-0 p-5 pb-3 overflow-hidden bg-light"
+              >
+                <img
+                  class="card-img-top w-75 mx-auto"
+                  src="/assets/images/merchandise/merchandiseProductHeat3.jpg"
+                  alt="Port Authority Low-Profile
+                  Snapback Trucker Cap"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">
+                    Port Authority Low-Profile Snapback Trucker Cap
+                  </h4>
+                  <p class="card-title">$30.00</p>
+                </div>
+              </div></a
+            >
+          </li>
+          <li>
+            <a href="merchandise_single.html">
+              <div
+                class="card border-0 rounded-0 p-5 pb-3 overflow-hidden bg-light"
+              >
+                <img
+                  class="card-img-top w-75 mx-auto"
+                  src="/assets/images/merchandise/merchandiseProductHeat4.jpg"
+                  alt="Port Authority Flexfit 110 Performance Snapback Cap C301"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">
+                    Port Authority Flexfit 110 Performance Snapback Cap C301
+                  </h4>
+                  <p class="card-title">$32.00</p>
+                </div>
+              </div></a
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="container text-center text-md-end">
+        <a
+          href="merchandise.html"
+          class="back-button ratio1-1 mt-md-8 mt-2 mb-9 p-1 ps-2"
+          ><span class="back-arrow"></span
+        ></a>
+      </section>
+    </main>
+    <%- include('./layout/jspackage'); -%> <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+
+    <script type="module">
+      import PhotoSwipeLightbox from "https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js";
+
+      const lightbox = new PhotoSwipeLightbox({
+        gallery: "#my-gallery",
+        children: "a",
+        pswpModule: () => import("https://unpkg.com/photoswipe"),
+      });
+
+      lightbox.init();
+    </script>
+<script>
+  // carousel for products
+var tween = window.TweenMax;
+  $('.nk-product-carousel').each(function () {
+      var $carousel = $(this).find('.nk-carousel-inner');
+      var $thumbs = $(this).find('.nk-product-carousel-thumbs');
+      var $thumbsCont = $thumbs.children();
+      var curX = 0;
+      var thumbsW = 0;
+      var thumbsContW = 0;
+
+      function updateValues() {
+          if ($thumbsCont[0]._gsTransform && $thumbsCont[0]._gsTransform.x) {
+              curX = $thumbsCont[0]._gsTransform.x;
+          } else {
+              curX = 0;
+          }
+          thumbsW = $thumbs.width();
+          thumbsContW = $thumbsCont.width();
+      }
+
+      $thumbsCont.on('click', '> div', function () {
+          var index = $(this).index();
+          $carousel.flickity('select', index);
+      });
+
+      $carousel.on('cellSelect', function () {
+          var api = $carousel.data('flickity');
+          if (!api) {
+              return;
+          }
+          // set selected nav cell
+          var $selected = $thumbsCont.children().removeClass('active').eq(api.selectedIndex).addClass('active');
+
+          // scroll nav
+          updateValues();
+          var selectedLeft = $selected.position().left;
+          if (selectedLeft < 0) {
+              tween.to($thumbsCont, 0.2, {
+                  x: curX - selectedLeft
+              });
+          } else {
+              var selectedW = $selected.width();
+              if (selectedLeft + selectedW > thumbsW) {
+                  tween.to($thumbsCont, 0.2, {
+                      x: curX - (selectedLeft + selectedW - thumbsW)
+                  });
+              }
+          }
+      });
+
+      var startX = false;
+      var mc = new Hammer.Manager($thumbs[0]);
+      mc.add(new Hammer.Pan({
+          pointers: 1,
+          threshold: 0
+      }));
+      mc.on('pan press', function (e) {
+          e.preventDefault();
+
+          // init
+          if (startX === false) {
+              updateValues();
+              startX = curX;
+          }
+
+          // move
+          if (thumbsContW > thumbsW) {
+              curX = Math.min(0, Math.max(e.deltaX + startX, thumbsW - thumbsContW));
+              tween.set($thumbsCont, {
+                  x: curX
+              });
+          }
+          if (e.isFinal) {
+              startX = false;
+          }
+      });
+  });
+</script>
+    <script>
+      (function ($) {
+        //設定大圖瀏覽顯示尺寸: 元素必須包含 href, data-size 屬性
+
+        var $gabrItems505_1 = $(".gabrItems505_1");
+        var image505_1 = new Image(); //使用 href 的內容來建立新圖片
+        image505_1.src = $gabrItems505_1.attr("href");
+        //alert(image505_1.src);
+        image505_1.onload = function () {
+          //必須等新圖片載入完成才可繼續設定
+          //alert('natural size: ' + image505_1.naturalWidth + 'x' + image505_1.naturalHeight);
+          $gabrItems505_1.attr(
+            "data-size",
+            image505_1.naturalWidth + "x" + image505_1.naturalHeight
+          );
+        };
+
+        var $gabrItems505_2 = $(".gabrItems505_2");
+        var image505_2 = new Image(); //使用 href 的內容來建立新圖片
+        image505_2.src = $gabrItems505_2.attr("href");
+        //alert(image505_2.src);
+        image505_2.onload = function () {
+          //必須等新圖片載入完成才可繼續設定
+          //alert('natural size: ' + image505_2.naturalWidth + 'x' + image505_2.naturalHeight);
+          $gabrItems505_2.attr(
+            "data-size",
+            image505_2.naturalWidth + "x" + image505_2.naturalHeight
+          );
+        };
+
+        var $gabrItems505_3 = $(".gabrItems505_3");
+        var image505_3 = new Image(); //使用 href 的內容來建立新圖片
+        image505_3.src = $gabrItems505_3.attr("href");
+        //alert(image505_3.src);
+        image505_3.onload = function () {
+          //必須等新圖片載入完成才可繼續設定
+          //alert('natural size: ' + image505_3.naturalWidth + 'x' + image505_3.naturalHeight);
+          $gabrItems505_3.attr(
+            "data-size",
+            image505_3.naturalWidth + "x" + image505_3.naturalHeight
+          );
+        };
+      })(jQuery);
+    </script>
+  </body>
+</html>

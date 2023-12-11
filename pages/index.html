@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <%- include('./layout/head'); -%>
     <title>QUEEN LONG MARINE | CUSTOMIZATION</title>
   </head>
+
   <body>
-    <%- include('./layout/nav'); -%>
+    <%- include('./layout/loading'); -%> <%- include('./layout/nav'); -%>
     <main class="index overflow-hidden">
-      <section data-bgcolor="#ffffff" class="hero position-relative">
+      <section class="hero position-relative">
         <div
-          class="container position-absolute top-0 start-50 translate-middle-x z-1"
+          class="col-10 col-md-9 position-absolute top-0 start-50 translate-middle-x z-1"
           data-aos="fade-zoom-in"
           data-aos-easing="ease-in-back"
           data-aos-delay="300"
@@ -22,456 +20,955 @@
             <p class="title">QUEEN LONG MARINE</p>
             <div class="v-line"></div>
           </div>
-          <h2 class="slogan">CUSTOMIZATION</h2>
+          <h2 class="slogan text-nowrap mt-md-7">
+            Cultivated by time and experience. <br />
+            Excellent craft and extraordinary design.
+          </h2>
         </div>
         <div class="position-relative hero_bg">
           <img
-            src="/assets/images/hero_bg.png"
+            src="/assets/images/wave1.png"
             alt=""
-            class="w-100"
+            class="w-100 position-absolute top-0 start-0 bg-wave hero-h-v100 hero-bg-img"
+          /><img
+            src="/assets/images/wave2.png"
+            alt=""
+            class="w-100 position-absolute top-0 start-0 bg-wave2 hero-h-v100 hero-bg-img"
+          /><img
+            src="/assets/images/wave3.png"
+            alt=""
+            class="w-100 position-absolute top-0 start-0 bg-wave3 hero-h-v100 hero-bg-img"
+          /><img
+            src="/assets/images/wave4.png"
+            alt=""
+            class="w-100 position-absolute top-0 start-0 bg-wave4 hero-h-v100 hero-bg-img"
+          /><img
+            src="/assets/images/wave5.png"
+            alt=""
+            class="w-100 position-absolute top-0 start-0 bg-wave5 hero-h-v100 hero-bg-img"
+          /><img
+            src="/assets/images/wave6.png"
+            alt=""
+            class="w-100 position-absolute top-0 start-0 bg-wave6 hero-h-v100 hero-bg-img"
+          /><img
+            src="/assets/images/wave7.png"
+            alt=""
+            class="w-100 position-absolute top-0 start-0 bg-wave7 hero-h-v100 hero-bg-img"
           />
-          
           <img
-            src="/assets/images/hero_bg_wave.png"
+            src="/assets/images/hero_bg.jpg"
             alt=""
-            class="w-100 position-absolute top-0 start-0 bg-wave"
-          />          <img
-          src="/assets/images/hero_bg_wave2.png"
-          alt=""
-          class="w-100 position-absolute top-0 start-0 bg-wave2"
-        />
+            class="w-100 hero-h-v100 hero-bg-img"
+          />
+
           <img
             src="/assets/images/bot.png"
             alt=""
-            class="w-100 position-absolute top-0 start-0 z-1 bg-bot"
+            class="w-100 position-absolute top-0 start-0 z-1 bg-boat d-none d-lg-block hero-bg-img"
+          />
+          <img
+            src="/assets/images/bot_mobile.png"
+            alt=""
+            class="w-100 position-absolute top-0 start-0 z-1 bg-boat-m d-block d-lg-none hero-bg-img"
           />
         </div>
-        <div class="hero-logo translate-middle-x text-center">
-          <img src="/assets/images/logo_4.png">
-        </div>
       </section>
-      <section data-bgcolor="#ffffff" class="position-relative mb-3 mb-md-72">
-        <ul class="list-unstyled m-0 p-0 slide-ul" data-aos="zoom-in">
-          <li class="slide-li out" data-tab="1">
+      <section 
+        class="position-relative mb-4 mb-md-72 z-1"
+      >
+        <ul class="list-unstyled m-0 p-0 slide-ul">
+          <li class="slide-li" data-tab="5">
             <div class="slide-word-box">
-              <h3 class="mx-1 mx-md-3 fw-bold">Affirmation of award</h3>
-              <h4 class="mb-3 mx-0 text-end font-sans-serif">獲獎肯定</h4>
+              <h3 class="mx-1 mx-md-1 fw-bold">Affirmation of award</h3>
+              <h4 class="mb-1 mb-md-3 mx-0 text-end font-sans-serif">
+                獲獎肯定
+              </h4>
             </div>
             <div class="slide-image-box">
-              <img
-                src="/assets/images/slide.jpg"
-                alt="slide1"
-                class="img-fluid slide-image"
-              />
-            </div>
-          </li>
-          <li class="slide-li" data-tab="2">
-            <div class="slide-word-box">
-              <h3 class="mx-1 mx-md-3 fw-bold">Co-designer</h3>
-              <h4 class="mb-3 mx-0 text-end font-sans-serif">合作設計師</h4>
-            </div>
-            <div class="slide-image-box">
-              <img
-                src="/assets/images/slide.jpg"
-                alt="slide1"
-                class="img-fluid slide-image"
-              />
-            </div>
-          </li>
-          <li class="slide-li" data-tab="3">
-            <div class="slide-word-box">
-              <h3 class="mx-1 mx-md-3 fw-bold">Quality Assurance</h3>
-              <h4 class="mb-3 mx-0 text-end font-sans-serif">品質保證</h4>
-            </div>
-            <div class="slide-image-box">
-              <img
-                src="/assets/images/slide.jpg"
-                alt="slide1"
-                class="img-fluid slide-image"
-              />
+              <div class="d-flex align-items-center h-100">
+                <img
+                  src="/assets/images/Slideaward.jpg"
+                  alt="slide1"
+                  class="img-fluid slide-image"
+                />
+              </div>
             </div>
           </li>
           <li class="slide-li" data-tab="4">
             <div class="slide-word-box">
-              <h3 class="mx-1 mx-md-3 fw-bold">Home maintenance</h3>
-              <h4 class="mb-3 mx-0 text-end font-sans-serif">到府維修保養</h4>
+              <h3 class="mx-1 mx-md-1 fw-bold">Co-designer</h3>
+              <h4 class="mb-1 mb-md-3 mx-0 text-end font-sans-serif">
+                合作設計師
+              </h4>
             </div>
             <div class="slide-image-box">
-              <img
-                src="/assets/images/slide.jpg"
-                alt="slide1"
-                class="img-fluid slide-image"
-              />
+              <div class="d-flex align-items-center h-100">
+                <img
+                  src="/assets/images/Slidedesigner.gif"
+                  alt="slide1"
+                  class="img-fluid slide-image"
+                />
+              </div>
             </div>
           </li>
-          <li class="slide-li" data-tab="5">
+          <li class="slide-li" data-tab="3">
             <div class="slide-word-box">
-              <h3 class="mx-1 mx-md-3 fw-bold">Club system</h3>
-              <h4 class="mb-3 mx-0 text-end font-sans-serif">俱樂部制度</h4>
+              <h3 class="mx-1 mx-md-1 fw-bold">Quality Assurance</h3>
+              <h4 class="mb-1 mb-md-3 mx-0 text-end font-sans-serif">
+                對工藝不變的堅持
+              </h4>
             </div>
             <div class="slide-image-box">
-              <img
-                src="/assets/images/slide.jpg"
-                alt="slide1"
-                class="img-fluid slide-image"
-              />
+              <div class="d-flex align-items-center h-100">
+                <img
+                  src="/assets/images/SlideQuality.gif"
+                  alt="slide1"
+                  class="img-fluid slide-image"
+                />
+              </div>
+            </div>
+          </li>
+          <li class="slide-li" data-tab="2">
+            <div class="slide-word-box">
+              <h3 class="mx-1 mx-md-1 fw-bold">Professional technology</h3>
+              <h4 class="mb-1 mb-md-3 mx-0 text-end font-sans-serif">
+                最新穎構造技術
+              </h4>
+            </div>
+            <div class="slide-image-box">
+              <div class="slide-video">
+                <div class="videobox">
+                  <iframe
+                    frameborder="0"
+                    src="https://www.youtube.com/embed/OcRKoKrWCbE?controls=0&autoplay=1&mute=1&loop=1&?modestbranding=1&&showinfo=0&vq=hd1080&playlist=OcRKoKrWCbE"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; loop"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="slide-li out" data-tab="1">
+            <div class="slide-word-box">
+              <h3 class="mx-1 mx-md-1 fw-bold">Club system</h3>
+              <h4 class="mb-1 mb-md-3 mx-0 text-end font-sans-serif">
+                俱樂部制度
+              </h4>
+            </div>
+            <div class="slide-image-box">
+              <div class="d-flex align-items-center h-100">
+                <img
+                  src="/assets/images/SlideClub.jpg"
+                  alt="slide1"
+                  class="img-fluid slide-image"
+                />
+              </div>
             </div>
           </li>
         </ul>
       </section>
-      <section data-bgcolor="#ffffff" class="position-relative mb-2">
+      <section 
+        class="position-relative mb-2 hero2"
+        style="z-index: 9"
+      >
         <div
-          class="position-absolute top-0 w-100 z-1"
+          class="position-absolute top-0 w-100 z-1 h-100"
           data-aos="zoom-in"
+          data-aos-duration="1500"
           data-aos-easing="ease-in-sine"
         >
-          <div class="container-fluid">
+          <div
+            class="container-fluid h-100 d-flex flex-column justify-content-between align-items-end"
+          >
             <h2
-              class="text-white fw-semibold text-end fs-md-110 me-md-7"
-              style="margin-top: 96px"
+              class="text-white fw-semibold text-end fs-md-55 fs-lg-110 me-md-7 mt-md-6 mt-lg-96"
             >
               SAILING<span class="ms-1 text-success">FLEET</span>
             </h2>
+            <div class="col-7 col-md-5 me-md-7">
+              <h3 class="text-third fw-bolder fs-md-2 fm-serif">
+                Our Heritage
+              </h3>
+              <p
+                class="fs-5 fm-serif mb-0 position-absolute z-3 d-none d-md-block"
+                style="padding: 8px; border-radius: 8px"
+              >
+                For over 40 years, Queen Long Marine has created innovative
+                yachts under the Hylas brand from the designs of Sparkman &
+                Stephens, Germán Frers, Bill Dixon and Dean Salthouse. Many have
+                been award winners, both for their beauty and build quality.
+              </p>
+              <p
+                class="fs-7 fm-serif mb-0 position-absolute z-3 d-block d-md-none"
+                style="padding: 8px; border-radius: 8px"
+              >
+                For over 40 years, Queen Long Marine have been award winners,
+                both for their beauty and build quality.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="col-9" data-aos="zoom-in" data-aos-easing="ease-in-sine">
+        <div
+          class="col-9"
+          data-aos="zoom-in"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="1500"
+        >
           <img
-            src="/assets/images/hero2.jpg"
+            src="/assets/images/hero2.png"
             alt="Sailing Fleet"
             class="img-fluid"
           />
         </div>
       </section>
-      <section data-bgcolor="#ffffff" class="mb-1 position-relative">
-        <div class="w-100 position-relative z-2 pt-4" data-aos="zoom-in">
-          <div class="col-9 h-100 ms-auto">
-            <img
-              src="/assets/images/turtle.png"
-              class="img-fluid col-5"
-              style="margin-left: calc(-1 * 6.25vw)"
-            />
-            <div
-              class="row row-cols-2 g-0 position-relative z-n1"
-              style="margin-top: calc(-1 * 3vw)"
-            >
-              <img src="/assets/images/womensup.png" class="img-fluid" alt="" />
-              <img src="/assets/images/area3Bg.png" class="img-fluid" alt="" />
-              <div class="horizontal-line"></div>
-              <div
-                class="position-absolute top-0 end-0 d-flex flex-column justify-content-between h-100 text-white pt-3 pt-md-80 pb-md-232 col-10"
-              >
-                <h2 class="text-end me-3 fw-bold fs-md-110" data-aos="zoom-in">
-                  FOR BUSINESS
-                </h2>
-                <h2 class="fw-bold fs-md-110" data-aos="zoom-in">Your life.</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-4 position-absolute top-0 z-1" data-aos="zoom-in">
-          <img
-            src="/assets/images/LightOfWaves_2.png"
-            alt="waves"
-            class="img-fluid"
-          />
-          <div class="wave-text-area">
-            <p
-              class="text-rl text-white fs-md-3 fs-7 fw-bold z1 me-1 h-100 md-0"
-              style="margin-top: calc(10.1vw)"
-            >
-              FRIENDS PARTY
-            </p>
-          </div>
-        </div>
-      </section>
-      <section
-        data-bgcolor="linear-gradient(180deg, rgba(255,255,255,1) 36%, rgba(121,121,121,1) 100%)"
-        class="gsap-section h-v100 family-trip position-relative z-2"
-        data-aos="zoom-in"
-        data-aos-easing="linear"
-        data-aos-duration="1500"
-      >
-        <div class="position-absolute top-25 w-100">
-          <div class="col-10 col-md-9">
-            <div class="col-4 col-md-3 ms-auto">
-              <div class="family-border position-relative">
-                <h2
-                  class="text-white fw-bolder fs-3 fs-md-4 my-1 my-md-4 lh-1"
-                  style="margin-left: -2rem"
-                >
-                  RETIRED<br />
-                  LIFE
-                </h2>
-                <p
-                  class="m-0 position-absolute text-warning translate-middle-y fs-md-4 fw-semibold"
-                  style="margin-left: -2rem !important"
-                >
-                  FAMILY TRIP
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <img
-          src="/assets/images/familytrip.png"
-          alt="familytrip"
-          class="img-fluid"
-          srcset=""
-        />
-      </section>
-      <section
-        data-bgcolor="linear-gradient(180deg, rgba(121,121,121,1) 0%, rgba(255,197,139,1) 36%, rgba(75,47,48,1) 100%)"
-        class="gsap-section  h-v100 friends-party position-relative friend z-1"
-        data-aos="fade-down"
-        data-aos-easing="linear"
-        data-aos-duration="2400"
-      >
-      <img
-      src="/assets/images/bg6.png"
-      alt="familytrip"
-      class="img-fluid position-relative z-n1 img-hv100"
-      srcset=""
-    />
-        <div class="position-absolute col-md-7 col-10 bottom-0 z-1 party-photo">
-          <img
-            src="/assets/images/friendparty.png"
-            class="img-fluid"
-            alt=""
-            data-aos="fade-down"
+      <div class="bg-1 mb-0 mb-md-4">
+        <section 
+          class="gsap-section mb-0 position-relative"
+        >
+          <div
+            class="w-100 position-relative z-2 pt-4"
+            data-aos="zoom-in"
             data-aos-easing="linear"
-            data-aos-duration="1500"
-          />
-        </div>
-        <div
-          class="position-absolute top-0 z-2 text-white w-100 container start-50 translate-middle-x friend-word"
+            data-aos-duration="2000"
+          >
+            <div class="col-9 h-100 ms-auto position-relative">
+              <img
+                src="/assets/images/turtle_box.png"
+                class="img-fluid col-3 mb-1 turtle-box"
+              />
+              <img
+                src="/assets/images/turtle.png"
+                class="gsap-turtle img-fluid col-4 col-md-3 position-absolute top-0 start-0 z-1 turtle-img"
+                alt=""
+              />
+              <div
+                class="row row-cols-2 g-0 position-relative z- 1"
+                style="margin-top: calc(-1 * 3vw)"
+              >
+                <img
+                  src="/assets/images/womensup.png"
+                  class="img-fluid"
+                  alt=""
+                />
+                <img
+                  src="/assets/images/area3Bg.png"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="horizontal-line"></div>
+                <div
+                  class="position-absolute top-0 end-0 d-flex flex-column justify-content-between h-100 text-white pb-2 pt-3 pt-md-80 pb-md-4 pb-lg-232 col-11"
+                >
+                  <h2
+                    class="text-end me-3 fw-bold fs-md-55 fs-lg-110"
+                    data-aos="zoom-in"
+                    data-aos-easing="linear"
+                    data-aos-duration="3800"
+                  >
+                    FOR BUSINESS
+                  </h2>
+                  <h3
+                    class="fw-bold fs-7 fs-md-3 fs-lg-55"
+                    data-aos="zoom-in"
+                    data-aos-easing="linear"
+                    data-aos-duration="4500"
+                  >
+                    enjoy your life
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-4 position-absolute top-0 z-1"
+            data-aos="fade-right"
+            data-aos-easing="linear"
+            data-aos-duration="2500"
+          >
+            <img
+              src="/assets/images/LightOfWaves_2.png"
+              alt="waves"
+              class="img-fluid"
+            />
+            <div class="wave-text-area">
+              <p
+                class="text-rl text-white fs-md-3 fs-7 fw-bold z1 me-1 h-100 md-0"
+                style="margin-top: calc(10.1vw)"
+              >
+                FRIENDS PARTY
+              </p>
+            </div>
+          </div>
+        </section>
+        <section
+          class="gsap-section h-v100 family-trip position-relative z-2"
           data-aos="zoom-in"
           data-aos-easing="linear"
           data-aos-duration="1500"
         >
-          <div class="w-100 mt-1 mt-md-6">
-            <div class="col-11">
-              <p class="text-rl fs-md-3 fw-bold ms-auto">FRIENDS PARTY</p>
+          <div class="position-absolute top-0 top-md-25 w-100 z-3">
+            <div class="col-10 col-md-9 mt-2 ms-auto me-2 ms-md-0 me-md-0">
+              <div class="col-3 col-md-3 ms-auto">
+                <div class="family-border position-relative">
+                  <h2
+                    class="text-white fw-bolder fs-md-3 fs-7 my-1 my-md-2 my-lg-4 lh-1 pb-md-0"
+                    style="margin-left: -2rem"
+                  >
+                    RETIRED<br />
+                    LIFE
+                  </h2>
+                  <p
+                    class="m-0 position-absolute text-warning translate-middle-y fs-md-4 fw-semibold fs-7"
+                    style="margin-left: -2rem !important"
+                  >
+                    FAMILY TRIP
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="d-flex justify-content-between mt-md-280">
-            <h2 class="text-white fw-semibold w-50 fs-md-110">LIFESTYLE.</h2>
-            <p class="fw-medium w-md-25 w-50 d-none d-md-block">
-              We have all your yachting requirements in hand. Together with your
-              captain and crew, we reduce the risk and increase the enjoyment.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section data-bgcolor="linear-gradient(180deg, rgba(75,47,48,1) 0%, rgba(108,150,169,1) 39%, rgba(2,53,75,1) 100%)" class="gsap-section h-v100 position-relative"           data-aos="zoom-in"
-      data-aos-easing="linear"
-      data-aos-duration="2500">
-        <img
-          src="/assets/images/bg7.png"
-          class="img-fluid img-hv100"
-          alt=""
-          data-aos="zoom-in"
-          data-aos-easing="linear"
-          data-aos-duration="2500"
-        />
-        <div class="col-9 position-absolute top-25 start-25 top-md-50 start-md-50 translate-middle-md z-1">
-          <img src="/assets/images/area7_hero.png" class="img-fluid" >
-        </div>
-      </section>
-      <section data-bgcolor="linear-gradient(180deg, rgba(2,53,75,1) 0%, rgba(213,164,113,1) 40%, rgba(77,34,24,1) 100%)" class="gsap-section h-v100 bottom-slide position-relative mb-3 mb-md-96">
-        <div class="top-0 start-50 w-100">
-          <div class="container">
-            <ul
-              class="list-unstyled row row-cols-2 row-cols-md-4 py-md-280 py-6"
+          <img
+            src="/assets/images/familytrip_bg.png"
+            alt="familytrip"
+            class="img-fluid img-hv100"
+          />
+          <div class="position-absolute h-100 w-100 top-0 z-2">
+            <img
+              src="/assets/images/sea.png"
+              class="position-absolute img-fluid top-0 end-0 h-100"
+            />
+            <img
+              src="/assets/images/bot_2.png"
+              class="position-absolute img-fluid top-0 end-0 h-100 bg-bot"
+            />
+            <div
+              class="position-absolute col-10 top-0 start-0 h-100 z-n1 family-slider active"
             >
-              <li
-                class="col"
-                data-aos="zoom-in"
-                data-aos-easing="linear"
-                data-aos-duration="1500"
-              >
-                <div class="card text-start border-0">
-                  <img
-                    class="card-img-top"
-                    src="/assets/images/slide1.png"
-                    alt="Title"
-                  />
-                  <div class="card-body border-0">
-                    <h6 class="card-title text-white fw-bold">
-                      More National Acclaim for Hylas Yachts
-                    </h6>
-                    <p class="card-text fs-7 text-white">
-                      The winners of the Cruising World’s “Boat of the Year”
-                      awards have just been announced and the Hylas H57 has won
-                      best cruising yacht overall.
-                    </p>
-                  </div>
+              <img
+                src="/assets/images/familytripSlide_1.png"
+                class="img-fluid h-100"
+                alt=""
+              />
+            </div>
+            <div
+              class="position-absolute col-10 top-0 start-0 h-100 z-n1 family-slider"
+            >
+              <img
+                src="/assets/images/familytripSlide_2.png"
+                class="img-fluid h-100"
+                alt=""
+              />
+            </div>
+            <div
+              class="position-absolute col-10 top-0 start-0 h-100 z-n1 family-slider"
+            >
+              <div class="slide-video">
+                <div class="videobox">
+                  <iframe
+                    frameborder="0"
+                    src="https://www.youtube.com/embed/LFVO0n7aeJw?controls=0&autoplay=1&mute=1&loop=1&?modestbranding=1&&showinfo=0&vq=hd1080&playlist=LFVO0n7aeJw"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; loop"
+                    allowfullscreen
+                  >
+                  </iframe>
                 </div>
-              </li>
-              <li
-                class="col"
-                data-aos="zoom-in"
-                data-aos-easing="linear"
-                data-aos-duration="1500"
-              >
-                <div class="card text-start border-0">
-                  <img
-                    class="card-img-top"
-                    src="/assets/images/slide2.png"
-                    alt="Title"
-                  />
-                  <div class="card-body border-0">
-                    <h6 class="card-title text-white fw-bold">
-                      More National Acclaim for Hylas Yachts
-                    </h6>
-                    <p class="card-text fs-7 text-white">
-                      The winners of the Cruising World’s “Boat of the Year”
-                      awards have just been announced and the Hylas H57 has won
-                      best cruising yacht overall.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="col"
-                data-aos="zoom-in"
-                data-aos-easing="linear"
-                data-aos-duration="1500"
-              >
-                <div class="card text-start border-0">
-                  <img
-                    class="card-img-top"
-                    src="/assets/images/slide3.png"
-                    alt="Title"
-                  />
-                  <div class="card-body border-0">
-                    <h6 class="card-title text-white fw-bold">
-                      More National Acclaim for Hylas Yachts
-                    </h6>
-                    <p class="card-text fs-7 text-white">
-                      The winners of the Cruising World’s “Boat of the Year”
-                      awards have just been announced and the Hylas H57 has won
-                      best cruising yacht overall.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li
-                class="col"
-                data-aos="zoom-in"
-                data-aos-easing="linear"
-                data-aos-duration="2000"
-              >
-                <div class="card text-start border-0">
-                  <img
-                    class="card-img-top"
-                    src="/assets/images/slide4.png"
-                    alt="Title"
-                  />
-                  <div class="card-body border-0">
-                    <h6 class="card-title text-white fw-bold">
-                      More National Acclaim for Hylas Yachts
-                    </h6>
-                    <p class="card-text fs-7 text-white">
-                      The winners of the Cruising World’s “Boat of the Year”
-                      awards have just been announced and the Hylas H57 has won
-                      best cruising yacht overall.
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-      <section data-bgcolor="#ffffff" class="container">
+        </section>
+        <section
+          class="gsap-section h-v100 friends-party position-relative friend z-1"
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="2400"
+          data-aos-anchor-placement="top-bottom"
+        >
+          <img
+            src="/assets/images/bg6.png"
+            alt="familytrip"
+            class="img-fluid position-relative z-n1 img-hv100"
+            style="opacity: 1"
+            srcset=""
+          />
+          <div
+            class="position-absolute col-md-7 col-10 bottom-0 z-1 party-photo"
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
+            <div class="slider-container">
+              <img
+                src="/assets/images/friendParty-01.png"
+                alt="SlideImage1"
+                class="img-fluid party-image active"
+              />
+              <img
+                src="/assets/images/friendParty-02.png"
+                alt="SlideImage2"
+                class="img-fluid party-image"
+              />
+              <img
+                src="/assets/images/friendParty-03.png"
+                alt="SlideImage3"
+                class="img-fluid party-image"
+              />
+              <img
+                src="/assets/images/friendParty-04.png"
+                alt="SlideImage4"
+                class="img-fluid party-image"
+              />
+              <img
+                src="/assets/images/friendParty-05.png"
+                alt="SlideImage5"
+                class="img-fluid party-image"
+              />
+            </div>
+          </div>
+          <div
+            class="position-absolute top-0 z-2 text-white w-100 container start-50 translate-middle-x friend-word"
+            data-aos="zoom-in"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
+            <div class="w-100 mt-1 mt-md-6">
+              <div class="col-11">
+                <p class="text-rl fs-md-3 fw-bold ms-auto">FRIENDS PARTY</p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between mt-lg-280">
+              <h2
+                class="mt-4 mt-md-0 text-white fw-semibold w-50 fs-4 fs-md-55 fs-lg-110"
+              >
+                LIFESTYLE.
+              </h2>
+              <p
+                class="fw-medium w-3xl-50 w-lg-25 w-100 w-md-50 fs-7 fs-md-4 fm-serif lh-1"
+              >
+                Whether you’re enjoying the serenity of the water, or embarking
+                on the next big adventure, your Hylas is equipped for any
+                condition you’ll encounter.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section
+          class="gsap-section h-v100 position-relative fire-party"
+        >
+          <img
+            src="/assets/images/bg7.png"
+            class="img-fluid img-hv100"
+            alt=""
+          />
+          <div
+            class="col-9 position-absolute top-50 start-50 translate-middle z-1"
+            data-aos="zoom-in"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
+            <div class="position-relative">
+              <img src="/assets/images/area7_hero.png" class="img-fluid fire-party-img" />
+              <div
+                class="col-lg-6 col-md-10 col-9 position-absolute bottom-md-0 end-md-0 top-75 start-50 translate-middle-x z-3"
+              >
+                <p
+                  class="fw-medium text-white fm-serif fs-md-4 fs-7 fire-word h-100"
+                  data-aos="fade-up"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                  data-aos-anchor-placement="top-bottom"
+                >
+                  We have all your yachting requirements in hand. Together with
+                  your captain and crew, we reduce the risk and increase the
+                  enjoyment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="gsap-section h-v100 bottom-slide position-relative mb-3 mb-md-2"
+        >
+          <img
+            src="/assets/images/bg8.png"
+            class="img-fluid position-relative position-absolute z-n1 img-hv100"
+            style="height: 100%"
+            srcset=""
+          />
+          <div class="top-0 start-50 w-100">
+            <div class="container col-3xl-9">
+              <ul
+                class="list-unstyled row row-cols-2 row-cols-md-4 py-md-144 py-6"
+              >
+                <li
+                  class="col"
+                  data-aos="zoom-in"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <div class="card text-start border-0">
+                    <img
+                      class="card-img-top"
+                      src="/assets/images/slide1.png"
+                      alt="Title"
+                    />
+                    <div class="card-body border-0">
+                      <h6 class="card-title text-white fw-bold">
+                        Annapolis Sailboat Show 2023
+                      </h6>
+                      <p class="card-text fs-7 text-white">
+                        ON DISPLAY: H57 Dock F2 RSVP DATES & TIMES October...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="col"
+                  data-aos="zoom-in"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <div class="card text-start border-0">
+                    <img
+                      class="card-img-top"
+                      src="/assets/images/slide2.jpg"
+                      alt="Title"
+                    />
+                    <div class="card-body border-0">
+                      <h6 class="card-title text-white fw-bold">
+                        Newport International Boat Show 2023
+                      </h6>
+                      <p class="card-text fs-7 text-white">
+                        ON DISPLAY: H57 Dock N-4 W RSVP DATES & TIMES...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="col"
+                  data-aos="zoom-in"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <div class="card text-start border-0">
+                    <img
+                      class="card-img-top"
+                      src="/assets/images/slide3.png"
+                      alt="Title"
+                    />
+                    <div class="card-body border-0">
+                      <h6 class="card-title text-white fw-bold">
+                        British Motor Yacht Show 2023
+                      </h6>
+                      <p class="card-text fs-7 text-white">
+                        Hylas Yachts UK will proudly be displaying...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="col"
+                  data-aos="zoom-in"
+                  data-aos-easing="linear"
+                  data-aos-duration="2000"
+                >
+                  <div class="card text-start border-0">
+                    <img
+                      class="card-img-top"
+                      src="/assets/images/slide4.png"
+                      alt="Title"
+                    />
+                    <div class="card-body border-0">
+                      <h6 class="card-title text-white fw-bold">
+                        DC Boat Show at National Harbor
+                      </h6>
+                      <p class="card-text fs-7 text-white">
+                        Join Us May 5-7NATIONAL HARBOR – FORT...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="container gsap-section mt-2 pt-3xl-5 pb-3xl-3 col-3xl-9">
         <ul
-          class="list-unstyled row row-cols-2 row-cols-md-6 justify-content-evenly align-items-center g-4">
+          class="list-unstyled row row-cols-3 row-cols-md-6 justify-content-evenly align-items-center g-4"
+        >
           <li class="text-center">
-            <img src="/assets/images/awardIcon_1.png" class="img-fluid" alt="" />
+            <img
+              src="/assets/images/awardIcon_1.png"
+              class="img-fluid award-icon"
+              alt=""
+            />
           </li>
           <li class="text-center">
-            <img src="/assets/images/awardIcon_2.png" class="img-fluid" alt="" />
+            <img
+              src="/assets/images/awardIcon_2.png"
+              class="img-fluid award-icon"
+              alt=""
+            />
           </li>
           <li class="text-center">
-            <img src="/assets/images/awardIcon_3.png" class="img-fluid" alt="" />
+            <img
+              src="/assets/images/awardIcon_3.png"
+              class="img-fluid award-icon"
+              alt=""
+            />
           </li>
           <li class="text-center">
-            <img src="/assets/images/awardIcon_4.png" class="img-fluid" alt="" />
+            <img
+              src="/assets/images/awardIcon_4.png"
+              class="img-fluid award-icon"
+              alt=""
+            />
           </li>
           <li class="text-center">
-            <img src="/assets/images/awardIcon_5.png" class="img-fluid" alt="" />
+            <img
+              src="/assets/images/awardIcon_5.png"
+              class="img-fluid award-icon"
+              alt=""
+            />
           </li>
           <li class="text-center">
-            <img src="/assets/images/awardIcon_6.png" class="img-fluid" alt="" />
+            <img
+              src="/assets/images/awardIcon_6.png"
+              class="img-fluid award-icon"
+              alt=""
+            />
           </li>
         </ul>
       </section>
     </main>
-    <div class="float-icon">
-      <ul class="list-unstyled connectIcons d-none">
-        <li class="mb-2">
-          <a href="#"><img src="/assets/images/icon_line.png"  class="img-fluid" alt="" /></a>
-        </li>
-        <li class="mb-2">
-          <a href="#"><img src="/assets/images/icon_FB.png"  class="img-fluid" alt="" /></a>
-        </li>
-        <li>
-          <a href="#"><img src="/assets/images/icon_phone.png"  class="img-fluid" alt="" /></a>
-        </li>
-      </ul>
-      <ul class="list-unstyled">
-        <li class="connectIcon mb-2">
-          <a href="#" class="connectClose"
-            ><img src="/assets/images/icon_message.png" class="img-fluid"  alt=""
-          /></a>
-        </li>
-        <li class="backToTop">
-          <a href="#"><img src="/assets/images/icon_top.png" class="img-fluid"  alt="" /></a>
-        </li>
-      </ul>
-    </div>
-    <%- include('./layout/footer'); -%>
-    <%- include('./layout/jspackage'); -%>
-    <script type="module" src="../main.js"></script>
-    
-    <script>
 
-
-      window.onload=function(){
-        const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
-      const familyElem = document.querySelector('.family-trip');
-      const partyElem = document.querySelector('.friends-party');
-      const bgAry =['linear-gradient(180deg, rgba(255,255,255,1) 21%, rgba(121,121,121,1) 100%)','linear-gradient(180deg, rgba(121,121,121,1) 21%, rgba(255,197,139,1) 36%, rgba(75,47,48,1) 100%)','linear-gradient(180deg, rgba(75,47,48,1) 18%, rgba(108,150,169,1) 39%, rgba(2,53,75,1) 100%)','linear-gradient(180deg, rgba(2,53,75,1) 18%, rgba(213,164,113,1) 40%, rgba(77,34,24,1) 100%)','rgb(255,255,255)']
-
-      gsap.set("section", {
-        background: gsap.utils.wrap(scrollColorElems),
-      });
-      gsap.registerPlugin(ScrollTrigger);
-      const sections = gsap.utils.toArray(".gsap-section");
-      sections.forEach(function (section, i) {
-        console.log(i)
-        console.log('section,',section),
-        ScrollTrigger.create({
-          trigger: section,
-          // markers:true,
-          start: "top 80%",
-          end:`bottom`,
-          animation: gsap.to("body", {
-            background: bgAry[i],
-            immediateRender: false,
-            ease: "power3.out",
-          }),
-          onLeave: () => {
-    gsap.to("body", {
-      background: '#ffffff', 
-      immediateRender: false,
-    });
-  },
-          toggleActions: "restart none none reverse",
-        });
-      });
-      }
-    </script>
-  
+    <%- include('./layout/jspackage'); -%> <%- include('./layout/footer'); -%>
   </body>
+  <script type="module" src="../main.js"></script>
+  <script>
+    AOS.init();
+
+    const waveImage = document.querySelector(".bg-wave");
+    const wave2Image = document.querySelector(".bg-wave2");
+    const wave3Image = document.querySelector(".bg-wave3");
+    const wave4Image = document.querySelector(".bg-wave4");
+    const wave5Image = document.querySelector(".bg-wave5");
+    const wave6Image = document.querySelector(".bg-wave6");
+    const wave7Image = document.querySelector(".bg-wave7");
+    const wave8Image = document.querySelector(".bg-wave8");
+    const botImage = document.querySelector(".bg-boat");
+    const botMobileImage = document.querySelector(".bg-boat-m");
+    const turtleImg = document.querySelector(".gsap-turtle");
+    const bot2Image = document.querySelector(".bg-bot");
+    const fireWord = document.querySelector("fire-word");
+
+    ScrollTrigger.matchMedia({
+      // x-large
+      "(min-width: 1980px)": function () {
+        gsap.to(turtleImg, {
+          y: 15,
+          duration: 3,
+          ease: "none",
+          repeat: -1,
+          yoyoEase: true
+        });
+
+        gsap.to(".bg-boat", {
+          y: -66,
+          x: -66,
+          duration: 5,
+          ease: "rough({ template: none.out, strength: 1, points: 20, taper: none, randomize: true, clamp: false})",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.to(".bg-wave", {
+          y: 130,
+          duration: 34,
+          ease: "none",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.from(".bg-wave2", {
+          y: 150,
+          duration: 14,
+          ease: "rough({ template: none.out, strength: 1, points: 20, taper: none, randomize: true, clamp: false})",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.from(".bg-wave3", {
+          y: 120,
+          duration: 25,
+          ease: "circ.out",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.from(".bg-wave4", {
+          y: 190,
+          duration: 30,
+          ease: "none",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.from(".bg-wave5", {
+          y: 182,
+          duration: 48,
+          ease: "bounce.out",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.from(".bg-wave6", {
+          y: 160,
+          duration: 63,
+          ease: "none",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.from(".bg-wave7", {
+          y: 83,
+          duration: 55,
+          ease: "none",
+          repeat: -1,
+          yoyoEase: true
+        });
+      },
+      // large
+      "(min-width: 600px)": function () {
+        gsap.to(turtleImg, {
+          y: 15,
+          duration: 3,
+          ease: "none",
+          repeat: -1,
+          yoyoEase: true
+        });
+
+        gsap.to(botImage, {
+          y: -33,
+          x: -33,
+          duration: 4,
+          ease: "rough({ template: none.out, strength: 1, points: 20, taper: none, randomize: true, clamp: false})",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.to(waveImage, {
+          y: 20,
+          duration: 4,
+          ease: "none",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.from(wave2Image, {
+          y: 40,
+          duration: 4,
+          ease: "rough({ template: none.out, strength: 1, points: 20, taper: none, randomize: true, clamp: false})",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.from(wave3Image, {
+          y: 37,
+          duration: 5,
+          ease: "circ.out",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.from(wave4Image, {
+          y: 46,
+          duration: 4,
+          ease: "none",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.from(wave5Image, {
+          y: 20,
+          duration: 5,
+          ease: "bounce.out",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.from(wave6Image, {
+          y: 35,
+          duration: 3,
+          ease: "none",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.from(wave7Image, {
+          y: 13,
+          duration: 1,
+          ease: "none",
+          repeat: -1,
+          yoyoEase: true
+        });
+      },
+      // small
+      "(max-width: 599px)": function () {
+        gsap.to(turtleImg, {
+          y: 5,
+          duration: 2,
+          ease: "none",
+          repeat: -1,
+          yoyoEase: true
+        });
+
+        gsap.to(botImage, {
+          y: -30,
+          x: -30,
+          duration: 10,
+          ease: "rough({ template: none.out, strength: 1, points: 20, taper: none, randomize: true, clamp: false})",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.to(waveImage, {
+          y: 20,
+          duration: 4,
+          ease: "none",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.from(wave2Image, {
+          y: 23,
+          duration: 4,
+          ease: "rough({ template: none.out, strength: 1, points: 20, taper: none, randomize: true, clamp: false})",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.from(wave3Image, {
+          y: 5,
+          duration: 5,
+          ease: "circ.out",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.from(wave4Image, {
+          y: 15,
+          duration: 4,
+          ease: "none",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.from(wave5Image, {
+          y: 20,
+          duration: 5,
+          ease: "bounce.out",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.from(wave6Image, {
+          y: 23,
+          duration: 6,
+          ease: "none",
+          repeat: -1,
+          yoyoEase: true
+        });
+        gsap.from(wave7Image, {
+          y: 13,
+          duration: 5,
+          ease: "none",
+          repeat: -1,
+          yoyoEase: true
+        });
+      },
+    });
+
+    gsap.to(bot2Image, {
+      x: 15,
+      duration: 3,
+      ease: "none",
+      repeat: -1,
+      yoyoEase: true
+    });
+    gsap.to(botMobileImage, {
+      y: -33,
+      x: -33,
+      duration: 4,
+      ease: "rough({ template: none.out, strength: 1, points: 20, taper: none, randomize: true, clamp: false})",
+      repeat: -1,
+      yoyoEase: true
+    });
+
+    $(function () {
+      let $accordion, $wideScreen;
+      $accordion = $(".slide-ul").children("li");
+      $wideScreen = $(window).width() > 767;
+
+      $accordion.on("click", function (e) {
+        var $this;
+        $this = $(this);
+        if ($this.hasClass("out")) {
+          $this.addClass("out");
+        } else {
+          $this.addClass("out");
+          $this.siblings().removeClass("out");
+        }
+      });
+    });
+    let i = 1;
+    let divDisplay,
+      iCount = 0;
+
+    function countNum(i) {
+      if (i < 1) {
+        return i + 5;
+      } else if (i > 5) {
+        return i - 5;
+      } else {
+        return i;
+      }
+    }
+  </script>
+
+  <script>
+    const partyImages = document.querySelectorAll(".party-image");
+    const familyImages = document.querySelectorAll(".family-slider");
+
+    let currentIndex = 0;
+    let familyIndex = 0;
+    let isLastImage = false;
+
+    function showImage(index) {
+      partyImages.forEach((image, i) => {
+        if (i === index) {
+          image.classList.add("active");
+        } else {
+          image.classList.remove("active");
+        }
+      });
+    }
+    function showFamilyImage(index) {
+      familyImages.forEach((image, i) => {
+        if (i === index) {
+          image.classList.add("active");
+        } else {
+          image.classList.remove("active");
+        }
+      });
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % partyImages.length;
+      showImage(currentIndex);
+    }
+
+    function nextfamilyImage() {
+      familyIndex = (familyIndex + 1) % familyImages.length;
+      if (familyIndex === familyImages.length - 1) {
+        isLastImage = true;
+      }
+      showFamilyImage(familyIndex);
+    }
+    setInterval(nextImage, 5000);
+    $(document).ready(function () {
+      setTimeout(() => {
+        const intervalId = setInterval(() => {
+          if (!isLastImage) {
+            nextfamilyImage();
+          } else {
+            clearInterval(intervalId);
+          }
+        }, 5000);
+      }, 5000);
+    });
+  </script>
 </html>
